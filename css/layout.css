@@ -256,23 +256,30 @@ aside .side-menu .menu-list .menu-item.active + .depth2 {
     border-left: 1px solid var(--bgColor);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.03);
     z-index: 11;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition: all 0.2s;
     overflow: hidden;
 }
-
 .filter.open {
     max-width: none;
     padding: 0 14px 100px;
     transform: translateX(0);
     overflow: visible;
 }
-
 .filter .filter-tit {
     padding: 42px 18px 22px;
     font-size: 26px;
     font-weight: 800;
     border-bottom: 1px solid var(--lightGray);
+}
+.filter .filter-tit svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 24px;
+    margin: -6px 10px 0 0;
+    color: var(--mainTxt);
+    stroke: var(--mainTxt);
 }
 .filter .filter-body {
     position: relative;
@@ -326,6 +333,9 @@ aside .side-menu .menu-list .menu-item.active + .depth2 {
 .content-item {
     position: relative;
 }
+.content-item + .content-item {
+    margin-top: 30px;
+}
 .content-item .item-head {
     display: flex;
     justify-content: space-between;
@@ -340,4 +350,92 @@ aside .side-menu .menu-list .menu-item.active + .depth2 {
     padding: 16px;
     background: var(--bgContent);
     border-radius: 10px;
+}
+
+/* dataTable */
+.table-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.table-head .right > div {
+    position: relative;
+    display: inline-block;
+}
+.table-head .right > div + div {
+    margin-left: 10px;
+}
+.table-head .right > div > button.dt-button {
+    position: relative;
+    display: inline-block;
+    min-width: 90px;
+    vertical-align: middle;
+    padding: 7px 40px 7px 12px;
+    font-size: 12px;
+    font-weight: 200;
+    background: var(--bgContent);
+    border: 1px solid #e8e8e8;
+    color: #666;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.2s;
+    letter-spacing: -0.02em;
+}
+.table-head .right button.dt-button .dt-button-down-arrow {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    font-size: 5px;
+}
+.table-head .right .dt-button-collection {
+    position: absolute;
+    top: 150%;
+    left: 0;
+    width: max-content;
+    min-width: 100%;
+    text-align: left;
+    border: 1px solid var(--lightGray);
+    background: var(--bgContent);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+.table-head .right .dt-button-collection .dt-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 11px;
+    color: #666;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid var(--lightGray); 
+}
+.table-head .colvis-wrap .dt-button-collection .dt-button {
+    text-indent: -16px;
+    padding-left: 27px;
+}
+.table-head .colvis-wrap .dt-button-collection .dt-button::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #949597;
+    background: var(--bgContent);
+    border-radius: 2px;
+}
+.table-head .colvis-wrap .dt-button-collection .dt-button.dt-button-active::before {
+    margin-right: 4px;
+    background: var(--blue);
+    border-color: var(--blue);
+}
+.table-head ~ * .table-style01 {
+    border: solid var(--lightGray);
+    border-width: 1px 0;
+}
+.table-head ~ * .table-style01 th {
+    padding-top: 12px;
+}
+.table-head ~ * .table-style01 tbody tr:last-of-type td {
+    padding-bottom: 12px;
 }

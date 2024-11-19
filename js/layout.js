@@ -44,15 +44,47 @@ $(document).ready(function() {
         $(this).addClass('active')
     })
 
-    // aside nav 버튼 클릭시 active-ball의 위치를 변경
-    // $('aside nav .menu-item').on('click', function() {
-    //     $('aside nav .menu-item').removeClass('active');
-    //     $(this).addClass('active');
+    // custom select 
+    // .option-list .option 클릭시 해당 텍스트가 label텍스트로 바뀜
+    // .option-list .option 클릭시 해당 data-value가 select의 data-value로 들어감
+    // 다른 select 클릭시 기존 select 닫힘
+    $('.select').on('click', function (e) {
+        e.stopPropagation();
+
+        $('.select').not(this).removeClass('open').children('.option-list').slideUp();
+
+        $(this).toggleClass('open');
+        $(this).children('.option-list').slideToggle(50);
+    });
+
+    $('.select .option-list .option').on('click', function (e) {
+        e.stopPropagation();
+        let selectText = $(this).text();
+        let selectValue = $(this).attr('data-value');
+        $(this).parents('.select').children('.label').text(selectText);
+
+        $(this).parents('.select').removeClass('open');
+        $(this).parents('.select').attr('data-value',selectValue);
+        $(this).parents('.option-list').slideUp(50);
+    });
+
+    // filter button 
+
+    if (!$('#filterBox').hasClass('open')) {
+        $('.btn-filter').removeClass('active'); // open 클래스가 없으면 active 제거
+    } else {
+        $('.btn-filter').addClass('active'); // open 클래스가 있으면 active 추가
+    }
     
-    //     let buttonTop = $(this).position().top;
-    //     let buttonHeight = $(this).outerHeight();
-    //     let activeBallTop = buttonTop + (buttonHeight / 2) - ($('.active-ball').outerHeight() / 2);
-    
-    //     $('aside nav .active-ball').css('top', activeBallTop + "px");
-    // });
+    $('.btn-filter').on('click',function(){
+        $(this).toggleClass('active');
+        $('#filterBox').toggleClass('open');
+    });
+});
+
+// custom select 
+// 셀렉트 영역이 아닌 다른 부분 클릭시 셀렉트 닫힘
+$(document).on('click', function () {
+    $('.select').removeClass('open');
+    $('.option-list').slideUp(50);
 });
