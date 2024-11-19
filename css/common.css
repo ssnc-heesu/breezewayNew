@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'Noto Sans CJK';
+    src: url('font/NotoSansCJKkr-Black.otf') format('woff');
+    font-weight: 800;
+    font-style: black;
+}
+@font-face {
+    font-family: 'Noto Sans CJK';
+    src: url('font/NotoSansCJKkr-Bold.otf') format('woff');
+    font-weight: 600;
+    font-style: bold;
+}
+@font-face {
+    font-family: 'Noto Sans CJK';
+    src: url('font/NotoSansCJKkr-Medium.otf') format('woff');
+    font-weight: 500;
+    font-style: medium;
+}
+@font-face {
+    font-family: 'Noto Sans CJK';
+    src: url('font/NotoSansCJKkr-Regular.otf') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Noto Sans CJK';
+    src: url('font/NotoSansCJKkr-DemiLight.otf') format('woff');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Noto Sans CJK';
+    src: url('font/NotoSansCJKkr-Light.otf') format('woff');
+    font-weight: 200;
+    font-style: light;
+}
+
+:root {
+    --blue: #2c67ff;
+}
+:root[color-theme='light'] {
+    --bgColor: #f3f6ff;
+    --bgContent: #fff;
+    
+    --mainTxt: #222;
+    --gray: #898989;
+    --lightGray: #e8e8e8;
+}
+
+:root[color-theme='dark'] {
+    --bgColor: #222;
+    --bgContent: #000;
+    
+    --mainTxt: #eaeaea;
+    --gray: #888;
+    --lightGray: #111111;
+}
+
+/* common.css */
+body {
+    color: var(--mainTxt);
+    background: var(--bgColor);
+    font-family:"Noto Sans CJK", sans-serif;
+}
+* {
+    color: var(--mainTxt);
+    font-family:"Noto Sans CJK", sans-serif;
+}
+
+
+/* main */
+.wrap {
+    display: flex;
+    height: 100vh;
+}
+main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 9;
+}
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 800px;
+    overflow: auto;
+}
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 10;
+}
+
+.btn-close {
+    position: absolute;
+    top: 5px;
+    right: -23px;
+    padding: 5px 3px 5px 0;
+    background: var(--bgContent);
+    color: var(--gray);
+    stroke: var(--gray);
+    border-radius: 0 4px 4px 0;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.03);
+}
+/* list  */
+.list-style01 li + li {
+    margin-top: 30px;
+}
+.list-style01 .list-tit {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #a8aaaf;
+}
+
+/* input  */
+input::placeholder,
+textarea::placeholder {
+    color: #acacac;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #acacac;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #acacac;
+}
+.input-style01 {
+    display: inline-block;
+    height: 30px;
+    padding: 12px;
+    font-size: 11px;
+    color: #666;
+    background: var(--bgContent);
+    border: 1px solid var(--lightGray);
+    border-radius: 4px;
+}
+.input-block {
+    display: block;
+    width: 100%;
+}
+
+/* button */
+.btn {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.2s;
+    letter-spacing: -0.02em;
+}
+.btn + .btn {
+    margin-left: 10px;
+}
+.btn-blue {
+    background: var(--blue);
+    border: 1px solid var(--blue);
+    color: #fff;
+}
+.btn-blue:hover {
+    background: #204cbd;
+}
+.btn-line-blue {
+    background: var(--bgContent);
+    border: 1px solid var(--blue);
+    color: var(--blue);
+}
+.btn-line-blue:hover {
+    background: var(--blue);
+    border: 1px solid var(--blue);
+    color: #fff;
+}
+.btn-line-gray {
+    background: var(--bgContent);
+    border: 1px solid #e8e8e8;
+    color: #666;
+}
+.btn-line-gray:hover {
+    color: var(--blue);
+}
+.btn-line-gray:hover svg {
+    stroke: var(--blue);
+    color: var(--blue);
+}
+.btn-sm {
+    min-width: 60px;
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: 200;
+}
+.btn-md {
+    min-width: 84px;
+    padding: 10px 14px;
+    font-size: 12px;
+}
+.btn-lg {
+    padding: 12px 14px;
+    font-size: 13px;
+}
+
+/* table  */
+table {
+    width: 100%;
+}
+.table-style01 th,
+.table-style01 td {
+    padding: 12px 10px;
+    text-align: left; 
+    font-size: 12px;
+    border-bottom: 1px solid var(--lightGray);
+}
+.table-style01 th {
+    padding-top: 0;
+    font-weight: 600;
+}
+.table-style01 tbody tr:last-of-type td {
+    padding-bottom: 0;
+    border-bottom: 0;
+}

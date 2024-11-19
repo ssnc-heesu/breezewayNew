@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko" color-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Breezeway FireONE layout</title>
+
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/layout.js"></script>
+</head>
+<body >
+    <div class="wrap">
+        <aside id="sideMenu">
+            <img src="" style="width :20px; height: 20px; background: red;" class="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="pencil-line"></i><span class="menu-name">Request</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="stamp"></i><span class="menu-name">Approval</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="list-todo"></i><span class="menu-name">Policy</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="chart-candlestick"></i><span class="menu-name">Governance</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item active">
+                            <i data-lucide="package-search"></i><span class="menu-name">Object</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="server"></i><span class="menu-name">Device(Firewall/Switch)</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="scroll-text"></i><span class="menu-name">Report</span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item">
+                            <i data-lucide="shield-plus"></i><span class="menu-name">Diagnostic</span>
+                        </a>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="settings"></i><span class="menu-name">Setting</span>
+                        </button>
+                    </li>
+                </ul>
+                <span class="active-ball"></span>
+            </nav>
+
+            <!-- 메뉴 오픈 -->
+            <div class="side-menu">
+                <img src="" style="width: 170px; height: 40px; background: red;" class="logo">
+                <button type="button" class="btn-close" data-name="sideMenu"><i data-lucide="chevrons-left" width="20"></i></button>
+                <ul class="menu-list">
+                    <li>
+                        <button type="button" class="menu-item active">
+                            <i data-lucide="pencil-line"></i><span class="menu-name">Request</span>
+                        </button>
+                        <ul class="depth2">
+                            <li class="active"><a href="#">Firewall Policy</a></li>
+                            <li><a href="#">Blacklist Policy</a></li>
+                            <li><a href="#">Policy List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="stamp"></i><span class="menu-name">Approval</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Approval</a></li>
+                            <li><a href="#">Draft</a></li>
+                            <li><a href="#">Mandate</a></li>
+                            <li><a href="#">My Line Setup</a></li>
+                            <li><a href="#">Fixed Line Setup</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="list-todo"></i><span class="menu-name">Policy</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Requested Policy</a></li>
+                            <li><a href="#">Completed Policy</a></li>
+                            <li><a href="#">Expire Policy</a></li>
+                            <li><a href="#">Unused Policy</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="chart-candlestick"></i><span class="menu-name">Governance</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Topology</a></li>
+                            <li><a href="#">Compliance</a></li>
+                            <li><a href="#">Blacklist</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="package-search"></i><span class="menu-name">Object</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Address</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Users</a></li>
+                            <li><a href="#">System</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="server"></i><span class="menu-name">Device(Firewall/Switch)</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Firewall List</a></li>
+                            <li><a href="#">Firewall Rule</a></li>
+                            <li><a href="#">Firewall Object</a></li>
+                            <li><a href="#">Switch List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="scroll-text"></i><span class="menu-name">Report</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">2차메뉴 미정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item">
+                            <i data-lucide="shield-plus"></i><span class="menu-name">Diagnostic
+                                <i data-lucide="external-link" class="ico-link"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="settings"></i><span class="menu-name">Setting</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Uer List</a></li>
+                            <li><a href="#">Dept List</a></li>
+                            <li><a href="#">Admin User</a></li>
+                            <li><a href="#">Work Group</a></li>
+                            <li><a href="#">IP ACL</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="overlay" data-name="sideMenu"></div>
+            <!-- 메뉴 오픈 End-->
+
+        </aside>
+        <main>
+            <div class="filter open" id="filterBox">
+                <button type="button" class="btn-close" data-name="filterBox"><i data-lucide="chevrons-left" width="20"></i></button>
+                
+                <h3 class="filter-tit">Filter</h3>
+                <div class="filter-body">
+                    <ul class="list-style01">
+                        <li>
+                            <label class="list-tit" for="applicationStatus">Application Status</label>
+                            <input type="text" class="input-style01 input-block" id="applicationStatus" placeholder="Application Status">
+                        </li>
+                        <li>
+                            <label class="list-tit" for="ApprovalNumber">Approval Number</label>
+                            <input type="text" class="input-style01 input-block" id="ApprovalNumber" value="Approval Number">
+                        </li>
+                        <li>
+                            <label class="list-tit">Custom Select</label>
+                            <ul class="select">
+                                <li class="option">select option</li>
+                                <li class="option">select option</li>
+                                <li class="option">select option</li>
+                                <li class="option">select option</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-foot">
+                    <button type="button" class="btn btn-line-blue btn-lg">Reset</button>
+                    <button type="button" class="btn btn-blue btn-lg">Search</button>
+                </div>
+            </div>
+            <div class="content-wrap">
+                <div class="inner">
+                    <div class="content">
+                        <h2 class="content-tit">
+                            <span>REQUEST</span>
+                            <span>Request Firewall Policy</span>
+                        </h2>
+                        <div class="content-item">
+                            <div class="item-head">
+                                <h3 class="item-tit">Result table</h3>
+                                <div class="btn-box">
+                                    <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <table class="table-style01">
+                                    <colgroup>
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                        <col style="width:20%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>Source</th>
+                                            <th>Destination</th>
+                                            <th>Service</th>
+                                            <th>Protocol</th>
+                                            <th>Verification Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Source Name</td>
+                                            <td>Destination Name</td>
+                                            <td>Service Name</td>
+                                            <td>Protocol</td>
+                                            <td>Verification Status</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="function-box">
+                <!-- 프로필, 알림, 랭귀지 들어갈예정 -->
+            </div>
+        </main>
+    </div>
+</body>
+</html>

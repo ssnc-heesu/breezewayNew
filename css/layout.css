@@ -1,0 +1,343 @@
+/* sidebar */
+
+aside {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 30px 20px;
+    text-align: center;
+    background: var(--bgContent);
+    z-index: 10;
+}
+aside nav {
+    position: relative;
+    display: inline-block;
+    margin-top: 30px;
+    background: var(--bgColor);
+    border-radius: 10em;
+    z-index: 1;
+}
+aside .logo {
+    display: block;
+    margin: 0 auto;
+}
+aside nav li {
+    padding: 20px 12px;
+}
+aside nav li svg {
+    width: 20px;
+    height: 20px;
+}
+aside nav li:first-of-type {
+    padding-top: 12px;
+}
+aside nav li:last-of-type {
+    padding-bottom: 12px;
+}
+aside nav li .menu-item {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+aside nav .menu-name {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 20px;
+    padding: 8px; 
+    font-size: 10px;
+    color: var(--gray);
+    white-space: nowrap;
+    background: var(--bgContent);
+    border: 1px solid var(--lightGray);
+    border-radius: 4px;
+    box-shadow: 0 0 13px rgba(0,0,0,0.06);
+    transform: translateY(-50%);
+}
+aside nav .menu-name::after{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 5px 3px 0px;
+    border-color: transparent var(--bgContent) transparent transparent;
+}
+aside nav .menu-name::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    margin-top: -4px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 7px 4px 0px;
+    border-color: transparent var(--lightGray) transparent transparent;
+}
+aside nav li .menu-item:hover .menu-name {
+    display: block;
+}
+aside nav li .menu-item:hover:not(.active) svg{
+    color: #2c67ff;
+}
+aside nav li .menu-item.active svg {
+    color: #fff;
+    stroke: #fff;
+}
+aside nav .active-ball {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 44px;
+    height: 44px;
+    background: #2c67ff;
+    border-radius: 50%;
+    z-index: -1;
+}
+aside.open .overlay {
+    display: block;
+}
+aside.open .side-menu {
+    transform: translateX(0);
+}
+
+aside .side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 100%;
+    padding: 35px 0 20px;
+    background: var(--bgContent);
+    z-index: 11;
+    transform: translateX(-120%);
+    transition: all 0.2s;
+}
+aside .side-menu .menu-list {
+    margin-top: 38px;
+}
+aside .side-menu .menu-list {
+    padding-left: 12px;
+}
+aside .side-menu .menu-list .menu-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 18px;
+    font-size: 12px;
+    text-align: left;
+}
+aside .side-menu .menu-list li{
+    overflow: hidden;
+}
+aside .side-menu .menu-list button.menu-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    width: 6px;
+    height: 6px;
+    margin-top: -3px;
+    border: solid var(--mainTxt);
+    border-width: 1px 1px 0 0;
+    transform: rotate(135deg);
+    transition: all 0.2s;
+}
+aside .side-menu .menu-list .menu-item svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    margin: -2px 14px 0 0;
+}
+aside .side-menu .menu-list .menu-name svg {
+    position: absolute;
+    top: 50%;
+    right: 1px;
+    width: 12px;
+    height: 12px;
+    margin-top: -6px;
+}
+aside .side-menu .menu-list .menu-item.active {
+    color: var(--blue);
+    font-weight: 600;
+    background: var(--bgColor);
+}
+aside .side-menu .menu-list .menu-item:hover {
+    color: var(--blue);
+    font-weight: 600;
+}
+aside .side-menu .menu-list .menu-item.active::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--blue);
+}
+aside .side-menu .menu-list button.menu-item.active::before {
+    border-color: var(--blue);
+    transform: rotate(315deg);
+}
+aside .side-menu .menu-list .menu-item.active svg,
+aside .side-menu .menu-list .menu-item:hover svg  {
+    color: var(--blue);
+    stroke: var(--blue);
+}
+aside .depth2 {
+    position: relative;
+    max-height: 0;
+    margin-left: 30px;
+    transition: all 0.2s;
+}
+aside .menu-item.active + .depth2 {
+    max-height: none;
+    margin: 10px 0 10px 30px;
+}
+aside .depth2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    width: 1px;
+    height: 71%;
+    background: var(--bgColor);
+    transform: translateY(-50%);
+    z-index: -1;
+}
+aside .depth2 li a {
+    position: relative;
+    display: block;
+    padding: 8px 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: #9cadb5;
+    text-align: left;
+    padding-left: 24px;
+    transition: all 0.2s;
+}
+aside .depth2 li a::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    margin-top: -2px;
+    background: #a4b2bb;
+    border-radius: 50%;
+}
+aside .depth2 li.active a,
+aside .depth2 li:hover a {
+    color: var(--mainTxt);
+    font-weight: 500;
+}
+aside .depth2 li.active a::before {
+    background: var(--blue);
+}
+aside .side-menu .menu-list .menu-item.active + .depth2 {
+    display: block;
+}
+
+/* filter */
+.filter {
+    position: relative;
+    width: 348px;
+    max-width: 0;
+    height: 100%;
+    padding: 0 0 100px;
+    background: var(--bgContent);
+    border-left: 1px solid var(--bgColor);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.03);
+    z-index: 11;
+    transform: translateX(100%);
+    transition: all 0.2s;
+    overflow: hidden;
+}
+
+.filter.open {
+    max-width: none;
+    padding: 0 14px 100px;
+    transform: translateX(0);
+    overflow: visible;
+}
+
+.filter .filter-tit {
+    padding: 42px 18px 22px;
+    font-size: 26px;
+    font-weight: 800;
+    border-bottom: 1px solid var(--lightGray);
+}
+.filter .filter-body {
+    position: relative;
+    height: 100%;
+    padding: 30px 18px 130px;
+    overflow: auto;
+}
+.filter .filter-foot {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    padding: 30px 40px;
+    justify-content: center;
+    align-items: center;
+    background: var(--bgContent);
+}
+.filter .filter-foot > * {
+    flex: 1;
+}
+
+/* content  */
+.content-wrap {
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    padding: 44px 56px;
+    background: var(--bgColor);
+    z-index: 10;
+}
+.content-tit {
+    margin-bottom: 48px;
+    font-size: 18px;
+    font-weight: 800;
+}
+.content-tit > * {
+    display: inline-block;
+}
+.content-tit > * + *::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    margin: -2px 14px 0 10px;
+    border: solid var(--mainTxt);
+    border-width: 2px 2px 0 0;
+    transform: rotate(45deg);
+}
+.content-item {
+    position: relative;
+}
+.content-item .item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+.content-item .item-head .item-tit {
+    font-size: 16px;
+    font-weight: 600;
+}
+.content-item .item-content {
+    padding: 16px;
+    background: var(--bgContent);
+    border-radius: 10px;
+}
