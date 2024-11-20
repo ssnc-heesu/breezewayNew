@@ -45,10 +45,12 @@
     --lightTxt: #666;
     --gray: #898989;
     --lightGray: #e8e8e8;
+
+    --overlay: rgba(0,0,0,0.4);
+    --lightShadow: rgba(0,0,0,0.04);
 }
 
 :root[color-theme='dark'] {
-    --blue: #5988ff;
     --bgColor: #222;
     --bgContent: #000;
     
@@ -56,6 +58,9 @@
     --lightTxt: #b9b9b9;
     --gray: #888;
     --lightGray: #444;
+    
+    --overlay: rgba(255,255,255,0.4);
+    --lightShadow: rgba(255,255,255,0.04);
 }
 
 /* common.css */
@@ -69,6 +74,62 @@ body {
     font-family:"Noto Sans CJK", sans-serif;
 }
 
+/* class style  */
+.small {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.85em;
+    color: var(--gray);
+}
+
+.row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+.row + .row,
+.row + .item-content {
+    margin-top: 20px;
+}
+.row > * {
+    margin: 0!important;
+}
+.col-12 {
+    width: 100%;
+}
+.col-11 {
+    width: 91.66666666666666%;
+}
+.col-10 {
+    width: 83.33333333333334%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-8 {
+    width: 66.66666666666666%;
+}
+.col-7 {
+    width: 58.333333333333336%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-5 {
+    width: 41.66666666666667%;
+}
+.col-4 {
+    width: 33.33333333333333%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-2 {
+    width: 16.666666666666664%;
+}
+.col-1 {
+    width: 8.333333333333332%;
+}
 
 /* main */
 .wrap {
@@ -97,7 +158,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4);
+    background: var(--overlay);
     z-index: 10;
 }
 
@@ -110,20 +171,40 @@ main {
     color: var(--gray);
     stroke: var(--gray);
     border-radius: 0 4px 4px 0;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.03);
+    box-shadow: 3px 3px 5px var(--lightShadow);
 }
+
 /* list  */
 .list-style01 li + li {
     margin-top: 30px;
 }
-.list-style01 .list-tit {
+.list-tit {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-size: 11px;
     font-weight: 500;
     color: #a8aaaf;
+    letter-spacing: -0.03em;
+}
+.list-info {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: -0.03em;
 }
 
+.list-style02 tr + tr th,
+.list-style02 tr + tr td {
+    padding-top: 24px;
+}
+.list-style02 th,
+.list-style02 td {
+    padding: 0 8px;
+}
+
+.list-style03 {
+
+}
 /* input  */
 input::placeholder,
 textarea::placeholder {
@@ -278,7 +359,7 @@ textarea:-ms-input-placeholder {
     margin-top: -3px;
     border-style: solid;
     border-width: 4px 3px 0px 3px;
-    border-color: var(--lightTxt)666 transparent transparent transparent;
+    border-color: var(--lightTxt) transparent transparent transparent;
     transition: all 0.1s;
 }
 .select.open .label::after {
@@ -290,18 +371,21 @@ textarea:-ms-input-placeholder {
 .select .option-list {
     position: absolute;
     top: 100%;
+    left: 0;
     display: none;
     min-width: 100%;
+    width: max-content;
     margin-top: 8px;
     border: 1px solid var(--lightGray);
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px var(--lightShadow);
     background: var(--bgContent);
     z-index: 10;
 }
 .select .option-list li {
-    padding: 10px;
+    padding: 12px 10px;
     border-bottom: 1px solid var(--lightGray); 
+    text-align: left;
 }
 .select .option-list li + li {
     margin-top: 0;
@@ -320,7 +404,7 @@ textarea:-ms-input-placeholder {
     letter-spacing: -0.02em;
 }
 .btn + .btn {
-    margin-left: 10px;
+    margin-left: 4px;
 }
 .btn-blue {
     background: var(--blue);
@@ -385,20 +469,38 @@ textarea:-ms-input-placeholder {
 
 /* table  */
 table {
+    position: relative;
     width: 100%;
+    text-align: left; 
+}
+.table-center,
+.table-center > * {
+    text-align: center;
 }
 .table-style01 th,
 .table-style01 td {
     padding: 12px 10px;
-    text-align: left; 
     font-size: 12px;
     border-bottom: 1px solid var(--lightGray);
 }
-.table-style01 th {
+.table-style01 thead th {
     padding-top: 0;
     font-weight: 600;
 }
+.table-style01 tbody tr:first-of-type th,
+.table-style01 tbody tr:first-of-type td {
+    padding-top: 0;
+}
+.table-style01 thead + tbody tr:first-of-type th,
+.table-style01 thead + tbody tr:first-of-type td {
+    padding-top: 12px;
+}
+.table-style01 tbody tr:last-of-type th,
 .table-style01 tbody tr:last-of-type td {
     padding-bottom: 0;
     border-bottom: 0;
+}
+form .table-style01 th {
+    font-weight: 500;
+    color: var(--lightTxt);
 }

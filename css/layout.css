@@ -52,7 +52,7 @@ aside nav .menu-name {
     background: var(--bgContent);
     border: 1px solid var(--lightGray);
     border-radius: 4px;
-    box-shadow: 0 0 13px rgba(0,0,0,0.06);
+    box-shadow: 0 0 13px var(--lightShadow);
     transform: translateY(-50%);
 }
 aside nav .menu-name::after{
@@ -294,6 +294,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
     left: 25px;
     color: var(--blue);
 }
+
 /* filter */
 .filter {
     position: relative;
@@ -303,7 +304,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
     padding: 0 0 100px;
     background: var(--bgContent);
     border-left: 1px solid var(--bgColor);
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.03);
+    box-shadow: 3px 3px 5px var(--lightShadow);
     z-index: 11;
     transform: translateX(-100%);
     transition: all 0.2s;
@@ -401,6 +402,55 @@ aside .mode .switch:checked ~ .mode-txt::after {
     border-radius: 10px;
 }
 
+/* function box  */
+.function-box {
+    position: absolute;
+    top: 30px;
+    right: 56px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+.function-box .select .label,
+.function-box > div {
+    position: relative;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    text-align: center;
+    border-radius: 50%;
+    background: var(--bgContent);
+    border: 0;
+}
+.function-box .select .label::after {
+    content: none;
+}
+.function-box svg {
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+}
+.function-box .alarm.new::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: 8px;
+    width: 4px;
+    height: 4px;
+    background: var(--blue);
+    border-radius: 50%;
+}
+.function-box .option-list {
+    left: auto;
+    right: 0;
+}
+.function-box .profile .option-list svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+    margin: -3px 5px 0 0;
+}
 /* dataTable */
 .table-head {
     display: flex;
@@ -413,7 +463,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
     display: inline-block;
 }
 .table-head .right > div + div {
-    margin-left: 10px;
+    margin-left: 4px;
 }
 .table-head .right > div > button.dt-button {
     position: relative;
@@ -447,7 +497,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
     border: 1px solid var(--lightGray);
     background: var(--bgContent);
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    box-shadow: 0 0 10px var(--lightShadow);
 }
 .table-head .right .dt-button-collection .dt-button {
     position: relative;
@@ -456,7 +506,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
     font-size: 11px;
     color: var(--lightTxt);
     text-align: left;
-    padding: 10px;
+    padding: 12px 10px;
     border-bottom: 1px solid var(--lightGray); 
 }
 .table-head .colvis-wrap .dt-button-collection .dt-button::before {
@@ -501,4 +551,25 @@ aside .mode .switch:checked ~ .mode-txt::after {
 }
 .table-head ~ * .table-style01 tbody tr:last-of-type td {
     padding-bottom: 12px;
+}
+
+.id-box .icon {
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 18px;
+    background: var(--bgColor);
+    text-align: center;
+    border-radius: 50%;
+}
+.id-box .icon svg {
+    width: 17px;
+    height: 17px;
+    margin-top: 8px;
+    color: var(--blue);
+    stroke: var(--blue);
+}
+.id-box .list-info {
+    font-size: 17px;
+    font-weight: 800;
 }

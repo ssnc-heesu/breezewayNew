@@ -26,7 +26,7 @@ blockquote:before, blockquote:after,
 q:before, q:after {	content: ''; content: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 input { vertical-align: middle; }
-button { border: 0; background: transparent; cursor: pointer; }
+button { border: 0; background: transparent; cursor: pointer; font-size: inherit; color: inherit; }
 a { text-decoration: none; color: inherit; cursor: pointer; }
 img,video { border: 0; outline: none; vertical-align: middle; max-width: 100%; }
 b,strong { font-weight: 700; }

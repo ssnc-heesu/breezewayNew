@@ -307,7 +307,7 @@
 
                         <div class="content-item">
                             <div class="item-head">
-                                <h3 class="item-tit">option table</h3>
+                                <h3 class="item-tit">dataTable option</h3>
                                 <div class="btn-box">
                                     <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
                                     <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
@@ -327,28 +327,28 @@
                                             <div class="dt-button-background" style=""></div>
                                             <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
                                                 <div role="menu">
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="1">
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="1" onclick="$(this).toggleClass('dt-button-active')">
                                                         <span>Application Number</span>
                                                     </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="2">
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="2" onclick="$(this).toggleClass('dt-button-active')">
                                                         <span>Name</span>
                                                     </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="3">
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="3" onclick="$(this).toggleClass('dt-button-active')">
                                                         <span>Company</span>
                                                     </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="4">
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="4" onclick="$(this).toggleClass('dt-button-active')">
                                                         <span>Department</span>
                                                     </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="5">
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="5" onclick="$(this).toggleClass('dt-button-active')">
                                                         <span>Requested Date</span>
                                                     </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="6">
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="6" onclick="$(this).toggleClass('dt-button-active')">
                                                         <span>Policy Expiration Date</span>
                                                     </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="7">
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="7" onclick="$(this).toggleClass('dt-button-active')">
                                                         <span>Application Type</span>
                                                     </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="8">
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="8" onclick="$(this).toggleClass('dt-button-active')">
                                                         <span>Application Status</span>
                                                     </button> 
                                                 </div>
@@ -398,11 +398,118 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="content-item">
+                            <div class="item-head">
+                                <h3 class="item-tit">col group, list style02</h3>
+                            </div>
+                            <div class="row">
+                                <div class="item-content col-2 id-box">
+                                    <span class="icon">
+                                        <i data-lucide="id-card"></i>
+                                    </span>
+                                    <div>
+                                        <label class="list-tit">룰 아이디</label>
+                                        <span class="list-info">R20241015155007003</span>
+                                    </div>
+                                </div>
+                                <div class="item-content col-10">
+                                    <table class="list-style02">
+                                        <colgroup>
+                                            <col style="width: 14%">
+                                            <col style="width: 23%">
+                                            <col style="width: 31%">
+                                            <col style="width: 32%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <span class="list-tit">룰 상태</span>
+                                                    <span class="list-info">REQUESTED</span>
+                                                </td>
+                                                <td>
+                                                    <span class="list-tit">방화벽 명</span>
+                                                    <span class="list-info">AhnLab1</span>
+                                                </td>
+                                                <td>
+                                                    <span class="list-tit">신청자 아이디</span>
+                                                    <span class="list-info">admin</span>
+                                                </td>
+                                                <td rowspan="2">
+                                                    <span class="list-tit">요청 내용</span>
+                                                    <span class="list-info">test example</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="list-tit">신청 유형</span>
+                                                    <span class="list-info">사후 결재</span>
+                                                </td>
+                                                <td>
+                                                    <span class="list-tit">신청 번호</span>
+                                                    <span class="list-info">FIQ20241015154858752</span>
+                                                </td>
+                                                <td>
+                                                    <span class="list-tit">요청일/만료일</span>
+                                                    <span class="list-info">2024-10-15 15:48:58 / 9999-12-31</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <form>
+                                    <table class="table-style01">
+                                        <colgroup>
+                                            <col style="width: 30%">
+                                            <col style="width: 70%">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>Firewall Name</th>
+                                                <td><input type="text" class="input-style01 input-block"></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Firewall Name</th>
+                                                <td><input type="text" class="input-style01 input-block"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="function-box">
+                    <div class="lanuge">
+                        <div class="select" data-value="">
+                            <span class="label"><i data-lucide="globe"></i></span>
+                            <ul class="option-list">
+                                <li class="option" data-value="en">English</li>
+                                <li class="option" data-value="es">Español </li>                                
+                                <li class="option" data-value="ko">한국어</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 새로운 알람 있을경우 new 클래스가 붙음  -->
+                    <div class="alarm new">
+                        <a href="#"><i data-lucide="bell"></i></a>
+                    </div>
+                    <div class="profile">
+                        <div class="select" data-value="">
+                            <span class="label"><img src="img/img_profile.png" alt="profile img" width="30" style="margin-top:4px"/></span>
+                            <ul class="option-list">
+                                <li class="option">Joshua Mclnerney <span class="small">Joshua@ssnc.co.kr</span></li>
+                                <li class="option">
+                                    <button type="button"><i data-lucide="log-out"></i>logout</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="function-box">
-                <!-- 프로필, 알림, 언어셀렉트 들어갈예정 -->
             </div>
         </main>
     </div>
