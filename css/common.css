@@ -42,17 +42,20 @@
     --bgContent: #fff;
     
     --mainTxt: #222;
+    --lightTxt: #666;
     --gray: #898989;
     --lightGray: #e8e8e8;
 }
 
 :root[color-theme='dark'] {
+    --blue: #5988ff;
     --bgColor: #222;
     --bgContent: #000;
     
     --mainTxt: #eaeaea;
+    --lightTxt: #b9b9b9;
     --gray: #888;
-    --lightGray: #111111;
+    --lightGray: #444;
 }
 
 /* common.css */
@@ -124,22 +127,22 @@ main {
 /* input  */
 input::placeholder,
 textarea::placeholder {
-    color: #acacac;
+    color: var(--gray);
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-    color: #acacac;
+    color: var(--gray);
 }
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
-    color: #acacac;
+    color: var(--gray);
 }
 .input-style01 {
     display: inline-block;
     height: 30px;
     padding: 12px;
     font-size: 11px;
-    color: #666;
+    color: var(--lightTxt);
     background: var(--bgContent);
     border: 1px solid var(--lightGray);
     border-radius: 4px;
@@ -160,7 +163,7 @@ textarea:-ms-input-placeholder {
     position: relative;
     padding-left: 20px;
     font-size: 12px;
-    color: #666;
+    color: var(--lightTxt);
     cursor: pointer;
 }
 .checkbox + label::before,
@@ -233,7 +236,7 @@ textarea:-ms-input-placeholder {
     left: 3px;
     width: 20px;
     height: 20px;
-    background: #666;
+    background: var(--lightTxt);
     border-radius: 50%;
     transition: all 0.2s;
 }
@@ -250,7 +253,7 @@ textarea:-ms-input-placeholder {
     position: relative;
     cursor: pointer;
     font-size: 12px;
-    color: #666;
+    color: var(--lightTxt);
     z-index: 1;
 }
 .select .label {
@@ -260,7 +263,7 @@ textarea:-ms-input-placeholder {
     height: 30px;
     padding: 7px 28px 7px 12px;
     font-size: 11px;
-    color: #666;
+    color: var(--lightTxt);
     background: var(--bgContent);
     border: 1px solid var(--lightGray);
     border-radius: 4px;
@@ -275,7 +278,7 @@ textarea:-ms-input-placeholder {
     margin-top: -3px;
     border-style: solid;
     border-width: 4px 3px 0px 3px;
-    border-color: #666666 transparent transparent transparent;
+    border-color: var(--lightTxt)666 transparent transparent transparent;
     transition: all 0.1s;
 }
 .select.open .label::after {
@@ -340,7 +343,7 @@ textarea:-ms-input-placeholder {
 .btn-line-gray {
     background: var(--bgContent);
     border: 1px solid var(--lightGray);
-    color: #666;
+    color: var(--lightTxt);
 }
 .btn-line-gray svg {
     display: inline-block;
@@ -348,12 +351,13 @@ textarea:-ms-input-placeholder {
     width: 12px;
     height: 12px;
     margin: -2px 4px 0 0;
-    stroke: #666;
-    color: #666;
+    stroke: var(--lightTxt);
+    color: var(--lightTxt);
 }
 .btn-line-gray:hover {
     color: var(--blue);
     border-color: var(--blue);
+    background: #fff;
 }
 .btn-line-gray:hover svg {
     stroke: var(--blue);

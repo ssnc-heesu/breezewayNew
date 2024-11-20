@@ -320,12 +320,12 @@
                                     </div>
                                     <div class="right">
                                         <div class="colvis-wrap">
-                                            <button class="dt-button buttons-collection buttons-colvis" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true">
+                                            <button class="dt-button buttons-collection buttons-colvis" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
                                                 <span>Toggle</span>
                                                 <span class="dt-button-down-arrow">▼</span>
                                             </button>
                                             <div class="dt-button-background" style=""></div>
-                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="margin-top: -10.5px;">
+                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
                                                 <div role="menu">
                                                     <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="1">
                                                         <span>Application Number</span>
@@ -356,12 +356,12 @@
                                         </div>
 
                                         <div class="length-wrap">
-                                            <button class="dt-button buttons-collection buttons-page-length" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true">
+                                            <button class="dt-button buttons-collection buttons-page-length" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
                                                 <span>Length</span>
                                                 <span class="dt-button-down-arrow">▼</span>
                                             </button>
                                             <div class="dt-button-background" style=""></div>
-                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="margin-top: -10.5px;">
+                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
                                                 <div role="menu">
                                                     <button class="dt-button button-page-length dt-button-active" tabindex="0" aria-controls="resultTable" type="button">
                                                         <span>10</span>

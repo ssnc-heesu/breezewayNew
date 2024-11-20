@@ -258,13 +258,15 @@ aside .mode svg {
     left: 8px;
     width: 11px;
     height: 11px;
-    color: #fff;
-    stroke: #fff;
+    color: #222;
+    stroke: #222;
     z-index: 1;
     transition: all 0.2s;
 }
 aside .mode svg.light {
     left: 34px;
+    color: #fff;
+    stroke: #fff;
 }
 aside .mode .switch:checked ~ label .dark,
 aside .mode .switch ~ label .light {
@@ -277,14 +279,20 @@ aside .mode .switch ~ label .dark {
 aside .mode .mode-txt {
     display: block;
     margin-top: 3px;
-    font-size: 9px;
-    color: var(--mainTxt);
+
 }
 aside .mode .mode-txt::after {
     content: 'Dark';
+    position: absolute;
+    top: 9px;
+    left: 46px;
+    font-size: 8px;
+    color: var(--mainTxt);
 }
 aside .mode .switch:checked ~ .mode-txt::after {
     content: 'Light';
+    left: 25px;
+    color: var(--blue);
 }
 /* filter */
 .filter {
@@ -416,8 +424,8 @@ aside .mode .switch:checked ~ .mode-txt::after {
     font-size: 12px;
     font-weight: 200;
     background: var(--bgContent);
-    border: 1px solid #e8e8e8;
-    color: #666;
+    border: 1px solid var(--lightGray);
+    color: var(--lightTxt);
     border-radius: 4px;
     text-align: center;
     transition: all 0.2s;
@@ -446,7 +454,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
     display: block;
     width: 100%;
     font-size: 11px;
-    color: #666;
+    color: var(--lightTxt);
     text-align: left;
     padding: 10px;
     border-bottom: 1px solid var(--lightGray); 
