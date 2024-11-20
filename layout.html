@@ -171,6 +171,18 @@
             <div class="overlay" data-name="sideMenu"></div>
             <!-- 메뉴 오픈 End-->
 
+            <!-- mode switch  -->
+            <div class="mode">
+                <input type="checkbox" id="mode" class="switch" checked>
+                <label for="mode">
+                    <i data-lucide="sun" class="light"></i>
+                    <i data-lucide="moon" class="dark"></i>
+                </label> 
+
+
+                <span class="mode-txt"></span>
+            </div>
+
         </aside>
         <main>
             <div class="filter open" id="filterBox">
@@ -209,6 +221,36 @@
                                     <li class="option" data-value="selectOPtion32">select option32</li>
                                     <li class="option" data-value="selectOPtion42">select option42</li>
                                 </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="list-tit">checkbox</label>
+                            <div>
+                                <input type="checkbox" id="checkbox1" class="checkbox">
+                                <label for="checkbox1">Permanent</label>
+
+                                <input type="checkbox" id="checkbox2" class="checkbox">
+                                <label for="checkbox2">Permanent</label>
+
+                                <!-- 체크박스만 사용할 경우 -->
+                                <input type="checkbox">
+                            </div>
+                        </li>
+                        <li>
+                            <label class="list-tit">radio</label>
+                            <div>
+                                <input type="radio" id="radio1" class="radio" name="radio">
+                                <label for="radio1">Allow</label>
+    
+                                <input type="radio" id="radio2" class="radio" name="radio">
+                                <label for="radio2">Deny</label>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="list-tit">switch toggle</label>
+                            <div>
+                                <input type="checkbox" id="switch" class="switch">
+                                <label for="switch"></label>
                             </div>
                         </li>
                     </ul>

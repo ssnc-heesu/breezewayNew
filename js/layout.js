@@ -15,6 +15,15 @@ $(document).ready(function() {
     // icon lucide
     lucide.createIcons();
 
+    // 모드 변경
+    $('#mode').on('change', function() {
+        if ($(this).is(':checked')) {
+            $('html').attr('color-theme', 'light');
+        } else {
+            $('html').attr('color-theme', 'dark');
+        }
+    });
+
     // overlay 클릭시 data-name과 동일한 id의 요소를 close
     $('.overlay,.side-close').on('click',function(){
         let thisName = $(this).attr('data-name');
@@ -69,13 +78,6 @@ $(document).ready(function() {
     });
 
     // filter button 
-
-    if (!$('#filterBox').hasClass('open')) {
-        $('.btn-filter').removeClass('active'); // open 클래스가 없으면 active 제거
-    } else {
-        $('.btn-filter').addClass('active'); // open 클래스가 있으면 active 추가
-    }
-    
     $('.btn-filter').on('click',function(){
         $(this).toggleClass('active');
         $('#filterBox').toggleClass('open');
