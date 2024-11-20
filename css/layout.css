@@ -461,6 +461,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
 .table-head .right > div {
     position: relative;
     display: inline-block;
+    z-index: 10;
 }
 .table-head .right > div + div {
     margin-left: 4px;

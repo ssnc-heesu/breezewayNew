@@ -386,6 +386,10 @@ textarea:-ms-input-placeholder {
     padding: 12px 10px;
     border-bottom: 1px solid var(--lightGray); 
     text-align: left;
+    transition: all 0.2s;
+}
+.select .option-list li:hover {
+    background: var(--lightGray);
 }
 .select .option-list li + li {
     margin-top: 0;
@@ -482,6 +486,7 @@ table {
     padding: 12px 10px;
     font-size: 12px;
     border-bottom: 1px solid var(--lightGray);
+    transition: all 0.2s;
 }
 .table-style01 thead th {
     padding-top: 0;
