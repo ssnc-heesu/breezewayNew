@@ -58,8 +58,8 @@
     --lightTxt: #b9b9b9;
     --gray: #888;
     --lightGray: #444;
-    
-    --overlay: rgba(255,255,255,0.4);
+
+    --overlay: rgba(0,0,0,0.7);
     --lightShadow: rgba(255,255,255,0.04);
 }
 
@@ -256,7 +256,7 @@ textarea:-ms-input-placeholder {
     width: 14px;
     height: 14px;
     border: 1px solid #949597;
-    background: var(--bgContent);
+    background: #fff;
     border-radius: 2px;
     transform: translateY(-50%);
 }

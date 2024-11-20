@@ -552,6 +552,11 @@ aside .mode .switch:checked ~ .mode-txt::after {
 .table-head ~ * .table-style01 tbody tr:last-of-type td {
     padding-bottom: 12px;
 }
+#resultTable_info {
+    margin-top: 8px;
+    font-size: 10px;
+    color: var(--gray);
+}
 
 .id-box .icon {
     display: block;
