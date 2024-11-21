@@ -295,6 +295,15 @@ aside .mode .switch:checked ~ .mode-txt::after {
     color: var(--blue);
 }
 
+.footer {
+    position: absolute;
+    right: 56px;
+    bottom: 44px;
+    font-size: 10px;
+    color: #ababab;
+    font-weight: 200;
+    text-align: right;
+}
 /* filter */
 .filter {
     position: relative;

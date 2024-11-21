@@ -36,9 +36,11 @@
 
 :root {
     --blue: #2c67ff;
-    --red: #e90101;
+
 }
 :root[color-theme='light'] {
+    --red: #e90101;
+    
     --bgColor: #f3f6ff;
     --bgContent: #fff;
     
@@ -53,6 +55,8 @@
 }
 
 :root[color-theme='dark'] {
+    --red: #ff3838; 
+
     --bgColor: #161618;
     --bgContent: #202127;
     
@@ -186,7 +190,7 @@ main {
 }
 .content {
     position: relative;
-    padding: 44px 56px;
+    padding: 44px 56px 88px 56px;
 }
 .overlay{
     display: none;
