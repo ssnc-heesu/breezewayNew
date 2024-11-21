@@ -603,6 +603,7 @@ form .table-style01 th {
     animation: fadeRight 0.3s forwards;
 }
 
+/* keyframes  */
 @keyframes fadeRight {
     0% {
         opacity: 0;
