@@ -565,14 +565,12 @@ form .table-style01 th {
     position: absolute;
     top: 10px;
     right: 0;
-    
 }
 .modal-content .modal-body {
     padding: 18px 0;
     flex: 1;
     overflow: auto;
 }
-
 .modal-content .modal-foot {
     padding: 14px 20px 0 20px;
     margin: 0 -20px;
@@ -593,6 +591,32 @@ form .table-style01 th {
     height: 660px;
 }
 
+.modal-right {
+    top: 0;
+    left: auto;
+    right: -100%;;
+    width: 520px;
+    height: 100%;
+    max-height: none;
+    border-radius: 0;
+    transform: none;
+    animation: fadeRight 0.3s forwards;
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        right: -100%;
+    }
+    20% {
+        opacity: 0.2;
+        right: -80%;
+    }
+    100% {
+        opacity: 1;
+        right: 0%;
+    }
+}
 @keyframes fadeUp {
     0% {
         opacity: 0;
