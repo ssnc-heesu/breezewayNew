@@ -60,7 +60,7 @@
     --lightTxt: #a3a3a3;
     --gray: #7c7c7c;
     --lightGray: #444;
-    --whiteGray: #f9f9fb;
+    --whiteGray: #111;
 
     --overlay: rgba(0,0,0,0.7);
     --lightShadow: rgba(255,255,255,0.04);
@@ -649,6 +649,24 @@ table {
 form .table-style01 th {
     font-weight: 500;
     color: var(--lightTxt);
+}
+table .empty {
+    text-align: center;
+    padding: 40px 0!important;
+    font-size: 12px;
+    font-weight: 200;
+    line-height: 1.3;
+    color: var(--gray);
+    background: var(--whiteGray);
+    opacity: 0.8;
+}
+table .empty svg {
+    display: block;
+    margin:0 auto 14px;
+    width: 34px;
+    height: 34px;
+    color: var(--gray);
+    stroke: var(--gray);
 }
 
 /* modal  */
