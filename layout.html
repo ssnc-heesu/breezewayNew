@@ -237,20 +237,29 @@
                             </div>
                         </li>
                         <li>
-                            <label class="list-tit">radio</label>
+                            <label class="list-tit">radio,switch</label>
                             <div>
                                 <input type="radio" id="radio1" class="radio" name="radio">
                                 <label for="radio1">Allow</label>
     
                                 <input type="radio" id="radio2" class="radio" name="radio">
                                 <label for="radio2">Deny</label>
+
+                                <input type="checkbox" id="switch" class="switch">
+                                <label for="switch"></label>
                             </div>
                         </li>
                         <li>
-                            <label class="list-tit">switch toggle</label>
+                            <label class="list-tit">file</label>
                             <div>
-                                <input type="checkbox" id="switch" class="switch">
-                                <label for="switch"></label>
+                                <div class="file-wrap">
+                                    <label for="file"><i data-lucide="paperclip"></i></label> 
+                                    <input class="upload-name" value="첨부파일" placeholder="첨부파일" readonly>
+                                    <input type="file" id="file" hidden>
+                                    <button type="button" class="btn-delete"><i data-lucide="trash-2"></i></button>
+                                </div>
+                               
+ 
                             </div>
                         </li>
                     </ul>
@@ -535,7 +544,12 @@
                     <button type="button" class="modal-close" data-name="modalSM"><i data-lucide="x"></i></button>
                 </div>
                 <div class="modal-body">
-                    모달바디
+                    <div class="file-wrap large">
+                        <label for="fileLarge" class="btn btn-sm btn-line-gray">Browse File</label> 
+                        <span class="file-guide"><i data-lucide="upload"></i>Choose a file or drag & drop it here.</span>
+                        <input class="upload-name" value="첨부파일" placeholder="첨부파일" readonly>
+                        <input type="file" id="fileLarge" hidden>
+                    </div>
                 </div>
                 <div class="modal-foot">
                     <button type="button" class="btn btn-line-blue btn-md">Reset</button>

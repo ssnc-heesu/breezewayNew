@@ -83,6 +83,45 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         $('#filterBox').toggleClass('open');
     });
+
+    $('.file-wrap').each(function () {
+        const fileWrap = $(this);
+        const fileInput = fileWrap.find('input[type="file"]');
+        const uploadName = fileWrap.find('.upload-name');
+        const btnDelete = fileWrap.find('.btn-delete');
+
+        fileInput.on('change', function () {
+            const fileName = this.files[0]?.name || '첨부파일';
+            uploadName.val(fileName);
+        });
+
+        uploadName.on('dragover', function (e) {
+            e.preventDefault();
+            fileWrap.addClass('drageover')
+        });
+
+        uploadName.on('dragleave drop', function (e) {
+            e.preventDefault();
+            fileWrap.removeClass('drageover')
+            if (e.type === 'drop') {
+                const files = e.originalEvent.dataTransfer.files;
+                if (files.length > 0) {
+                    fileInput.prop('files', files);
+                    console.log(files[0])
+                    uploadName.val(files[0].name);
+                }
+            }
+        });
+
+        btnDelete.on('click', function () {
+            fileInput.val('');
+            uploadName.val('첨부파일');
+        });
+
+        uploadName.on('click', function () {
+            fileInput.click(); 
+        });
+    });
 });
 
 // custom select 

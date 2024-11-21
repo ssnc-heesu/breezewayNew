@@ -45,19 +45,21 @@
     --lightTxt: #666;
     --gray: #898989;
     --lightGray: #e8e8e8;
+    --whiteGray: #f9f9fb;
 
     --overlay: rgba(0,0,0,0.4);
     --lightShadow: rgba(0,0,0,0.04);
 }
 
 :root[color-theme='dark'] {
-    --bgColor: #000;
-    --bgContent: #222;
+    --bgColor: #161618;
+    --bgContent: #202127;
     
-    --mainTxt: #eaeaea;
-    --lightTxt: #b9b9b9;
-    --gray: #888;
+    --mainTxt: #dbdbdb;
+    --lightTxt: #a3a3a3;
+    --gray: #7c7c7c;
     --lightGray: #444;
+    --whiteGray: #f9f9fb;
 
     --overlay: rgba(0,0,0,0.7);
     --lightShadow: rgba(255,255,255,0.04);
@@ -237,7 +239,7 @@ textarea:-ms-input-placeholder {
     width: 100%;
 }
 
-/* checkbox,radio */
+/* checkbox,radio,switch */
 .checkbox, .radio, .switch {
     -webkit-appearance: none; 
     -moz-appearance: none; 
@@ -332,7 +334,110 @@ textarea:-ms-input-placeholder {
     left: 29px;
     background: var(--blue);
 }
+/* file  */
+.file-wrap {
+    position: relative;
+    display: flex;
+    height: 36px;
+    background: var(--bgContent);
+    border: 1px solid var(--lightGray);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+.file-wrap.drageover {
+    border: 1px dashed var(--blue);
+    background: var(--bgColor);
+}
+.file-wrap.drageover label {
+    background: var(--blue);
+}
+.file-wrap.drageover .upload-name {
+    color: var(--blue);
+}
+.file-wrap.drageover label svg {
+    color: #fff;
+    stroke: #fff
+}
+.file-wrap .upload-name {
+    padding: 0 10px;
+    color: var(--lightTxt);
+    cursor: pointer;
+}
+.file-wrap label {
+    width: 40px;
+    text-align: center;
+    background-color: var(--lightGray);
+    cursor: pointer;
+}
+.file-wrap label svg {
+    width: 14px;
+    height: 14px;
+    margin-top: 9px;
+    color: var(--lightTxt);
+    stroke: var(--lightTxt);
+}
+.file-wrap input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+.file-wrap .btn-delete {
+    width: 40px;
+    border-left: 1px solid var(--lightGray);
+}
+.file-wrap .btn-delete svg {
+    width: 15px;
+    height: 15px;
+    color: var(--lightTxt);
+    stroke: var(--lightTxt);
+}
 
+.file-wrap.large {
+    display: block;
+    width: 100%;
+    height: 140px;
+    background: var(--whiteGray);
+    border-style: dashed;
+}
+.file-wrap.large.drageover {
+    background: var(--bgColor);
+}
+.file-wrap.large label {
+    position: absolute;
+    left: 50%;
+    bottom: 26px;
+    display: inline-block;
+    width: auto;
+    transform: translateX(-50%);
+    background: var(--bgContent);
+    z-index: 10;
+}
+.file-wrap.large .file-guide {
+    display: block;
+    text-align: center;
+    color: var(--mainTxt);
+    font-size: 11px;
+}
+.file-wrap.large .file-guide svg {
+    display: block;
+    margin: 20px auto 12px;
+    width: 14px;
+    height: 14px;
+}
+.file-wrap.large .upload-name {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    font-size: 11px;
+    text-align: center ;
+    color: var(--lightTxt);
+}
 /* select  */
 .select {
     position: relative;
@@ -559,6 +664,7 @@ form .table-style01 th {
     margin-top: 8px;
     font-size: 10px;
     font-weight: 200;
+    line-height: 1.2;
     color: var(--gray)
 }
 .modal-content .modal-head .modal-close {
