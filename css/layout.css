@@ -114,7 +114,7 @@ aside .side-menu {
     height: 100%;
     padding: 35px 0 20px;
     background: var(--bgContent);
-    z-index: 11;
+    z-index: 100;
     transform: translateX(-120%);
     transition: all 0.2s;
 }
@@ -357,7 +357,6 @@ aside .mode .switch:checked ~ .mode-txt::after {
     position: relative;
     flex: 1;
     overflow: auto;
-    padding: 44px 56px;
     background: var(--bgColor);
     z-index: 10;
 }
@@ -405,7 +404,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
 /* function box  */
 .function-box {
     position: absolute;
-    top: 30px;
+    top: 34px;
     right: 56px;
     display: flex;
     gap: 10px;

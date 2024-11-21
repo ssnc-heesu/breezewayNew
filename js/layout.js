@@ -24,16 +24,17 @@ $(document).ready(function() {
         }
     });
 
-    // overlay 클릭시 data-name과 동일한 id의 요소를 close
-    $('.overlay,.side-close').on('click',function(){
+    // modal 
+    $('.modal-open').on('click',function(){
+        let thisName = $(this).attr('data-name');
+        $('#'+thisName).addClass('open');
+        $('#'+thisName).children('.overlay').show();
+    });
+
+    // overlay,close버튼들 클릭 시 data-name과 동일한 id의 요소를 close
+    $('.overlay, .side-close, .modal-close').on('click',function(){
         let thisName = $(this).attr('data-name');
         $('#' + thisName).removeClass('open');
-
-        console.log(this)
-
-        if (!$(this).hasClass('side-close')) {
-            $(this).hide();
-        }
     });
 
     $('.menu-item').on('click',function(){

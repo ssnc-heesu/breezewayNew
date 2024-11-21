@@ -51,8 +51,8 @@
 }
 
 :root[color-theme='dark'] {
-    --bgColor: #222;
-    --bgContent: #000;
+    --bgColor: #000;
+    --bgContent: #222;
     
     --mainTxt: #eaeaea;
     --lightTxt: #b9b9b9;
@@ -150,6 +150,10 @@ main {
     height: 100%;
     min-width: 800px;
     overflow: auto;
+}
+.content {
+    position: relative;
+    padding: 44px 56px;
 }
 .overlay{
     display: none;
@@ -406,6 +410,7 @@ textarea:-ms-input-placeholder {
     text-align: center;
     transition: all 0.2s;
     letter-spacing: -0.02em;
+    cursor: pointer;
 }
 .btn + .btn {
     margin-left: 4px;
@@ -508,4 +513,97 @@ table {
 form .table-style01 th {
     font-weight: 500;
     color: var(--lightTxt);
+}
+
+/* modal  */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.modal.open,
+.modal.open .overlay {
+    display: block;
+}
+.modal-content {
+    position: absolute;
+    top: 300%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 70%;
+    max-height: 70%;
+    padding: 14px 20px;
+    background: var(--bgContent);
+    border-radius: 15px;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 0 10px var(--lightShadow);
+    opacity: 0;
+    z-index: 100;
+    animation: fadeUp 0.2s forwards;
+}
+.modal-content .modal-head {
+    position: relative;
+    padding: 14px 20px 0 0;
+}
+.modal-content .modal-head .modal-tit {
+    font-size: 16px;
+    font-weight: 600;
+}
+.modal-content .modal-head .modal-tit + p {
+    margin-top: 8px;
+    font-size: 10px;
+    font-weight: 200;
+    color: var(--gray)
+}
+.modal-content .modal-head .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    
+}
+.modal-content .modal-body {
+    padding: 18px 0;
+    flex: 1;
+    overflow: auto;
+}
+
+.modal-content .modal-foot {
+    padding: 14px 20px 0 20px;
+    margin: 0 -20px;
+    text-align: right;
+    border-top: 1px solid var(--lightGray)
+}
+
+.modal-sm {
+    width: 410px;
+    height: 320px;
+}
+.modal-md {
+    width: 580px;
+    height: 530px;
+}
+.modal-lg {
+    width: 900px;
+    height: 660px;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        top: 300%;
+    }
+    20% {
+        opacity: 0.2;
+        top: 100%;
+    }
+    100% {
+        opacity: 1;
+        top: 50%;
+    }
 }

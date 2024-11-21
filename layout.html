@@ -481,38 +481,104 @@
                             </div>
                         </div>
 
+                        <div class="content-item">
+                            <div class="item-head">
+                                <h3 class="item-tit">모달</h3>
+                            </div>
+                            <div class="item-content">
+                                <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalSM">modal-sm</button>
+                                <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalMD">modal-md</button>
+                                <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalLG">modal-lg</button>
+                                <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalRight">modal-right</button>
+                            </div>
+                        </div>
+
+                        <div class="function-box">
+                            <div class="lanuge">
+                                <div class="select" data-value="">
+                                    <span class="label"><i data-lucide="globe"></i></span>
+                                    <ul class="option-list">
+                                        <li class="option" data-value="en">English</li>
+                                        <li class="option" data-value="es">Español </li>                                
+                                        <li class="option" data-value="ko">한국어</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 새로운 알람 있을경우 new 클래스가 붙음  -->
+                            <div class="alarm new">
+                                <a href="#"><i data-lucide="bell"></i></a>
+                            </div>
+                            <div class="profile">
+                                <div class="select" data-value="">
+                                    <span class="label"><img src="img/img_profile.png" alt="profile img" width="30" style="margin-top:4px"/></span>
+                                    <ul class="option-list">
+                                        <li class="option">Joshua Mclnerney <span class="small">Joshua@ssnc.co.kr</span></li>
+                                        <li class="option">
+                                            <button type="button"><i data-lucide="log-out"></i>logout</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
-                <div class="function-box">
-                    <div class="lanuge">
-                        <div class="select" data-value="">
-                            <span class="label"><i data-lucide="globe"></i></span>
-                            <ul class="option-list">
-                                <li class="option" data-value="en">English</li>
-                                <li class="option" data-value="es">Español </li>                                
-                                <li class="option" data-value="ko">한국어</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- 새로운 알람 있을경우 new 클래스가 붙음  -->
-                    <div class="alarm new">
-                        <a href="#"><i data-lucide="bell"></i></a>
-                    </div>
-                    <div class="profile">
-                        <div class="select" data-value="">
-                            <span class="label"><img src="img/img_profile.png" alt="profile img" width="30" style="margin-top:4px"/></span>
-                            <ul class="option-list">
-                                <li class="option">Joshua Mclnerney <span class="small">Joshua@ssnc.co.kr</span></li>
-                                <li class="option">
-                                    <button type="button"><i data-lucide="log-out"></i>logout</button>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
             </div>
         </main>
+
+        <div class="modal" id="modalSM">
+            <div class="modal-content modal-sm">
+                <div class="modal-head">
+                    <h3 class="modal-tit">Modal Title</h3>
+                    <p>Information about the modal title. It doesn't matter if the length is longer. It continues to increase.</p>
+                    <button type="button" class="modal-close" data-name="modalSM"><i data-lucide="x"></i></button>
+                </div>
+                <div class="modal-body">
+                    모달바디
+                </div>
+                <div class="modal-foot">
+                    <button type="button" class="btn btn-line-blue btn-md">Reset</button>
+                    <input type="button" class="btn btn-blue btn-md" value="Create">
+                </div>
+            </div>
+            <div class="overlay" data-name="modalSM"></div>
+        </div>
+
+        <div class="modal" id="modalMD">
+            <div class="modal-content modal-md">
+                <div class="modal-head">
+                    <h3 class="modal-tit">Modal Title</h3>
+                    <p>Information about the modal title. It doesn't matter if the length is longer. It continues to increase.</p>
+                    <button type="button" class="modal-close" data-name="modalMD"><i data-lucide="x"></i></button>
+                </div>
+                <div class="modal-body">
+                    모달바디
+                </div>
+                <div class="modal-foot">
+                    <button type="button" class="btn btn-line-blue btn-md">Reset</button>
+                    <input type="button" class="btn btn-blue btn-md" value="Create">
+                </div>
+            </div>
+            <div class="overlay" data-name="modalMD"></div>
+        </div>
+
+        <div class="modal" id="modalLG">
+            <div class="modal-content modal-lg">
+                <div class="modal-head">
+                    <h3 class="modal-tit">Modal Title</h3>
+                    <p>Information about the modal title. It doesn't matter if the length is longer. It continues to increase.</p>
+                    <button type="button" class="modal-close" data-name="modalLG"><i data-lucide="x"></i></button>
+                </div>
+                <div class="modal-body">
+                    모달바디
+                </div>
+                <div class="modal-foot">
+                    <button type="button" class="btn btn-line-blue btn-md">Reset</button>
+                    <input type="button" class="btn btn-blue btn-md" value="Create">
+                </div>
+            </div>
+            <div class="overlay" data-name="modalLG"></div>
+        </div>
     </div>
 </body>
 </html>
