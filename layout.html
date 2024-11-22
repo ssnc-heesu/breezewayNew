@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Breezeway FireONE layout</title>
 
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/common.css" rel="stylesheet" />
     <link href="css/layout.css" rel="stylesheet" />
 
     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="js/layout.js"></script>
 </head>
@@ -192,6 +194,25 @@
                 <div class="filter-body">
                     <ul class="list-style01">
                         <li>
+                            <label class="list-tit">date picker</label>
+                            <input type="text" id="datepicker" class="input-style01">
+                        </li>
+                        <li>
+                            <label class="list-tit" for="time">time</label>
+                            <div class="time-wrap">
+                                <input type="text" value="00" id="hour">
+                                <input type="text" value="00" id="minute">
+                                <input type="text" value="00" id="second">
+                                
+                                <div class="time-option">
+                                    <div class="hour"></div>
+                                    <div class="minute"></div>
+                                    <div class="second"></div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
                             <label class="list-tit" for="applicationStatus">Application Status</label>
                             <input type="text" class="input-style01 input-block" id="applicationStatus" placeholder="Application Status">
                         </li>
@@ -292,7 +313,11 @@
                                 <div class="tab-content active" id="tab01">
                                     <div class="table-head">
                                         <div class="left">left</div>
-                                        <div class="right">right</div>
+                                        <div class="right">
+                                            <div class="input-wrap">
+
+                                            </div>
+                                        </div>
                                     </div>
                                     <table class="table-style01">
                                         <colgroup>
@@ -567,12 +592,12 @@
                                         </colgroup>
                                         <tbody>
                                             <tr>
-                                                <th>Firewall Name</th>
-                                                <td><input type="text" class="input-style01 input-block"></td>
+                                                <th><label for="input01">Firewall Name</label></th>
+                                                <td><input type="text" class="input-style01 input-block" id="input01"></td>
                                             </tr>
                                             <tr>
-                                                <th>Firewall Name</th>
-                                                <td><input type="text" class="input-style01 input-block"></td>
+                                                <th><label for="input02">Firewall Name</label></th>
+                                                <td><input type="text" class="input-style01 input-block" id="input02"></td>
                                             </tr>
                                         </tbody>
                                     </table>

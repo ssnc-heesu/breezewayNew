@@ -8,10 +8,28 @@ function activeBallPosition(){
     $('aside nav .active-ball').css('top', activeBallTop + "px");
 } 
 
+// 옵션 추가 함수
+function populateOptions(selectClass, range) {
+    const $optionList = $(`.${selectClass} .option-list`);
+    for (let i = 0; i < range; i++) {
+        const li = $('<li>', {
+            class: 'option',
+            'data-value': i,
+            text: i.toString().padStart(2, '0'),
+        });
+        $optionList.append(li);
+    }
+}
+
 $(document).ready(function() {
 
     activeBallPosition();
 
+    // datepicker 
+    $( "#datepicker" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+    });
     // icon lucide
     lucide.createIcons();
 
@@ -97,6 +115,11 @@ $(document).ready(function() {
         $(this).parents('.select').attr('data-value',selectValue);
         $(this).parents('.option-list').slideUp(50);
     });
+
+    // time picker 
+    populateOptions('hours', 24);
+    populateOptions('minutes', 60);
+    populateOptions('seconds', 60);
 
     // filter button 
     $('.btn-filter').on('click',function(){

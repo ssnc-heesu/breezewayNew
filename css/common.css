@@ -149,15 +149,15 @@ body {
     background: var(--whiteGray);
 }
 .guide-box::before {
-    content: '!';
+    content: 'i';
     position: absolute;
     top: 14px;
     left: 12px;
     width: 13px;
     height: 13px;
     padding-left: 1px;
-    font-size: 8px;
-    font-weight: 600;
+    font-size: 9px;
+    font-weight: 400;
     line-height: 11px;
     text-align: center;
     border: 1px solid var(--gray);
@@ -536,6 +536,8 @@ textarea:-ms-input-placeholder {
 .select .option-list li:last-of-type {
     border-bottom: 0;
 }
+
+/* time  */
 
 /* button */
 .btn {
