@@ -686,7 +686,7 @@ table .empty svg {
 }
 
 .tab-style01 .item.active {
-    font-weight: 400;
+    font-weight: 500;
     color: var(--mainTxt);
 }
 .tab-style01 .active-ball {
