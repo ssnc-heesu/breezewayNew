@@ -112,14 +112,14 @@ aside .side-menu {
     left: 0;
     width: 256px;
     height: 100%;
-    padding: 35px 0 20px;
+    padding: 24px 0 20px;
     background: var(--bgContent);
     z-index: 100;
     transform: translateX(-120%);
     transition: all 0.2s;
 }
 aside .side-menu .menu-list {
-    margin-top: 38px;
+    margin-top: 24px;
 }
 aside .side-menu .menu-list {
     padding-left: 12px;
