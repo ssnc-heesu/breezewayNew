@@ -24,11 +24,6 @@
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-DemiLight.otf') format('woff');
-    font-weight: 300;
-}
-@font-face {
-    font-family: 'Noto Sans CJK';
     src: url('font/NotoSansCJKkr-Light.otf') format('woff');
     font-weight: 200;
     font-style: light;
@@ -40,7 +35,7 @@
 }
 :root[color-theme='light'] {
     --red: #e90101;
-    
+
     --bgColor: #f3f6ff;
     --bgContent: #fff;
     
@@ -671,6 +666,47 @@ table .empty svg {
     height: 34px;
     color: var(--gray);
     stroke: var(--gray);
+}
+
+/* tab  */
+.tab-style01 {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 4px;
+    background: var(--whiteGray);
+    border-radius: 10em;
+    z-index: 10;
+}
+.tab-style01 .item {
+    padding: 10px 30px;
+    font-size: 11px;
+    font-weight: 200;
+    color: #666666;
+}
+
+.tab-style01 .item.active {
+    font-weight: 400;
+    color: var(--mainTxt);
+}
+.tab-style01 .active-ball {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 100px;
+    height: calc(100% - 8px);
+    background: var(--bgContent);
+    border-radius: 10em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: -1;
+    transition: all 0.2s;
+}
+.tab-content {
+    display: none;
+    margin-top: 14px;
+}
+.tab-content.active {
+    display: block;
 }
 
 /* modal  */

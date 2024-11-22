@@ -31,22 +31,42 @@ $(document).ready(function() {
         $('#'+thisName).children('.overlay').show();
     });
 
+    // tab 
+    $('.tab .item').on('click',function(){
+        let thisName = $(this).attr('data-name');
+
+        $('.tab .item').removeClass('active');
+        $('.tab-content').removeClass('active');
+
+        $(this).addClass('active');
+        $('#' + thisName).addClass('active');
+
+        $(this).siblings('.active-ball').css({
+            'left': $(this).position().left + 'px',
+            'width': $(this).outerWidth() + 'px'
+        });
+    });
+
+
     // overlay,close버튼들 클릭 시 data-name과 동일한 id의 요소를 close
     $('.overlay, .side-close, .modal-close').on('click',function(){
         let thisName = $(this).attr('data-name');
         $('#' + thisName).removeClass('open');
     });
 
+    // menu-item 클릭시 메뉴 열림 
     $('.menu-item').on('click',function(){
         $(this).parents('aside').addClass('open');
         $(this).parents('aside').children('.overlay').show();
     });
 
+    // btn-close 클릭시 해당요소의 data-name과 같은 id의 요소에 open클래스를 제거함
     $('.btn-close').on('click',function(){
         let thisName = $(this).attr('data-name');
         $('#' + thisName).removeClass('open');
     })
 
+    // 메뉴 열렸을때 메뉴명을 클릭하면 하위메뉴가 열림(다른 메뉴는 닫힘)
     $('.side-menu .menu-item').on('click',function(){
         $('.side-menu .menu-item').removeClass('active');
         $('.side-menu .menu-item .depth2 li').removeClass('active');
@@ -84,11 +104,11 @@ $(document).ready(function() {
         $('#filterBox').toggleClass('open');
     });
 
+    // file custom (파일첨부, 드래그해서 첨부, 삭제)
     $('.file-wrap').each(function () {
-        const fileWrap = $(this);
-        const fileInput = fileWrap.find('input[type="file"]');
-        const uploadName = fileWrap.find('.upload-name');
-        const btnDelete = fileWrap.find('.btn-delete');
+        const fileInput = $(this).find('input[type="file"]');
+        const uploadName = $(this).find('.upload-name');
+        const btnDelete = $(this).find('.btn-delete');
 
         fileInput.on('change', function () {
             const fileName = this.files[0]?.name || '첨부파일';
@@ -97,12 +117,12 @@ $(document).ready(function() {
 
         uploadName.on('dragover', function (e) {
             e.preventDefault();
-            fileWrap.addClass('drageover')
+            $(this).parents('.file-wrap').addClass('drageover')
         });
 
         uploadName.on('dragleave drop', function (e) {
             e.preventDefault();
-            fileWrap.removeClass('drageover')
+            $(this).parents('.file-wrap').removeClass('drageover')
             if (e.type === 'drop') {
                 const files = e.originalEvent.dataTransfer.files;
                 if (files.length > 0) {

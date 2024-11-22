@@ -282,12 +282,49 @@
                                 <h3 class="item-tit">tab</h3>
                             </div>
                             <div class="item-content">
-                                <ul class="tab-styl01">
-                                    <li><button type="button">Address</button></li>
-                                    <li><button type="button">Service</button></li>
-                                    <li><button type="button">System</button></li>
-                                    <li><button type="button">Group Object</button></li>
-                                </ul>
+                                <div class="tab tab-style01">
+                                    <button class="item active" data-name="tab01">Address</button>
+                                    <button class="item" data-name="tab02">Service</button>
+                                    <button class="item" data-name="tab03">System</button>
+                                    <button class="item" data-name="tab04">Group Object</button>
+                                    <div class="active-ball"></div>
+                                </div>
+                                <div class="tab-content active" id="tab01">
+                                    <div class="table-head">
+                                        <div class="left">left</div>
+                                        <div class="right">right</div>
+                                    </div>
+                                    <table class="table-style01">
+                                        <colgroup>
+                                            <col style="width:20%">
+                                            <col style="width:20%">
+                                            <col style="width:20%">
+                                            <col style="width:20%">
+                                            <col style="width:20%">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>Source</th>
+                                                <th>Destination</th>
+                                                <th>Service</th>
+                                                <th>Protocol</th>
+                                                <th>Verification Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="5" class="empty">
+                                                    <i data-lucide="file-search"></i>
+                                                    There are no search results.<br>
+                                                    Please check the contents again.
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="tab-content" id="tab02">tab02</div>
+                                <div class="tab-content" id="tab03">tab03</div>
+                                <div class="tab-content" id="tab04">tab04</div>
                             </div>
                         </div>
 
@@ -554,7 +591,7 @@
                                 <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalRight">modal-right</button>
                             </div>
                         </div>
-                        
+
                         <div class="function-box">
                             <div class="lanuge">
                                 <div class="select" data-value="">

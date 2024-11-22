@@ -551,13 +551,16 @@ aside .mode .switch:checked ~ .mode-txt::after {
     border-radius: 1px;
     transform: rotate(45deg) translateY(-50%);
 }
+.table-head ~ .table-style01,
 .table-head ~ * .table-style01 {
     border: solid var(--lightGray);
     border-width: 1px 0;
 }
+.table-head ~ .table-style01 th,
 .table-head ~ * .table-style01 th {
     padding-top: 12px;
 }
+.table-head ~ .table-style01 tbody tr:last-of-type td,
 .table-head ~ * .table-style01 tbody tr:last-of-type td {
     padding-bottom: 12px;
 }
