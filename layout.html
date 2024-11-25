@@ -22,47 +22,47 @@
                 <ul>
                     <li>
                         <button type="button" class="menu-item">
-                            <i data-lucide="pencil-line"></i><span class="menu-name">Request</span>
+                            <i data-lucide="pencil-line"></i><span class="bubble">Request</span>
                         </button>
                     </li>
                     <li>
                         <button type="button" class="menu-item">
-                            <i data-lucide="stamp"></i><span class="menu-name">Approval</span>
+                            <i data-lucide="stamp"></i><span class="bubble">Approval</span>
                         </button>
                     </li>
                     <li>
                         <button type="button" class="menu-item">
-                            <i data-lucide="list-todo"></i><span class="menu-name">Policy</span>
+                            <i data-lucide="list-todo"></i><span class="bubble">Policy</span>
                         </button>
                     </li>
                     <li>
                         <button type="button" class="menu-item">
-                            <i data-lucide="chart-candlestick"></i><span class="menu-name">Governance</span>
+                            <i data-lucide="chart-candlestick"></i><span class="bubble">Governance</span>
                         </button>
                     </li>
                     <li>
                         <button type="button" class="menu-item active">
-                            <i data-lucide="package-search"></i><span class="menu-name">Object</span>
+                            <i data-lucide="package-search"></i><span class="bubble">Object</span>
                         </button>
                     </li>
                     <li>
                         <button type="button" class="menu-item">
-                            <i data-lucide="server"></i><span class="menu-name">Device(Firewall/Switch)</span>
+                            <i data-lucide="server"></i><span class="bubble">Device(Firewall/Switch)</span>
                         </button>
                     </li>
                     <li>
                         <button type="button" class="menu-item">
-                            <i data-lucide="scroll-text"></i><span class="menu-name">Report</span>
+                            <i data-lucide="scroll-text"></i><span class="bubble">Report</span>
                         </button>
                     </li>
                     <li>
                         <a href="#" class="menu-item">
-                            <i data-lucide="shield-plus"></i><span class="menu-name">Diagnostic</span>
+                            <i data-lucide="shield-plus"></i><span class="bubble">Diagnostic</span>
                         </a>
                     </li>
                     <li>
                         <button type="button" class="menu-item">
-                            <i data-lucide="settings"></i><span class="menu-name">Setting</span>
+                            <i data-lucide="settings"></i><span class="bubble">Setting</span>
                         </button>
                     </li>
                 </ul>
@@ -299,14 +299,130 @@
 
                         <div class="content-item">
                             <div class="item-head">
+                                <h3 class="item-tit">dataTable option</h3>
+                                <div class="btn-box">
+                                    <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
+                                    <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
+                                </div>
+                            </div>
+                            <div class="item-content">
+                                <div class="table-head">
+                                    <div class="left">
+                                        <button type="button" class="btn-filter btn btn-line-gray btn-sm"><i data-lucide="sliders-horizontal"></i>Filter</button>
+                                    </div>
+                                    <div class="right">
+                                        <div class="colvis-wrap">
+                                            <button class="dt-button buttons-collection buttons-colvis" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
+                                                <span>Toggle</span>
+                                                <span class="dt-button-down-arrow">▼</span>
+                                            </button>
+                                            <div class="dt-button-background" style=""></div>
+                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
+                                                <div role="menu">
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="1" onclick="$(this).toggleClass('dt-button-active')">
+                                                        <span>Application Number</span>
+                                                    </button> 
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="2" onclick="$(this).toggleClass('dt-button-active')">
+                                                        <span>Name</span>
+                                                    </button> 
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="3" onclick="$(this).toggleClass('dt-button-active')">
+                                                        <span>Company</span>
+                                                    </button> 
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="4" onclick="$(this).toggleClass('dt-button-active')">
+                                                        <span>Department</span>
+                                                    </button> 
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="5" onclick="$(this).toggleClass('dt-button-active')">
+                                                        <span>Requested Date</span>
+                                                    </button> 
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="6" onclick="$(this).toggleClass('dt-button-active')">
+                                                        <span>Policy Expiration Date</span>
+                                                    </button> 
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="7" onclick="$(this).toggleClass('dt-button-active')">
+                                                        <span>Application Type</span>
+                                                    </button> 
+                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="8" onclick="$(this).toggleClass('dt-button-active')">
+                                                        <span>Application Status</span>
+                                                    </button> 
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="length-wrap">
+                                            <button class="dt-button buttons-collection buttons-page-length" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
+                                                <span>Length</span>
+                                                <span class="dt-button-down-arrow">▼</span>
+                                            </button>
+                                            <div class="dt-button-background" style=""></div>
+                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
+                                                <div role="menu">
+                                                    <button class="dt-button button-page-length dt-button-active" tabindex="0" aria-controls="resultTable" type="button">
+                                                        <span>10</span>
+                                                    </button> 
+                                                    <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
+                                                        <span>25</span>
+                                                    </button> 
+                                                    <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
+                                                        <span>50</span>
+                                                    </button> 
+                                                    <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
+                                                        <span>100</span>
+                                                    </button> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="resultTable_wrapper">
+                                    <table class="table-style01">
+                                        <thead>
+                                            <tr>
+                                                <th>dd</th>
+                                                <th>dd</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>gg</td>
+                                                <td>gg</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <div class="dataTables_info" id="resultTable_info" role="status" aria-live="polite">Showing 1 to 10 of 85 entries</div>
+
+                                    <div class="dataTables_paginate paging_full_numbers" id="ObjectAddrlist_paginate">
+                                        <a class="paginate_button first" aria-controls="ObjectAddrlist" data-dt-idx="0" tabindex="0" id="ObjectAddrlist_first">First</a>
+                                        <a class="paginate_button previous" aria-controls="ObjectAddrlist" data-dt-idx="1" tabindex="0" id="ObjectAddrlist_previous">Previous</a>
+                                        <span>
+                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="2" tabindex="0">1</a>
+                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="3" tabindex="0">2</a>
+                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="4" tabindex="0">3</a>
+                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="5" tabindex="0">4</a>
+                                            <a class="paginate_button current" aria-controls="ObjectAddrlist" data-dt-idx="6" tabindex="0">5</a>
+                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="7" tabindex="0">6</a>
+                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="8" tabindex="0">7</a>
+                                        </span>
+                                        <a class="paginate_button next" aria-controls="ObjectAddrlist" data-dt-idx="9" tabindex="0" id="ObjectAddrlist_next">Next</a>
+                                        <a class="paginate_button last" aria-controls="ObjectAddrlist" data-dt-idx="10" tabindex="0" id="ObjectAddrlist_last">Last</a>
+
+                                        <div class="page-input">
+                                            <span>Go to page</span>
+                                            <input type="number" id="pageInput" min="1">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="content-item">
+                            <div class="item-head">
                                 <h3 class="item-tit">tab</h3>
                             </div>
                             <div class="item-content">
                                 <div class="tab tab-style01">
                                     <button class="item active" data-name="tab01">Address</button>
                                     <button class="item" data-name="tab02">Service</button>
-                                    <button class="item" data-name="tab03">System</button>
-                                    <button class="item" data-name="tab04">Group Object</button>
+                                    <button class="item" data-name="tab03">짧</button>
+                                    <button class="item" data-name="tab04">어어어어어어어어어엄청긴이름</button>
                                     <div class="active-ball"></div>
                                 </div>
                                 <div class="tab-content active" id="tab01">
@@ -319,7 +435,6 @@
                                         </div>
                                         <div class="right">
                                             <div class="input-wrap">
-dd
                                             </div>
                                         </div>
                                     </div>
@@ -333,7 +448,13 @@ dd
                                         </colgroup>
                                         <thead>
                                             <tr>
-                                                <th>Source</th>
+                                                <th>
+                                                    Source
+                                                    <div class="tooltip">
+                                                        <button type="button"><i data-lucide="info"></i></button>
+                                                        <div class="bubble">ddd</div>
+                                                    </div>
+                                                </th>
                                                 <th>Destination</th>
                                                 <th>Service</th>
                                                 <th>Protocol</th>
@@ -430,101 +551,6 @@ dd
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
-
-                        <div class="content-item">
-                            <div class="item-head">
-                                <h3 class="item-tit">dataTable option</h3>
-                                <div class="btn-box">
-                                    <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
-                                    <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <div class="table-head">
-                                    <div class="left">
-                                        <button type="button" class="btn-filter btn btn-line-gray btn-sm"><i data-lucide="sliders-horizontal"></i>Filter</button>
-                                    </div>
-                                    <div class="right">
-                                        <div class="colvis-wrap">
-                                            <button class="dt-button buttons-collection buttons-colvis" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
-                                                <span>Toggle</span>
-                                                <span class="dt-button-down-arrow">▼</span>
-                                            </button>
-                                            <div class="dt-button-background" style=""></div>
-                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
-                                                <div role="menu">
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="1" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Application Number</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="2" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Name</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="3" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Company</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="4" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Department</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="5" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Requested Date</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="6" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Policy Expiration Date</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="7" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Application Type</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="8" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Application Status</span>
-                                                    </button> 
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="length-wrap">
-                                            <button class="dt-button buttons-collection buttons-page-length" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
-                                                <span>Length</span>
-                                                <span class="dt-button-down-arrow">▼</span>
-                                            </button>
-                                            <div class="dt-button-background" style=""></div>
-                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
-                                                <div role="menu">
-                                                    <button class="dt-button button-page-length dt-button-active" tabindex="0" aria-controls="resultTable" type="button">
-                                                        <span>10</span>
-                                                    </button> 
-                                                    <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
-                                                        <span>25</span>
-                                                    </button> 
-                                                    <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
-                                                        <span>50</span>
-                                                    </button> 
-                                                    <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
-                                                        <span>100</span>
-                                                    </button> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="resultTable_wrapper">
-                                    <table class="table-style01">
-                                        <thead>
-                                            <tr>
-                                                <th>dd</th>
-                                                <th>dd</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>gg</td>
-                                                <td>gg</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="dataTables_info" id="resultTable_info" role="status" aria-live="polite">Showing 1 to 10 of 85 entries</div>
-                                </div>
                             </div>
                         </div>
 

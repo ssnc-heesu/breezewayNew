@@ -835,6 +835,67 @@ table .empty svg {
     display: block;
 }
 
+/* speech bubble style */
+.bubble {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-left: 20px;
+    padding: 8px; 
+    font-size: 10px;
+    font-weight: 400;
+    color: var(--gray);
+    white-space: nowrap;
+    background: var(--bgContent);
+    border: 1px solid var(--lightGray);
+    border-radius: 4px;
+    box-shadow: 0 0 13px var(--lightShadow);
+    transform: translateY(-50%);
+}
+.bubble::after{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 5px 3px 0px;
+    border-color: transparent var(--bgContent) transparent transparent;
+}
+.bubble::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: -7px;
+    margin-top: -4px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 7px 4px 0px;
+    border-color: transparent var(--lightGray) transparent transparent;
+}
+
+/* tooltip  */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.tooltip button svg {
+    width: 11px;
+    height: 11px;
+    margin-top: 1px;
+    color: var(--lightTxt);
+    stroke: var(--lightTxt);
+}
+.tooltip:hover .bubble {
+    display: block;
+    margin-left: 10px;
+}
+
 /* modal  */
 .modal {
     display: none;
