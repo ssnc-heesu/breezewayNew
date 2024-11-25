@@ -786,8 +786,10 @@ table {
 }
 .table-style01 tbody tr:last-of-type th,
 .table-style01 tbody tr:last-of-type td {
-    padding-bottom: 0;
     border-bottom: 0;
+}
+.table-style01 tbody tr:hover td {
+    background: var(--bgColor);
 }
 form .table-style01 th {
     font-weight: 500;
