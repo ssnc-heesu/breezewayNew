@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko" color-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Breezeway FireONE layout</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/layout.js"></script>
+</head>
+<body >
+    <div class="wrap" id="login">
+        <div class="form-wrap">
+            <img src="img/img_login_logo.png" class="login-logo">
+
+            <!-- 1차로그인 -->
+            <form>
+                <h2>FireONE</h2>
+                <p>Welcome Back, Please enter Your details</p>
+                <div class="input-wrap">
+                    <input type="text" placeholder="ID">
+                    <input type="password" placeholder="Password">
+                    <p class="error"><i data-lucide="triangle-alert"></i>Please check the information you entered again.</p>
+                </div>
+                <button type="submit" class="btn btn-blue btn-login">LOGIN</button>
+                <a href="#" class="find-pw">Forgot password?</a>
+            </form>
+            <!-- // 1차 로그인  -->
+
+            <!-- 2차인증  -->
+            <!-- <form>
+                <h2>FireONE</h2>
+                <p>Welcome Back, Please enter Your details</p>
+                <div class="input-wrap">
+                    <input type="text" placeholder="Enter authentication number">
+                    <span class="time">10:00</span>
+                    <div class="func-box">
+                        <button type="button">인증번호가 안왔다면?</button>
+                        <button type="button">시간연장</button>
+                    </div>
+                    <p class="error"><i data-lucide="triangle-alert"></i>Please check the information you entered again.</p>
+                </div>
+                <button type="submit" class="btn btn-blue btn-login">LOGIN</button>
+                <a href="#" class="find-pw">Forgot password?</a>
+            </form> -->
+             <!-- //2차인증  -->
+            <div class="copyright">ⓒ 2024 SSNC All rights reserved. Beta Version 1.0.0</div>
+        </div>
+        <div class="login-right"></div>
+    </div>
+</body>
+</html>

@@ -180,8 +180,6 @@
                     <i data-lucide="sun" class="light"></i>
                     <i data-lucide="moon" class="dark"></i>
                 </label> 
-
-
                 <span class="mode-txt"></span>
             </div>
 
@@ -195,21 +193,22 @@
                     <ul class="list-style01">
                         <li>
                             <label class="list-tit">date picker</label>
-                            <input type="text" id="datepicker" class="input-style01">
+                            <div class="date-wrap">
+                                <div class="date-item">
+                                    <input type="text" id="datepicker01" class="input-style01" placeholder="Start Date">
+                                    <i data-lucide="calendar"></i>
+                                </div>
+                                <div class="date-item">
+                                    <input type="text" id="datepicker02" class="input-style01" placeholder="End Date">
+                                    <i data-lucide="calendar"></i>
+                                </div>
+                            </div>
                         </li>
                         <li>
                             <label class="list-tit" for="time">time</label>
-                            <div class="time-wrap">
-                                <input type="text" value="00" id="hour">
-                                <input type="text" value="00" id="minute">
-                                <input type="text" value="00" id="second">
-                                
-                                <div class="time-option">
-                                    <div class="hour"></div>
-                                    <div class="minute"></div>
-                                    <div class="second"></div>
-                                </div>
-
+                            <div class="date-wrap">
+                                <input class="input-style01 date-item" type="time" name="appt-time-second" value="13:30:10" step="2"/>
+                                <input class="input-style01 date-item" type="time" name="appt-time-second" value="13:30:10" step="2"/>
                             </div>
                         </li>
                         <li>
@@ -312,10 +311,15 @@
                                 </div>
                                 <div class="tab-content active" id="tab01">
                                     <div class="table-head">
-                                        <div class="left">left</div>
+                                        <div class="left">
+                                            <div class="date-item">
+                                                <input type="text" id="datepicker03" class="date-picker input-style01" placeholder="Start Date">
+                                                <i data-lucide="calendar"></i>
+                                            </div>
+                                        </div>
                                         <div class="right">
                                             <div class="input-wrap">
-
+dd
                                             </div>
                                         </div>
                                     </div>

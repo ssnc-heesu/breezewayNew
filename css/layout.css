@@ -343,9 +343,21 @@ aside .mode .switch:checked ~ .mode-txt::after {
 .filter .filter-body {
     position: relative;
     height: 100%;
-    padding: 30px 18px 130px;
+    margin: 10px 0;
+    padding: 20px 18px 120px;
     overflow: auto;
 }
+.filter .filter-body::-webkit-scrollbar {
+    width: 4px;  
+}
+.filter .filter-body::-webkit-scrollbar-thumb {
+    background: var(--lightGray);
+    border-radius: 10px;
+}
+.filter .filter-body::-webkit-scrollbar-track {
+    background: var(--bgContent);
+}
+
 .filter .filter-foot {
     position: absolute;
     left: 0;
@@ -589,4 +601,133 @@ aside .mode .switch:checked ~ .mode-txt::after {
 .id-box .list-info {
     font-size: 17px;
     font-weight: 800;
+}
+
+/* login  */
+#login {
+    display: grid;
+    grid-template-columns: 700px 1fr;
+}
+#login .form-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 84px 0 38px;
+    background: var(--bgContent);
+}
+#login .form-wrap .login-logo {
+    width: 222px;
+}
+#login .form-wrap form {
+    position: relative;
+    text-align: center;
+    width: 340px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid #cacaca;
+}
+#login .form-wrap form h2 {
+    font-size: 30px;
+    font-weight: 800;
+}
+#login .form-wrap form h2 + p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #cacaca;
+}
+#login .form-wrap .input-wrap {
+    position: relative;
+    padding: 24px 0 30px;
+}
+#login .form-wrap .input-wrap .error {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 11px;
+    color: var(--red);
+}
+#login .form-wrap .input-wrap .error svg {
+    display: inline-block;
+    vertical-align: middle;
+    width: 13px;
+    height: 13px;
+    color: var(--red);
+    stroke: var(--red);
+    margin: -4px 5px 0 0;
+}
+#login .form-wrap .input-wrap input {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-align: left;
+    background: #f0f0f2;
+    border-radius: 10px;
+}
+input::placeholder {
+    color: #bababa;
+}
+input::-webkit-input-placeholder {
+    color: #bababa;
+}
+input:-ms-input-placeholder {
+    color: #bababa;
+}
+#login .form-wrap form .input-wrap input + input {
+    margin-top: 18px;
+}
+#login .form-wrap .btn-login {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 10px;
+}
+#login .form-wrap .find-pw {
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    padding: 0 10px;
+    color: #cacaca;
+    font-size: 14px;
+    background: #fff;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+}
+#login .form-wrap .find-pw:hover {
+    color: var(--blue);
+}
+#login .form-wrap .copyright {
+    font-size: 10px;
+    color: #c9c9c9;
+}
+#login .form-wrap .input-wrap .time {
+    position: absolute;
+    top: 40px;
+    right: 12px;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--blue);
+}
+#login .form-wrap .func-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+#login .form-wrap .func-box > * {
+    padding-bottom: 3px;
+    font-size: 12px;
+    color: #909090;
+    border-bottom: 1px solid #909090;
+    transition: all 0.3s;
+}
+#login .form-wrap .func-box > *:hover {
+    color: var(--blue);
+    border-bottom-color: var(--blue);
+}
+#login .login-right {
+    background: url(../img/bg_login.jpg) no-repeat center / cover;
 }

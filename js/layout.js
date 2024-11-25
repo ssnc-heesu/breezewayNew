@@ -22,16 +22,28 @@ function populateOptions(selectClass, range) {
 }
 
 $(document).ready(function() {
+    // icon lucide
+    lucide.createIcons();
 
     activeBallPosition();
 
     // datepicker 
-    $( "#datepicker" ).datepicker({
+    $( "#datepicker01" ).datepicker({
         changeMonth: true,
         changeYear: true
     });
-    // icon lucide
-    lucide.createIcons();
+    $( "#datepicker02" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+    });
+    $( "#datepicker03" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+    });
+    $( "#datepicker04" ).datepicker({
+        changeMonth: true,
+        changeYear: true
+    });
 
     // 모드 변경
     $('#mode').on('change', function() {
