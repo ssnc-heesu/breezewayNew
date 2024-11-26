@@ -1025,7 +1025,7 @@ table .empty svg {
 .modal-right {
     top: 0;
     left: auto;
-    right: -100%;;
+    right: -100%;
     width: 520px;
     height: 100%;
     max-height: none;

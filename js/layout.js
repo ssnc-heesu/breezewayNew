@@ -8,19 +8,6 @@ function activeBallPosition(){
     $('aside nav .active-ball').css('top', activeBallTop + "px");
 } 
 
-// 옵션 추가 함수
-function populateOptions(selectClass, range) {
-    const $optionList = $(`.${selectClass} .option-list`);
-    for (let i = 0; i < range; i++) {
-        const li = $('<li>', {
-            class: 'option',
-            'data-value': i,
-            text: i.toString().padStart(2, '0'),
-        });
-        $optionList.append(li);
-    }
-}
-
 $(document).ready(function() {
     // icon lucide
     lucide.createIcons();
@@ -78,7 +65,6 @@ $(document).ready(function() {
             'width': $(this).outerWidth() + 'px'
         });
     });
-
 
     // overlay,close버튼들 클릭 시 data-name과 동일한 id의 요소를 close
     $('.overlay, .side-close, .modal-close').on('click',function(){
