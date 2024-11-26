@@ -251,11 +251,6 @@ aside .mode .switch:checked ~ label .light,
 aside .mode .switch ~ label .dark {
     opacity: 1;
 }
-aside .mode .mode-txt {
-    display: block;
-    margin-top: 3px;
-
-}
 aside .mode .mode-txt::after {
     content: 'Dark';
     position: absolute;
