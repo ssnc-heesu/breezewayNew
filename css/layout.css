@@ -251,19 +251,6 @@ aside .mode .switch:checked ~ label .light,
 aside .mode .switch ~ label .dark {
     opacity: 1;
 }
-aside .mode .mode-txt::after {
-    content: 'Dark';
-    position: absolute;
-    top: 9px;
-    left: 46px;
-    font-size: 8px;
-    color: var(--mainTxt);
-}
-aside .mode .switch:checked ~ .mode-txt::after {
-    content: 'Light';
-    left: 25px;
-    color: var(--blue);
-}
 
 .footer {
     margin-top: 40px;
