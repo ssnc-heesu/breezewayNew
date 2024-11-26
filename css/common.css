@@ -795,6 +795,9 @@ form .table-style01 th {
     font-weight: 500;
     color: var(--lightTxt);
 }
+form .table-style01 tbody tr:hover td:not(.empty) {
+    background: none;
+}
 table .empty {
     text-align: center;
     padding: 40px 0!important;
