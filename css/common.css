@@ -626,9 +626,12 @@ textarea:-ms-input-placeholder {
 .ui-datepicker .ui-datepicker-next span {
     width: 6px;
     height: 10px;
-    margin-top: 3px;
-    padding: 5px;
-    background: url("../img/ico_arrow_blue.png") no-repeat center / 6px;
+    margin-top: 0px;
+    margin-left: -22px;
+    padding: 8px;
+    background: #fff url("../img/ico_arrow_blue.png") no-repeat center / 5px;
+    border-radius: 3px;
+    border: 1px solid var(--blue)
 }
 .ui-datepicker .ui-datepicker-prev {
     left: auto;
@@ -682,15 +685,19 @@ textarea:-ms-input-placeholder {
     font-weight: 200!important;
     line-height: 19px;
     text-align: center;
+    border: 1px solid transparent;
     border-radius: 50%;
 }
 .ui-state-default, .ui-widget-content .ui-state-default {
-    border: 0;
     background: none;
+}
+.ui-datepicker-today .ui-state-default {
+    color: var(--blue);
+    text-decoration: underline;
 }
 .ui-state-active, .ui-widget-content .ui-state-active {
     color: #fff;
-    background: var(--blue)
+    background: var(--blue);
 
 }
 /* button */
