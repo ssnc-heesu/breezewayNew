@@ -25,7 +25,9 @@ $(document).ready(function() {
     // icon lucide
     lucide.createIcons();
 
-    activeBallPosition();
+    if($('aside nav .menu-item').length > 0 ){
+        activeBallPosition();
+    }
 
     // datepicker 
     $( "#datepicker01" ).datepicker({

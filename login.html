@@ -13,6 +13,12 @@
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <script src="js/layout.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#username').focus();
+        });
+    </script>
 </head>
 <body >
     <div class="wrap" id="login">
@@ -24,7 +30,7 @@
                 <h2>FireONE</h2>
                 <p>Welcome Back, Please enter Your details</p>
                 <div class="input-wrap">
-                    <input type="text" placeholder="ID">
+                    <input type="text" placeholder="ID" id="username">
                     <input type="password" placeholder="Password">
                     <p class="error"><i data-lucide="triangle-alert"></i>Please check the information you entered again.</p>
                 </div>

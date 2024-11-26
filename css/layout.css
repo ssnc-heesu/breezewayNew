@@ -714,6 +714,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
     text-align: left;
     background: #f0f0f2;
     border-radius: 10px;
+    transition: all 0.2s;
 }
 input::placeholder {
     color: #bababa;
@@ -723,6 +724,10 @@ input::-webkit-input-placeholder {
 }
 input:-ms-input-placeholder {
     color: #bababa;
+}
+#login .form-wrap .input-wrap input:focus {
+    background: #fff;
+    box-shadow: 0 0 6px rgba(44,103,255,0.5)
 }
 #login .form-wrap form .input-wrap input + input {
     margin-top: 18px;
