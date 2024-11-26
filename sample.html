@@ -16,7 +16,57 @@
 </head>
 <body >
     <div class="wrap">
-        ddd
+        <aside id="sideMenu">
+            <img> <!--작은로고-->
+            <nav>메뉴영역</nav>
+            <div class="side-menu">메뉴오픈시 열리는 영역</div>
+            <div class="mode">다크/라이트 모드선택</div>
+        </aside>
+        <main>
+            <div class="filter">
+                <button class="btn-close">필터 닫기 버튼</button>
+                <h3 class="filter-tit">필터 제목 영역</h3>
+                <div class="filter-body">
+                    <ul class="list-style01">필터의 내용이 들어 갈 영역</ul>
+                </div>
+                <div class="filter-foot">필터 버튼 영역</div>
+            </div>
+
+            <div class="content-wrap">
+                <div class="inner"> // 화면 줄어들 경우 최소 넓이 유지, 컨텐츠 내 간격(패딩)을 위해 사용
+                    <h2 class="content-tit">
+                        메뉴 명이 들어가는 영역
+                        span으로 메뉴명을 감싸면 사이에 자동으로 >(화살표) 가 생김
+                    </h2>
+                
+                    <div class="content-item">
+                        <div class="item-head">
+                            <h3 class="item-tit">테이블제목</h3>
+                            <div>
+                                버튼들이 들어가는 영역
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <div class="table-head">
+                                <button type="button" class="btn-filter btn btn-line-gray btn-sm"><i data-lucide="sliders-horizontal"></i>Filter</button>
+                                <div class="right">
+                                    <div class="colvis-wrap"></div>
+                                    <div class="length-wrap"></div>
+                                </div>
+                            </div>
+                            <div id="resultTable_wrapper">
+                                <table class="table-style01"></table>
+                                <div class="dataTables_info"></div>
+                                <div class="dataTables_paginate"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer">푸터</div>
+                </div>
+            </div>
+        </main>
     </div>
 </body>
 </html>
+

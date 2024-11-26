@@ -286,246 +286,150 @@
             </div>
             <div class="content-wrap">
                 <div class="inner">
-                    <div class="content">
-                        <h2 class="content-tit">
-                            <span>REQUEST</span>
-                            <span>Request Firewall Policy</span>
-                        </h2>
+                    <h2 class="content-tit">
+                        <span>REQUEST</span>
+                        <span>Request Firewall Policy</span>
+                    </h2>
 
-                        <div class="content-item">
-                            <div class="item-head">
-                                <h3 class="item-tit">dataTable option</h3>
-                                <div class="btn-box">
-                                    <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
-                                    <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <div class="table-head">
-                                    <div class="left">
-                                        <button type="button" class="btn-filter btn btn-line-gray btn-sm"><i data-lucide="sliders-horizontal"></i>Filter</button>
-                                    </div>
-                                    <div class="right">
-                                        <div class="colvis-wrap">
-                                            <button class="dt-button buttons-collection buttons-colvis" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
-                                                <span>Toggle</span>
-                                                <span class="dt-button-down-arrow">▼</span>
-                                            </button>
-                                            <div class="dt-button-background" style=""></div>
-                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
-                                                <div role="menu">
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="1" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Application Number</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="2" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Name</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="3" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Company</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="4" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Department</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="5" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Requested Date</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="6" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Policy Expiration Date</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="7" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Application Type</span>
-                                                    </button> 
-                                                    <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="8" onclick="$(this).toggleClass('dt-button-active')">
-                                                        <span>Application Status</span>
-                                                    </button> 
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="length-wrap">
-                                            <button class="dt-button buttons-collection buttons-page-length" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
-                                                <span>Length</span>
-                                                <span class="dt-button-down-arrow">▼</span>
-                                            </button>
-                                            <div class="dt-button-background" style=""></div>
-                                            <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
-                                                <div role="menu">
-                                                    <button class="dt-button button-page-length dt-button-active" tabindex="0" aria-controls="resultTable" type="button">
-                                                        <span>10</span>
-                                                    </button> 
-                                                    <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
-                                                        <span>25</span>
-                                                    </button> 
-                                                    <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
-                                                        <span>50</span>
-                                                    </button> 
-                                                    <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
-                                                        <span>100</span>
-                                                    </button> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="resultTable_wrapper">
-                                    <table class="table-style01">
-                                        <thead>
-                                            <tr>
-                                                <th>dd</th>
-                                                <th>dd</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>gg</td>
-                                                <td>gg</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="dataTables_info" id="resultTable_info" role="status" aria-live="polite">Showing 1 to 10 of 85 entries</div>
-
-                                    <div class="dataTables_paginate paging_full_numbers" id="ObjectAddrlist_paginate">
-                                        <a class="paginate_button first" aria-controls="ObjectAddrlist" data-dt-idx="0" tabindex="0" id="ObjectAddrlist_first">First</a>
-                                        <a class="paginate_button previous" aria-controls="ObjectAddrlist" data-dt-idx="1" tabindex="0" id="ObjectAddrlist_previous">Previous</a>
-                                        <span>
-                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="2" tabindex="0">1</a>
-                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="3" tabindex="0">2</a>
-                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="4" tabindex="0">3</a>
-                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="5" tabindex="0">4</a>
-                                            <a class="paginate_button current" aria-controls="ObjectAddrlist" data-dt-idx="6" tabindex="0">5</a>
-                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="7" tabindex="0">6</a>
-                                            <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="8" tabindex="0">7</a>
-                                        </span>
-                                        <a class="paginate_button next" aria-controls="ObjectAddrlist" data-dt-idx="9" tabindex="0" id="ObjectAddrlist_next">Next</a>
-                                        <a class="paginate_button last" aria-controls="ObjectAddrlist" data-dt-idx="10" tabindex="0" id="ObjectAddrlist_last">Last</a>
-
-                                        <div class="page-input">
-                                            <label for="pageInput">Go to page</label>
-                                            <input type="number" id="pageInput" min="1">
-                                        </div>
-                                    </div>
-                                </div>
+                    <div class="content-item">
+                        <div class="item-head">
+                            <h3 class="item-tit">dataTable option</h3>
+                            <div class="btn-box">
+                                <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
+                                <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
                             </div>
                         </div>
-
-                        <div class="content-item">
-                            <div class="item-head">
-                                <h3 class="item-tit">tab</h3>
-                            </div>
-                            <div class="item-content">
-                                <div class="tab tab-style01">
-                                    <button class="item active" data-name="tab01">Address</button>
-                                    <button class="item" data-name="tab02">Service</button>
-                                    <button class="item" data-name="tab03">짧</button>
-                                    <button class="item" data-name="tab04">어어어어어어어어어엄청긴이름</button>
-                                    <div class="active-ball"></div>
-                                </div>
-                                <div class="tab-content active" id="tab01">
-                                    <div class="table-head">
-                                        <div class="left">
-                                            <div class="date-item">
-                                                <input type="text" id="datepicker03" class="date-picker input-style01" placeholder="Start Date">
-                                                <i data-lucide="calendar"></i>
-                                            </div>
-                                        </div>
-                                        <div class="right">
-                                            <div class="input-wrap">
+                        <div class="item-content">
+                            <div class="table-head">
+                                <button type="button" class="btn-filter btn btn-line-gray btn-sm"><i data-lucide="sliders-horizontal"></i>Filter</button>
+                                <div class="right">
+                                    <div class="colvis-wrap">
+                                        <button class="dt-button buttons-collection buttons-colvis" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
+                                            <span>Toggle</span>
+                                            <span class="dt-button-down-arrow">▼</span>
+                                        </button>
+                                        <div class="dt-button-background" style=""></div>
+                                        <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
+                                            <div role="menu">
+                                                <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="1" onclick="$(this).toggleClass('dt-button-active')">
+                                                    <span>Application Number</span>
+                                                </button> 
+                                                <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="2" onclick="$(this).toggleClass('dt-button-active')">
+                                                    <span>Name</span>
+                                                </button> 
+                                                <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="3" onclick="$(this).toggleClass('dt-button-active')">
+                                                    <span>Company</span>
+                                                </button> 
+                                                <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="4" onclick="$(this).toggleClass('dt-button-active')">
+                                                    <span>Department</span>
+                                                </button> 
+                                                <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="5" onclick="$(this).toggleClass('dt-button-active')">
+                                                    <span>Requested Date</span>
+                                                </button> 
+                                                <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="6" onclick="$(this).toggleClass('dt-button-active')">
+                                                    <span>Policy Expiration Date</span>
+                                                </button> 
+                                                <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="7" onclick="$(this).toggleClass('dt-button-active')">
+                                                    <span>Application Type</span>
+                                                </button> 
+                                                <button class="dt-button buttons-columnVisibility dt-button-active" tabindex="0" aria-controls="resultTable" type="button" data-cv-idx="8" onclick="$(this).toggleClass('dt-button-active')">
+                                                    <span>Application Status</span>
+                                                </button> 
                                             </div>
                                         </div>
                                     </div>
-                                    <table class="table-style01">
-                                        <colgroup>
-                                            <col style="width:20%">
-                                            <col style="width:20%">
-                                            <col style="width:20%">
-                                            <col style="width:20%">
-                                            <col style="width:20%">
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    Source
-                                                    <div class="tooltip">
-                                                        <button type="button"><i data-lucide="info"></i></button>
-                                                        <div class="bubble">ddd</div>
-                                                    </div>
-                                                </th>
-                                                <th>Destination</th>
-                                                <th>Service</th>
-                                                <th>Protocol</th>
-                                                <th>Verification Status</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td colspan="5" class="empty">
-                                                    <i data-lucide="file-search"></i>
-                                                    There are no search results.<br>
-                                                    Please check the contents again.
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="tab-content" id="tab02">tab02</div>
-                                <div class="tab-content" id="tab03">tab03</div>
-                                <div class="tab-content" id="tab04">tab04</div>
-                            </div>
-                        </div>
 
-                        <div class="content-item">
-                            <div class="item-head">
-                                <h3 class="item-tit">Result table</h3>
-                                <div class="btn-box">
-                                    <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
+                                    <div class="length-wrap">
+                                        <button class="dt-button buttons-collection buttons-page-length" tabindex="0" aria-controls="resultTable" type="button" aria-haspopup="dialog" aria-expanded="true" onclick="$(this).siblings('.dt-button-collection').toggle();">
+                                            <span>Length</span>
+                                            <span class="dt-button-down-arrow">▼</span>
+                                        </button>
+                                        <div class="dt-button-background" style=""></div>
+                                        <div class="dt-button-collection" aria-modal="true" role="dialog" style="display: none; margin-top: -10.5px;">
+                                            <div role="menu">
+                                                <button class="dt-button button-page-length dt-button-active" tabindex="0" aria-controls="resultTable" type="button">
+                                                    <span>10</span>
+                                                </button> 
+                                                <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
+                                                    <span>25</span>
+                                                </button> 
+                                                <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
+                                                    <span>50</span>
+                                                </button> 
+                                                <button class="dt-button button-page-length" tabindex="0" aria-controls="resultTable" type="button">
+                                                    <span>100</span>
+                                                </button> 
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="item-content">
+                            <div id="resultTable_wrapper">
                                 <table class="table-style01">
-                                    <colgroup>
-                                        <col style="width:20%">
-                                        <col style="width:20%">
-                                        <col style="width:20%">
-                                        <col style="width:20%">
-                                        <col style="width:20%">
-                                    </colgroup>
                                     <thead>
                                         <tr>
-                                            <th>Source</th>
-                                            <th>Destination</th>
-                                            <th>Service</th>
-                                            <th>Protocol</th>
-                                            <th>Verification Status</th>
+                                            <th>dd</th>
+                                            <th>dd</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>Source Name</td>
-                                            <td>Destination Name</td>
-                                            <td>Service Name</td>
-                                            <td>Protocol</td>
-                                            <td>Verification Status</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Source Name</td>
-                                            <td>Destination Name</td>
-                                            <td>Service Name</td>
-                                            <td>Protocol</td>
-                                            <td>Verification Status</td>
+                                            <td>gg</td>
+                                            <td>gg</td>
                                         </tr>
                                     </tbody>
                                 </table>
-                            </div>
-                        </div>
+                                <div class="dataTables_info" id="resultTable_info" role="status" aria-live="polite">Showing 1 to 10 of 85 entries</div>
 
-                        <div class="content-item">
-                            <div class="item-head">
-                                <h3 class="item-tit">empty table</h3>
-                                <div class="btn-box">
-                                    <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
+                                <div class="dataTables_paginate paging_full_numbers" id="ObjectAddrlist_paginate">
+                                    <a class="paginate_button first" aria-controls="ObjectAddrlist" data-dt-idx="0" tabindex="0" id="ObjectAddrlist_first">First</a>
+                                    <a class="paginate_button previous" aria-controls="ObjectAddrlist" data-dt-idx="1" tabindex="0" id="ObjectAddrlist_previous">Previous</a>
+                                    <span>
+                                        <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="2" tabindex="0">1</a>
+                                        <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="3" tabindex="0">2</a>
+                                        <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="4" tabindex="0">3</a>
+                                        <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="5" tabindex="0">4</a>
+                                        <a class="paginate_button current" aria-controls="ObjectAddrlist" data-dt-idx="6" tabindex="0">5</a>
+                                        <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="7" tabindex="0">6</a>
+                                        <a class="paginate_button " aria-controls="ObjectAddrlist" data-dt-idx="8" tabindex="0">7</a>
+                                    </span>
+                                    <a class="paginate_button next" aria-controls="ObjectAddrlist" data-dt-idx="9" tabindex="0" id="ObjectAddrlist_next">Next</a>
+                                    <a class="paginate_button last" aria-controls="ObjectAddrlist" data-dt-idx="10" tabindex="0" id="ObjectAddrlist_last">Last</a>
+
+                                    <div class="page-input">
+                                        <label for="pageInput">Go to page</label>
+                                        <input type="number" id="pageInput" min="1">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="item-content">
+                        </div>
+                    </div>
+
+                    <div class="content-item">
+                        <div class="item-head">
+                            <h3 class="item-tit">tab</h3>
+                        </div>
+                        <div class="item-content">
+                            <div class="tab tab-style01">
+                                <button class="item active" data-name="tab01">Address</button>
+                                <button class="item" data-name="tab02">Service</button>
+                                <button class="item" data-name="tab03">짧</button>
+                                <button class="item" data-name="tab04">어어어어어어어어어엄청긴이름</button>
+                                <div class="active-ball"></div>
+                            </div>
+                            <div class="tab-content active" id="tab01">
+                                <div class="table-head">
+                                    <div class="left">
+                                        <div class="date-item">
+                                            <input type="text" id="datepicker03" class="date-picker input-style01" placeholder="Start Date">
+                                            <i data-lucide="calendar"></i>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <div class="input-wrap">
+                                        </div>
+                                    </div>
+                                </div>
                                 <table class="table-style01">
                                     <colgroup>
                                         <col style="width:20%">
@@ -536,7 +440,13 @@
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th>Source</th>
+                                            <th>
+                                                Source
+                                                <div class="tooltip">
+                                                    <button type="button"><i data-lucide="info"></i></button>
+                                                    <div class="bubble">ddd</div>
+                                                </div>
+                                            </th>
                                             <th>Destination</th>
                                             <th>Service</th>
                                             <th>Protocol</th>
@@ -554,130 +464,216 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <div class="tab-content" id="tab02">tab02</div>
+                            <div class="tab-content" id="tab03">tab03</div>
+                            <div class="tab-content" id="tab04">tab04</div>
                         </div>
-
-                        <div class="content-item">
-                            <div class="item-head">
-                                <h3 class="item-tit">col group, list style02</h3>
-                            </div>
-                            <div class="row">
-                                <div class="item-content col-2 id-box">
-                                    <span class="icon">
-                                        <i data-lucide="id-card"></i>
-                                    </span>
-                                    <div>
-                                        <label class="list-tit">룰 아이디</label>
-                                        <span class="list-info">R20241015155007003</span>
-                                    </div>
-                                </div>
-                                <div class="item-content col-10">
-                                    <table class="list-style02">
-                                        <colgroup>
-                                            <col style="width: 14%">
-                                            <col style="width: 23%">
-                                            <col style="width: 31%">
-                                            <col style="width: 32%">
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <td>
-                                                    <span class="list-tit">룰 상태 </span>
-                                                    <span class="list-info">REQUESTED</span>
-                                                </td>
-                                                <td>
-                                                    <span class="list-tit">방화벽 명</span>
-                                                    <span class="list-info">AhnLab1</span>
-                                                </td>
-                                                <td>
-                                                    <span class="list-tit">신청자 아이디</span>
-                                                    <span class="list-info">admin</span>
-                                                </td>
-                                                <td rowspan="2">
-                                                    <span class="list-tit">요청 내용</span>
-                                                    <span class="list-info">test example</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="list-tit">신청 유형</span>
-                                                    <span class="list-info">사후 결재</span>
-                                                </td>
-                                                <td>
-                                                    <span class="list-tit">신청 번호</span>
-                                                    <span class="list-info">FIQ20241015154858752</span>
-                                                </td>
-                                                <td>
-                                                    <span class="list-tit">요청일/만료일</span>
-                                                    <span class="list-info">2024-10-15 15:48:58 / 9999-12-31</span>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <div class="item-content">
-                                <form>
-                                    <table class="table-style01">
-                                        <colgroup>
-                                            <col style="width: 30%">
-                                            <col style="width: 70%">
-                                        </colgroup>
-                                        <tbody>
-                                            <tr>
-                                                <th><label for="input01">Firewall Name</label></th>
-                                                <td><input type="text" class="input-style01 input-block" id="input01"></td>
-                                            </tr>
-                                            <tr>
-                                                <th><label for="input02">Firewall Name</label></th>
-                                                <td><input type="text" class="input-style01 input-block" id="input02"></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="content-item">
-                            <div class="item-head">
-                                <h3 class="item-tit">Modal</h3>
-                            </div>
-                            <div class="item-content">
-                                <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalSM">modal-sm</button>
-                                <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalMD">modal-md</button>
-                                <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalLG">modal-lg</button>
-                                <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalRight">modal-right</button>
-                            </div>
-                        </div>
-
-                        <div class="function-box">
-                            <div class="lanuge">
-                                <div class="select" data-value="">
-                                    <span class="label"><i data-lucide="globe"></i></span>
-                                    <ul class="option-list">
-                                        <li class="option" data-value="en">English</li>
-                                        <li class="option" data-value="es">Español </li>                                
-                                        <li class="option" data-value="ko">한국어</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- 새로운 알람 있을경우 new 클래스가 붙음  -->
-                            <div class="alarm new">
-                                <a href="#"><i data-lucide="bell"></i></a>
-                            </div>
-                            <div class="profile">
-                                <div class="select" data-value="">
-                                    <span class="label"><img src="img/img_profile.png" alt="profile img" width="30" style="margin-top:4px"/></span>
-                                    <ul class="option-list">
-                                        <li class="option">Joshua Mclnerney <span class="small txt-gray">Joshua@ssnc.co.kr</span></li>
-                                        <li class="option">
-                                            <button type="button"><i data-lucide="log-out"></i>logout</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer">ⓒ 2024 SSNC All rights reserved. Beta Version 1.0.0</div>
                     </div>
+
+                    <div class="content-item">
+                        <div class="item-head">
+                            <h3 class="item-tit">Result table</h3>
+                            <div class="btn-box">
+                                <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <table class="table-style01">
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Source</th>
+                                        <th>Destination</th>
+                                        <th>Service</th>
+                                        <th>Protocol</th>
+                                        <th>Verification Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Source Name</td>
+                                        <td>Destination Name</td>
+                                        <td>Service Name</td>
+                                        <td>Protocol</td>
+                                        <td>Verification Status</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Source Name</td>
+                                        <td>Destination Name</td>
+                                        <td>Service Name</td>
+                                        <td>Protocol</td>
+                                        <td>Verification Status</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="content-item">
+                        <div class="item-head">
+                            <h3 class="item-tit">empty table</h3>
+                            <div class="btn-box">
+                                <button type="button" class="btn btn-blue btn-sm">Batch Upload</button>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <table class="table-style01">
+                                <colgroup>
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                    <col style="width:20%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>Source</th>
+                                        <th>Destination</th>
+                                        <th>Service</th>
+                                        <th>Protocol</th>
+                                        <th>Verification Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="5" class="empty">
+                                            <i data-lucide="file-search"></i>
+                                            There are no search results.<br>
+                                            Please check the contents again.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="content-item">
+                        <div class="item-head">
+                            <h3 class="item-tit">col group, list style02</h3>
+                        </div>
+                        <div class="row">
+                            <div class="item-content col-2 id-box">
+                                <span class="icon">
+                                    <i data-lucide="id-card"></i>
+                                </span>
+                                <div>
+                                    <label class="list-tit">룰 아이디</label>
+                                    <span class="list-info">R20241015155007003</span>
+                                </div>
+                            </div>
+                            <div class="item-content col-10">
+                                <table class="list-style02">
+                                    <colgroup>
+                                        <col style="width: 14%">
+                                        <col style="width: 23%">
+                                        <col style="width: 31%">
+                                        <col style="width: 32%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="list-tit">룰 상태 </span>
+                                                <span class="list-info">REQUESTED</span>
+                                            </td>
+                                            <td>
+                                                <span class="list-tit">방화벽 명</span>
+                                                <span class="list-info">AhnLab1</span>
+                                            </td>
+                                            <td>
+                                                <span class="list-tit">신청자 아이디</span>
+                                                <span class="list-info">admin</span>
+                                            </td>
+                                            <td rowspan="2">
+                                                <span class="list-tit">요청 내용</span>
+                                                <span class="list-info">test example</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="list-tit">신청 유형</span>
+                                                <span class="list-info">사후 결재</span>
+                                            </td>
+                                            <td>
+                                                <span class="list-tit">신청 번호</span>
+                                                <span class="list-info">FIQ20241015154858752</span>
+                                            </td>
+                                            <td>
+                                                <span class="list-tit">요청일/만료일</span>
+                                                <span class="list-info">2024-10-15 15:48:58 / 9999-12-31</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="item-content">
+                            <form>
+                                <table class="table-style01">
+                                    <colgroup>
+                                        <col style="width: 30%">
+                                        <col style="width: 70%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><label for="input01">Firewall Name</label></th>
+                                            <td><input type="text" class="input-style01 input-block" id="input01"></td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="input02">Firewall Name</label></th>
+                                            <td><input type="text" class="input-style01 input-block" id="input02"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="content-item">
+                        <div class="item-head">
+                            <h3 class="item-tit">Modal</h3>
+                        </div>
+                        <div class="item-content">
+                            <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalSM">modal-sm</button>
+                            <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalMD">modal-md</button>
+                            <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalLG">modal-lg</button>
+                            <button type="button" class="btn btn-sm btn-blue modal-open" data-name="modalRight">modal-right</button>
+                        </div>
+                    </div>
+
+                    <div class="function-box">
+                        <div class="lanuge">
+                            <div class="select" data-value="">
+                                <span class="label"><i data-lucide="globe"></i></span>
+                                <ul class="option-list">
+                                    <li class="option" data-value="en">English</li>
+                                    <li class="option" data-value="es">Español </li>                                
+                                    <li class="option" data-value="ko">한국어</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 새로운 알람 있을경우 new 클래스가 붙음  -->
+                        <div class="alarm new">
+                            <a href="#"><i data-lucide="bell"></i></a>
+                        </div>
+                        <div class="profile">
+                            <div class="select" data-value="">
+                                <span class="label"><img src="img/img_profile.png" alt="profile img" width="30" style="margin-top:4px"/></span>
+                                <ul class="option-list">
+                                    <li class="option">Joshua Mclnerney <span class="small txt-gray">Joshua@ssnc.co.kr</span></li>
+                                    <li class="option">
+                                        <button type="button"><i data-lucide="log-out"></i>logout</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">ⓒ 2024 SSNC All rights reserved. Beta Version 1.0.0</div>
                 </div>
             </div>
         </main>

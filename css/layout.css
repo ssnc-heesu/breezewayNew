@@ -266,9 +266,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
 }
 
 .footer {
-    position: absolute;
-    right: 56px;
-    bottom: 44px;
+    margin-top: 40px;
     font-size: 10px;
     color: #ababab;
     font-weight: 200;
