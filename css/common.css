@@ -57,7 +57,7 @@
     
     --mainTxt: #dbdbdb;
     --lightTxt: #a3a3a3;
-    --gray: #7c7c7c;
+    --gray: #646464;
     --lightGray: #444;
     --whiteGray: #111;
 
@@ -241,9 +241,6 @@ main {
     padding: 0 8px;
 }
 
-.list-style03 {
-
-}
 /* input  */
 input::placeholder,
 textarea::placeholder {
@@ -810,12 +807,12 @@ table {
 .table-style01 tbody tr:hover td:not(.empty) {
     background: var(--bgColor);
 }
+.table-style01 tbody tr:hover th + td:not(.empty) {
+    background: none;
+}
 form .table-style01 th {
     font-weight: 500;
     color: var(--lightTxt);
-}
-form .table-style01 tbody tr:hover td:not(.empty) {
-    background: none;
 }
 table .empty {
     text-align: center;

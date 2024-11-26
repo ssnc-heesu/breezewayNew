@@ -696,13 +696,13 @@ aside .mode .switch ~ label .dark {
     border-radius: 10px;
     transition: all 0.2s;
 }
-input::placeholder {
+#login .form-wrap .input-wrap input::placeholder {
     color: #bababa;
 }
-input::-webkit-input-placeholder {
+#login .form-wrap .input-wrap input::-webkit-input-placeholder {
     color: #bababa;
 }
-input:-ms-input-placeholder {
+#login .form-wrap .input-wrap input:-ms-input-placeholder {
     color: #bababa;
 }
 #login .form-wrap .input-wrap input:focus {
