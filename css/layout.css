@@ -686,6 +686,7 @@ aside .mode .switch:checked ~ .mode-txt::after {
 }
 #login .form-wrap .input-wrap {
     position: relative;
+    display: block;
     padding: 24px 0 30px;
 }
 #login .form-wrap .input-wrap .error {
