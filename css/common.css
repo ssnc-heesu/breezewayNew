@@ -524,17 +524,19 @@ textarea:-ms-input-placeholder {
     z-index: 20;
 }
 .select .option-list {
+    display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    display: none;
-    min-width: 100%;
     width: max-content;
+    max-height: 200px;
+    min-width: 100%;
     margin-top: 8px;
     border: 1px solid var(--lightGray);
     border-radius: 5px;
     box-shadow: 0 0 10px var(--lightShadow);
     background: var(--bgContent);
+    overflow: auto;
     z-index: 10;
 }
 .select .option-list li {
@@ -551,6 +553,16 @@ textarea:-ms-input-placeholder {
 }
 .select .option-list li:last-of-type {
     border-bottom: 0;
+}
+.select .option-list::-webkit-scrollbar {
+    width: 4px;  
+}
+.select .option-list::-webkit-scrollbar-thumb {
+    background: var(--gray);
+    border-radius: 10px;
+}
+.select .option-list::-webkit-scrollbar-track {
+    background: var(--bgContent);
 }
 
 /* date, time  */
@@ -972,6 +984,16 @@ table .empty svg {
     padding: 18px 0;
     flex: 1;
     overflow: auto;
+}
+.modal-content .modal-body::-webkit-scrollbar {
+    width: 4px;  
+}
+.modal-content .modal-body::-webkit-scrollbar-thumb {
+    background: var(--lightGray);
+    border-radius: 10px;
+}
+.modal-content .modal-body::-webkit-scrollbar-track {
+    background: var(--bgContent);
 }
 .modal-content .modal-foot {
     padding: 14px 20px 0 20px;
