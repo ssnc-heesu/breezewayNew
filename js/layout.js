@@ -130,11 +130,6 @@ $(document).ready(function() {
         $(this).parents('.option-list').slideUp(50);
     });
 
-    // time picker 
-    populateOptions('hours', 24);
-    populateOptions('minutes', 60);
-    populateOptions('seconds', 60);
-
     // filter button 
     $('.btn-filter').on('click',function(){
         $(this).toggleClass('active');
