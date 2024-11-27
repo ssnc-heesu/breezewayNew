@@ -384,7 +384,7 @@ aside .mode .switch ~ label .dark {
     right: 56px;
     display: flex;
     gap: 10px;
-    z-index: 10;
+    z-index: 100;
 }
 .function-box .select .label,
 .function-box > div {

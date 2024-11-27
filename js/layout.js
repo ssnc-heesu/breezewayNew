@@ -128,6 +128,9 @@ $(document).ready(function() {
     });
 
     $('.select .option-list .option').on('click', function (e) {
+        if($(this).parents('.function-box')) {
+            return false;
+        }
         e.stopPropagation();
         let selectText = $(this).text();
         let selectValue = $(this).attr('data-value');
