@@ -17,19 +17,7 @@ $(document).ready(function() {
     }
 
     // datepicker 
-    $( "#datepicker01" ).datepicker({
-        changeMonth: true,
-        changeYear: true
-    });
-    $( "#datepicker02" ).datepicker({
-        changeMonth: true,
-        changeYear: true
-    });
-    $( "#datepicker03" ).datepicker({
-        changeMonth: true,
-        changeYear: true
-    });
-    $( "#datepicker04" ).datepicker({
+    $('#datepicker01, #datepicker02, #datepicker03, #datepicker04').datepicker({
         changeMonth: true,
         changeYear: true
     });
@@ -41,7 +29,7 @@ $(document).ready(function() {
         $('.time-select').not($(this).siblings('.time-select')).fadeOut(150);
         $(this).siblings('.time-select').fadeToggle(150);
     });
-    
+
     $('.time-wrap .select-list button').on('click',function(){
         let selectTime = $(this).parents('.time-select').attr('data-name');
         let changeValue = $(this).parents('.time-wrap').children('.time-result');

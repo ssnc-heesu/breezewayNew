@@ -31,7 +31,6 @@
 
 :root {
     --blue: #2c67ff;
-
 }
 :root[color-theme='light'] {
     --red: #e90101;
