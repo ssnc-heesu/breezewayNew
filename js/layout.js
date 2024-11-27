@@ -34,6 +34,43 @@ $(document).ready(function() {
         changeYear: true
     });
 
+    // time
+    $('.time-result').on('click',function(e){
+        e.stopPropagation();
+
+        $('.time-select').not($(this).siblings('.time-select')).fadeOut(150);
+        $(this).siblings('.time-select').fadeToggle(150);
+    });
+    
+    $('.time-wrap .select-list button').on('click',function(){
+        let selectTime = $(this).parents('.time-select').attr('data-name');
+        let changeValue = $(this).parents('.time-wrap').children('.time-result');
+
+        let timeValue =  $('#'+selectTime).val();
+        let Hour = timeValue.substr(0,2);
+        let Minute = timeValue.substr(3,2);
+        let Second = timeValue.substr(6,2);
+
+        let thisType = $(this).attr('data-type');
+        let thisValue = $(this).text();
+
+        if(thisType === "Hour") {
+            Hour = thisValue;
+        } else if (thisType === "Minute") {
+            Minute = thisValue;
+        } else if (thisType === "Second") {
+            Second = thisValue;
+        }
+        
+        $('#'+selectTime).val(Hour+":"+Minute+":"+Second);
+        
+        $(changeValue).text($('#'+selectTime).val());
+        $(changeValue).attr('data-value',$('#'+selectTime).val())
+
+        $(this).parents('.select-list').find('.active').removeClass('active');
+        $(this).addClass('active');
+    });
+
     // 모드 변경
     $('#mode').on('change', function() {
         if ($(this).is(':checked')) {
@@ -92,10 +129,7 @@ $(document).ready(function() {
         $(this).addClass('active')
     })
 
-    // custom select 
-    // .option-list .option 클릭시 해당 텍스트가 label텍스트로 바뀜
-    // .option-list .option 클릭시 해당 data-value가 select의 data-value로 들어감
-    // 다른 select 클릭시 기존 select 닫힘
+    // custom select
     $('.select').on('click', function (e) {
         e.stopPropagation();
 
@@ -162,9 +196,14 @@ $(document).ready(function() {
     });
 });
 
-// custom select 
-// 셀렉트 영역이 아닌 다른 부분 클릭시 셀렉트 닫힘
-$(document).on('click', function () {
+
+$(document).on('click', function (e) {
+    // 셀렉트 영역이 아닌 다른 부분 클릭시 셀렉트 닫힘
     $('.select').removeClass('open');
     $('.option-list').slideUp(50);
+
+    if ($(e.target).closest('.time-wrap').length) {
+        return; 
+    }
+    $('.time-select').fadeOut(150);
 });

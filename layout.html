@@ -205,9 +205,71 @@
                         </li>
                         <li>
                             <label class="list-tit" for="time">time</label>
+
                             <div class="date-wrap">
-                                <input class="input-style01 date-item" type="time" name="appt-time-second" value="13:30:10" step="2"/>
-                                <input class="input-style01 date-item" type="time" name="appt-time-second" value="13:30:10" step="2"/>
+                                <div class="time-wrap date-item">
+                                    <i data-lucide="clock-3"></i>
+                                    <label for="timeTest" class="time-result input-style01 input-block" data-value="">00:00:00</label>
+                                    <input class="" id="timeTest" type="time" name="appt-time-second" value="13:30:10" step="2"/>
+                                    
+                                    <div class="time-select" data-name="timeTest">
+                                        <div class="select-body">
+                                            <div class="select-item">
+                                                <label>Hour</label>
+                                                <ul class="select-list hour-list"></ul>
+                                            </div>
+                                            <div class="select-item">
+                                                <label>Minute</label>
+                                                <ul class="select-list minute-list"></ul>
+                                            </div>
+                                            <div class="select-item">
+                                                <label>Second</label>
+                                                <ul class="select-list second-list"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="time-wrap date-item">
+                                    <i data-lucide="clock-3"></i>
+                                    <label for="timeTest02" class="time-result input-style01 input-block" data-value="">00:00:00</label>
+                                    <input class="" id="timeTest02" type="time" name="appt-time-second" value="13:30:10" step="2"/>
+                                    
+                                    <div class="time-select" data-name="timeTest02">
+                                        <div class="select-body">
+                                            <div class="select-item">
+                                                <label>Hour</label>
+                                                <ul class="select-list hour-list"></ul>
+                                            </div>
+                                            <div class="select-item">
+                                                <label>Minute</label>
+                                                <ul class="select-list minute-list"></ul>
+                                            </div>
+                                            <div class="select-item">
+                                                <label>Second</label>
+                                                <ul class="select-list second-list"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script>
+                                    let hours = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, "0")); // 00 ~ 23
+                                    let minutes = Array.from({ length: 60 }, (_, i) => String(i).padStart(2, "0")); // 00 ~ 59
+        
+                                    let populateList = (selector, values, type) => {
+                                        let list = $(selector);
+                                        let items = ""; // HTML 문자열 생성
+        
+                                        values.forEach(value => {
+                                            items += `<li><button data-type="${type}">${value}</button></li>`;
+                                        });
+                                        list.html(items);
+                                    };
+        
+                                    populateList(".hour-list", hours, "Hour");
+                                    populateList(".minute-list", minutes, "Minute");
+                                    populateList(".second-list", minutes, "Second");
+                                </script>
                             </div>
                         </li>
                         <li>

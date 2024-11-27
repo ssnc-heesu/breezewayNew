@@ -595,7 +595,6 @@ textarea:-ms-input-placeholder {
 .date-wrap .date-item + .date-item {
     margin-left: 5%;
 }
-
 .ui-widget.ui-widget-content * {
     font-family:"Noto Sans CJK", sans-serif;
 }
@@ -640,7 +639,6 @@ textarea:-ms-input-placeholder {
 .ui-datepicker .ui-datepicker-prev span {
     transform: rotate(180deg);
 }
-
 .ui-datepicker .ui-datepicker-next-hover,
 .ui-datepicker .ui-datepicker-prev-hover {
     top: 0;
@@ -695,8 +693,72 @@ textarea:-ms-input-placeholder {
 .ui-state-active, .ui-widget-content .ui-state-active {
     color: #fff;
     background: var(--blue);
-
 }
+.time-wrap {
+    position: relative;
+}
+.time-wrap input[type="time"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0;
+}
+.time-wrap .time-result {
+    padding: 0 12px;
+    line-height: 30px;
+    cursor: pointer;
+}
+.time-wrap > svg {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+}
+.time-select {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    display: none;
+    height: 180px;
+}
+.time-select .select-body {
+    display: inline-flex;
+    gap: 10px;
+    height: 100%;
+    padding: 8px 16px 12px;
+    text-align: center;
+    background: var(--bgContent);
+    border: 1px solid var(--lightGray);
+    border-radius: 4px;
+    color: var(--lightTxt);
+}
+.time-select .select-item > label {
+    font-size: 9px;
+}
+.time-select .select-list {
+    text-align: center;
+    width: 32px;
+    height: 85%;
+    padding: 14px 0;
+    margin-top: 6px;
+    font-size: 11px;
+    background: var(--bgColor);
+    border-radius: 10em;
+    overflow: auto;
+}
+.time-select .select-list li + li {
+    margin-top: 14px;
+}
+.time-select .select-list button.active {
+    color: var(--blue);
+    font-weight: 600;
+}
+.time-select .select-list::-webkit-scrollbar {
+    width: 0;  
+}
+
 /* button */
 .btn {
     display: inline-block;
