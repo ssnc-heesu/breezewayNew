@@ -753,6 +753,8 @@ aside .mode .switch ~ label .dark {
     margin: 10px 0;
 }
 #login .form-wrap .func-box > * {
+    width: auto;
+    height: auto;
     padding-bottom: 3px;
     font-size: 12px;
     color: #909090;
