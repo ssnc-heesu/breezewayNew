@@ -871,20 +871,8 @@ table {
     transition: all 0.2s;
 }
 .table-style01 thead th {
-    padding-top: 0;
     font-weight: 600;
-}
-.table-style01 tbody tr:first-of-type th,
-.table-style01 tbody tr:first-of-type td {
-    padding-top: 0;
-}
-.table-style01 thead + tbody tr:first-of-type th,
-.table-style01 thead + tbody tr:first-of-type td {
-    padding-top: 12px;
-}
-.table-style01 tbody tr:last-of-type th,
-.table-style01 tbody tr:last-of-type td {
-    border-bottom: 0;
+    background: var(--whiteGray);
 }
 .table-style01 tbody tr:hover td:not(.empty) {
     background: var(--bgColor);

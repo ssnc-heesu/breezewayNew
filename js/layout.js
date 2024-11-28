@@ -155,7 +155,7 @@ $(document).ready(function() {
         $(this).parents('.option-list').slideUp(50);
 
 
-        if($(this).parents('.function-box')) {
+        if ($(this).closest('.function-box').length > 0) {
             return false;
         }
 
