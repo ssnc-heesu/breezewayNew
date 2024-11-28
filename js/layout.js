@@ -23,6 +23,23 @@ $(document).ready(function() {
     });
 
     // time
+    let hours = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, "0")); // 00 ~ 23
+    let minutes = Array.from({ length: 60 }, (_, i) => String(i).padStart(2, "0")); // 00 ~ 59
+
+    let populateList = (selector, values, type) => {
+        let list = $(selector);
+        let items = "";
+
+        values.forEach(value => {
+            items += `<li><button data-type="${type}">${value}</button></li>`;
+        });
+        list.html(items);
+    };
+
+    populateList(".hour-list", hours, "Hour");
+    populateList(".minute-list", minutes, "Minute");
+    populateList(".second-list", minutes, "Second");
+    
     $('.time-result').on('click',function(e){
         e.stopPropagation();
 
@@ -128,17 +145,21 @@ $(document).ready(function() {
     });
 
     $('.select .option-list .option').on('click', function (e) {
-        if($(this).parents('.function-box')) {
-            return false;
-        }
         e.stopPropagation();
+
         let selectText = $(this).text();
         let selectValue = $(this).attr('data-value');
-        $(this).parents('.select').children('.label').text(selectText);
-
+   
         $(this).parents('.select').removeClass('open');
         $(this).parents('.select').attr('data-value',selectValue);
         $(this).parents('.option-list').slideUp(50);
+
+
+        if($(this).parents('.function-box')) {
+            return false;
+        }
+
+        $(this).parents('.select').children('.label').text(selectText);
     });
 
     // filter button 

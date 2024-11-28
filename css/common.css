@@ -468,10 +468,12 @@ textarea:-ms-input-placeholder {
 }
 .file-wrap.large label {
     position: absolute;
+    top: auto;
     left: 50%;
     bottom: 26px;
     display: inline-block;
     width: auto;
+    height: auto;
     transform: translateX(-50%);
     background: var(--bgContent);
     z-index: 10;

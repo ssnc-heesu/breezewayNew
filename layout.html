@@ -252,24 +252,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <script>
-                                    let hours = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, "0")); // 00 ~ 23
-                                    let minutes = Array.from({ length: 60 }, (_, i) => String(i).padStart(2, "0")); // 00 ~ 59
-        
-                                    let populateList = (selector, values, type) => {
-                                        let list = $(selector);
-                                        let items = "";
-        
-                                        values.forEach(value => {
-                                            items += `<li><button data-type="${type}">${value}</button></li>`;
-                                        });
-                                        list.html(items);
-                                    };
-        
-                                    populateList(".hour-list", hours, "Hour");
-                                    populateList(".minute-list", minutes, "Minute");
-                                    populateList(".second-list", minutes, "Second");
-                                </script>
                             </div>
                         </li>
                         <li>
