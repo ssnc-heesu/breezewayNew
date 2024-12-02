@@ -213,9 +213,6 @@ main {
 }
 
 /* list  */
-.list-style01 li + li {
-    margin-top: 30px;
-}
 .list-tit {
     display: block;
     margin-bottom: 8px;
@@ -231,6 +228,9 @@ main {
     letter-spacing: -0.03em;
 }
 
+.list-style01 li + li {
+    margin-top: 30px;
+}
 .list-style02 tr + tr th,
 .list-style02 tr + tr td {
     padding-top: 24px;
@@ -883,6 +883,10 @@ table {
 form .table-style01 th {
     font-weight: 500;
     color: var(--lightTxt);
+}
+form .table-style01 tr:last-of-type th,
+form .table-style01 tr:last-of-type td {
+    border-bottom: 0;
 }
 table .empty {
     text-align: center;

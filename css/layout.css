@@ -178,9 +178,9 @@ aside .depth2::after {
     content: '';
     position: absolute;
     top: 50%;
-    left: 2px;
+    left: 3px;
     width: 1px;
-    height: 71%;
+    height: calc(100% - 26px);
     background: var(--bgColor);
     transform: translateY(-50%);
     z-index: -1;
@@ -201,8 +201,8 @@ aside .depth2 li a::before {
     position: absolute;
     top: 50%;
     left: 0;
-    width: 5px;
-    height: 5px;
+    width: 6px;
+    height: 6px;
     margin-top: -2px;
     background: #a4b2bb;
     border-radius: 50%;
@@ -462,6 +462,7 @@ aside .mode .switch ~ label .dark {
     top: 50%;
     right: 12px;
     font-size: 5px;
+    transform: translate(-50%);
 }
 .table-head .right .dt-button-collection {
     position: absolute;
@@ -560,12 +561,12 @@ aside .mode .switch ~ label .dark {
     background: var(--blue);
     color: #fff;
 }
-.paginate_button.first,
+.paginate_button.previous,
 .paginate_button.next {
     font-size: 0;
     background: url(../img/ico_arrow.png) no-repeat center / 11px;
 }
-.paginate_button.previous,
+.paginate_button.first,
 .paginate_button.last {
     font-size: 0;
     background: url(../img/ico_d_arrow.png) no-repeat center / 11px;
