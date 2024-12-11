@@ -1,43 +1,38 @@
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Black.otf') format('woff');
+    src: url('font/NotoSansCJKkr-Black.otf') format('opentype');
     font-weight: 800;
-    font-style: black;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Bold.otf') format('woff');
+    src: url('font/NotoSansCJKkr-Bold.otf') format('opentype');
     font-weight: 600;
-    font-style: bold;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Medium.otf') format('woff');
+    src: url('font/NotoSansCJKkr-Medium.otf') format('opentype');
     font-weight: 500;
-    font-style: medium;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Regular.otf') format('woff');
+    src: url('font/NotoSansCJKkr-Regular.otf') format('opentype');
     font-weight: 400;
-    font-style: normal;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Light.otf') format('woff');
+    src: url('font/NotoSansCJKkr-Light.otf') format('opentype');
     font-weight: 200;
-    font-style: light;
 }
 
 :root {
-    --blue: #2c67ff;
+    --point: #2c67ff;
 }
 :root[color-theme='light'] {
     --red: #e90101;
 
     --bgColor: #f3f6ff;
     --bgContent: #fff;
-    
+
     --mainTxt: #222;
     --lightTxt: #666;
     --gray: #898989;
@@ -45,15 +40,16 @@
     --whiteGray: #f9f9fb;
 
     --overlay: rgba(0,0,0,0.4);
+    --Shadow: rgba(0,0,0,0.07);
     --lightShadow: rgba(0,0,0,0.04);
 }
 
 :root[color-theme='dark'] {
-    --red: #ff3838; 
+    --red: #ff3838;
 
     --bgColor: #161618;
     --bgContent: #202127;
-    
+
     --mainTxt: #dbdbdb;
     --lightTxt: #a3a3a3;
     --gray: #646464;
@@ -61,6 +57,7 @@
     --whiteGray: #111;
 
     --overlay: rgba(0,0,0,0.7);
+    --Shadow: rgba(255,255,255,0.07);
     --lightShadow: rgba(255,255,255,0.04);
 }
 
@@ -68,11 +65,11 @@
 body {
     color: var(--mainTxt);
     background: var(--bgColor);
-    font-family:"Noto Sans CJK", sans-serif;
+    font-family: "Noto Sans CJK", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 * {
     color: var(--mainTxt);
-    font-family:"Noto Sans CJK", sans-serif;
+    font-family: "Noto Sans CJK", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
 /* class style  */
@@ -87,13 +84,27 @@ body {
 .txt-red {
     color: var(--red);
 }
+.txt-blue {
+    color: var(--point);
+}
+
 .txt-left {
-    text-align: left!important;    
+    text-align: left!important;
 }
 .txt-center {
     text-align: center!important;
 }
 
+.d-flex {
+    display: flex;
+    gap: 15px;
+}
+.f-between {
+    justify-content: space-between;
+}
+.flex-block {
+    flex: 1;
+}
 .row {
     display: flex;
     flex-wrap: nowrap;
@@ -147,6 +158,7 @@ body {
 .guide-box {
     position: relative;
     padding: 14px 12px 14px 32px;
+    margin-bottom: 10px;
     font-size: 10px;
     color: var(--gray);
     line-height: 1.3;
@@ -160,7 +172,6 @@ body {
     left: 12px;
     width: 13px;
     height: 13px;
-    padding-left: 1px;
     font-size: 9px;
     font-weight: 400;
     line-height: 11px;
@@ -168,9 +179,21 @@ body {
     border: 1px solid var(--gray);
     border-radius: 50%;
 }
+/*empty*/
+.empty {
+    text-align: center;
+    color: var(--gray);
+    background: var(--whiteGray);
+}
+.empty svg {
+    display: block;
+    color: var(--gray);
+    stroke: var(--gray);
+}
 /* main */
 .wrap {
     display: flex;
+    width: 100%;
     height: 100vh;
 }
 main {
@@ -188,6 +211,9 @@ main {
     padding: 44px 56px;
     min-width: 800px;
     overflow: auto;
+}
+.inner.inner-sm > * {
+    max-width: 800px;
 }
 .overlay{
     display: none;
@@ -213,6 +239,9 @@ main {
 }
 
 /* list  */
+.list-style01 li + li {
+    margin-top: 30px;
+}
 .list-tit {
     display: block;
     margin-bottom: 8px;
@@ -228,9 +257,6 @@ main {
     letter-spacing: -0.03em;
 }
 
-.list-style01 li + li {
-    margin-top: 30px;
-}
 .list-style02 tr + tr th,
 .list-style02 tr + tr td {
     padding-top: 24px;
@@ -253,6 +279,9 @@ input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
     color: var(--gray);
 }
+textarea {
+    min-height: 60px;
+}
 .input-style01 {
     display: inline-block;
     max-width: 100%;
@@ -272,14 +301,15 @@ textarea:-ms-input-placeholder {
     max-width: 100%;
     font-size: 0;
 }
-.input-wrap input {
+.input-wrap input[type='text'] {
     display: inline-block;
     vertical-align: middle;
     width: calc(100% - 80px);
     border-radius: 4px 0 0 4px;
     border-right: 0;
 }
-.input-wrap button {
+.input-wrap button,
+.input-wrap input[type='button'] {
     display: inline-block;
     vertical-align: middle;
     width: 80px;
@@ -290,9 +320,9 @@ textarea:-ms-input-placeholder {
 
 /* checkbox,radio,switch */
 .checkbox, .radio, .switch {
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
-    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 .checkbox + label,
 .radio + label {
@@ -317,8 +347,8 @@ textarea:-ms-input-placeholder {
 }
 .checkbox:checked + label::before {
     margin-right: 4px;
-    background: var(--blue);
-    border-color: var(--blue);
+    background: var(--point);
+    border-color: var(--point);
 }
 .checkbox:checked + label::after {
     content: '';
@@ -339,7 +369,7 @@ textarea:-ms-input-placeholder {
     border-radius: 50%;
 }
 .radio:checked + label::before {
-    border-color: var(--blue);
+    border-color: var(--point);
 }
 .radio:checked + label::after {
     content: '';
@@ -348,7 +378,7 @@ textarea:-ms-input-placeholder {
     left: 3px;
     width: 10px;
     height: 10px;
-    background: var(--blue);
+    background: var(--point);
     border-radius: 50%;
     transform: translateY(-50%);
 }
@@ -377,11 +407,11 @@ textarea:-ms-input-placeholder {
     transition: all 0.2s;
 }
 .switch:checked + label {
-    background: #e7edff;
+    background: var(--bgColor);
 }
 .switch:checked + label::after {
     left: 29px;
-    background: var(--blue);
+    background: var(--point);
 }
 
 /* file  */
@@ -396,14 +426,14 @@ textarea:-ms-input-placeholder {
     transition: all 0.2s;
 }
 .file-wrap.drageover {
-    border: 1px dashed var(--blue);
+    border: 1px dashed var(--point);
     background: var(--bgColor);
 }
 .file-wrap.drageover label {
-    background: var(--blue);
+    background: var(--point);
 }
 .file-wrap.drageover .upload-name {
-    color: var(--blue);
+    color: var(--point);
 }
 .file-wrap.drageover label svg {
     color: #fff;
@@ -453,6 +483,7 @@ textarea:-ms-input-placeholder {
 .file-wrap .btn-delete svg {
     width: 15px;
     height: 15px;
+    margin-top: 2px;
     color: var(--lightTxt);
     stroke: var(--lightTxt);
 }
@@ -470,7 +501,7 @@ textarea:-ms-input-placeholder {
     position: absolute;
     top: auto;
     left: 50%;
-    bottom: 26px;
+    bottom: 20px;
     display: inline-block;
     width: auto;
     height: auto;
@@ -513,21 +544,22 @@ textarea:-ms-input-placeholder {
     display: inline-block;
     width: 100%;
     height: 30px;
-    padding: 7px 28px 7px 12px;
+    padding: 7px 18px 7px 12px;
     font-size: 11px;
     color: var(--lightTxt);
     background: var(--bgContent);
     border: 1px solid var(--lightGray);
     border-radius: 4px;
+    overflow: hidden;
 }
 .select .label::after {
     content: '';
     position: absolute;
     top: 50%;
-    right: 12px;
+    right: 8px;
     width: 0;
     height: 0;
-    margin-top: -3px;
+    margin-top: -2px;
     border-style: solid;
     border-width: 4px 3px 0px 3px;
     border-color: var(--lightTxt) transparent transparent transparent;
@@ -557,7 +589,7 @@ textarea:-ms-input-placeholder {
 }
 .select .option-list li {
     padding: 12px 10px;
-    border-bottom: 1px solid var(--lightGray); 
+    border-bottom: 1px solid var(--lightGray);
     text-align: left;
     transition: all 0.2s;
 }
@@ -571,7 +603,7 @@ textarea:-ms-input-placeholder {
     border-bottom: 0;
 }
 .select .option-list::-webkit-scrollbar {
-    width: 4px;  
+    width: 4px;
 }
 .select .option-list::-webkit-scrollbar-thumb {
     background: var(--gray);
@@ -595,9 +627,11 @@ textarea:-ms-input-placeholder {
 }
 .date-item {
     position: relative;
+}
+div[class*='-wrap'] .date-item {
     display: inline-block;
     vertical-align: middle;
-    width: 46.5%; 
+    width: 46.5%;
     min-width: 100px;
     max-width: 100%;
 }
@@ -638,7 +672,7 @@ textarea:-ms-input-placeholder {
     height: auto;
     top: 0;
 }
-.ui-datepicker .ui-datepicker-prev span, 
+.ui-datepicker .ui-datepicker-prev span,
 .ui-datepicker .ui-datepicker-next span {
     width: 6px;
     height: 10px;
@@ -647,7 +681,7 @@ textarea:-ms-input-placeholder {
     padding: 8px;
     background: #fff url("../img/ico_arrow_blue.png") no-repeat center / 5px;
     border-radius: 3px;
-    border: 1px solid var(--blue)
+    border: 1px solid var(--point)
 }
 .ui-datepicker .ui-datepicker-prev {
     left: auto;
@@ -675,14 +709,14 @@ textarea:-ms-input-placeholder {
     text-align: left;
     line-height: 1;
 }
-.ui-datepicker select.ui-datepicker-month, 
+.ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year {
     width: auto;
     font-size: 13px;
     font-weight: 800;
-    -webkit-appearance: none; 
-    -moz-appearance: none; 
-    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 .ui-datepicker th {
     font-size: 10px;
@@ -707,12 +741,12 @@ textarea:-ms-input-placeholder {
     background: none;
 }
 .ui-datepicker-today .ui-state-default {
-    color: var(--blue);
+    color: var(--point);
     text-decoration: underline;
 }
 .ui-state-active, .ui-widget-content .ui-state-active {
     color: #fff;
-    background: var(--blue);
+    background: var(--point);
 }
 .time-wrap {
     position: relative;
@@ -772,11 +806,11 @@ textarea:-ms-input-placeholder {
     margin-top: 14px;
 }
 .time-select .select-list button.active {
-    color: var(--blue);
+    color: var(--point);
     font-weight: 600;
 }
 .time-select .select-list::-webkit-scrollbar {
-    width: 0;  
+    width: 0;
 }
 
 /* button */
@@ -789,12 +823,16 @@ textarea:-ms-input-placeholder {
     letter-spacing: -0.02em;
     cursor: pointer;
 }
+.btn-block {
+    display: block;
+    width: 100%;
+}
 .btn + .btn {
     margin-left: 4px;
 }
 .btn-blue {
-    background: var(--blue);
-    border: 1px solid var(--blue);
+    background: var(--point);
+    border: 1px solid var(--point);
     color: #fff;
 }
 .btn-blue:hover {
@@ -802,12 +840,12 @@ textarea:-ms-input-placeholder {
 }
 .btn-line-blue {
     background: var(--bgContent);
-    border: 1px solid var(--blue);
-    color: var(--blue);
+    border: 1px solid var(--point);
+    color: var(--point);
 }
 .btn-line-blue:hover {
-    background: var(--blue);
-    border: 1px solid var(--blue);
+    background: var(--point);
+    border: 1px solid var(--point);
     color: #fff;
 }
 .btn-line-gray {
@@ -820,28 +858,28 @@ textarea:-ms-input-placeholder {
     vertical-align: middle;
     width: 12px;
     height: 12px;
-    margin: -2px 4px 0 0;
+    margin: -2px 3px 0 0;
     stroke: var(--lightTxt);
     color: var(--lightTxt);
 }
 .btn-line-gray:hover {
-    color: var(--blue);
-    border-color: var(--blue);
+    color: var(--point);
+    border-color: var(--point);
     background: #fff;
 }
 .btn-line-gray:hover svg {
-    stroke: var(--blue);
-    color: var(--blue);
+    stroke: var(--point);
+    color: var(--point);
 }
 .btn-sm {
     min-width: 60px;
-    padding: 8px 14px;
+    padding: 6px 12px;
     font-size: 11px;
-    font-weight: 200;
+    font-weight: 300;
 }
 .table-head .btn-sm {
     padding: 7px 12px;
-    font-size: 12px;
+    font-size: 11px;
 }
 .btn-md {
     min-width: 84px;
@@ -857,11 +895,19 @@ textarea:-ms-input-placeholder {
 table {
     position: relative;
     width: 100%;
-    text-align: left; 
+    text-align: left;
 }
 .table-center,
 .table-center > * {
-    text-align: center;
+    text-align: center!important;
+}
+.v-middle,
+.v-middle * {
+    vertical-align: middle!important;
+}
+.v-top,
+.v-top * {
+    vertical-align: top!important;
 }
 .table-style01 th,
 .table-style01 td {
@@ -874,39 +920,33 @@ table {
     font-weight: 600;
     background: var(--whiteGray);
 }
-.table-style01 tbody tr:hover td:not(.empty) {
+.table-style01 tbody tr:not(.readonly):hover td:not(.empty) {
     background: var(--bgColor);
 }
-.table-style01 tbody tr:hover th + td:not(.empty) {
+.table-style01 tbody tr:not(.readonly):hover th + td:not(.empty) {
     background: none;
 }
 form .table-style01 th {
     font-weight: 500;
     color: var(--lightTxt);
 }
-form .table-style01 tr:last-of-type th,
-form .table-style01 tr:last-of-type td {
-    border-bottom: 0;
-}
 table .empty {
-    text-align: center;
     padding: 40px 0!important;
     font-size: 12px;
     font-weight: 200;
     line-height: 1.3;
-    color: var(--gray);
-    background: var(--whiteGray);
     opacity: 0.8;
 }
 table .empty svg {
-    display: block;
-    margin:0 auto 14px;
     width: 34px;
     height: 34px;
-    color: var(--gray);
-    stroke: var(--gray);
+    margin:0 auto 14px;
 }
-
+table .readonly th,
+table .readonly td {
+    color: var(--lightTxt);
+    background: var(--lightGray);
+}
 /* tab  */
 .tab-style01 {
     position: relative;
@@ -947,19 +987,32 @@ table .empty svg {
 .tab-content.active {
     display: block;
 }
-
+.scroll-table {
+    overflow: auto;
+}
+.scroll-table table {
+    width: max-content;
+    min-width: 100%;
+}
+.scroll-table table th *,
+.scroll-table table td * {
+    width: max-content;
+    white-space: nowrap;
+}
 /* speech bubble style */
 .bubble {
     display: none;
     position: absolute;
     top: 50%;
     left: 100%;
+    width: max-content;
+    max-width: 150px;
     margin-left: 20px;
-    padding: 8px; 
+    padding: 8px;
     font-size: 10px;
     font-weight: 400;
+    white-space: normal;
     color: var(--gray);
-    white-space: nowrap;
     background: var(--bgContent);
     border: 1px solid var(--lightGray);
     border-radius: 4px;
@@ -996,13 +1049,16 @@ table .empty svg {
     position: relative;
     display: inline-block;
     vertical-align: middle;
+    margin: -2px 0 0 3px;
+    z-index: 10;
 }
 .tooltip button svg {
-    width: 11px;
-    height: 11px;
-    margin-top: 1px;
+    width: 0.9em;
+    height: 0.9em;
     color: var(--lightTxt);
     stroke: var(--lightTxt);
+    background: var(--bgContent);
+    border-radius: 50%;
 }
 .tooltip:hover .bubble {
     display: block;
@@ -1030,7 +1086,7 @@ table .empty svg {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 70%;
+    max-width: 85%;
     max-height: 70%;
     padding: 14px 20px;
     background: var(--bgContent);
@@ -1067,7 +1123,7 @@ table .empty svg {
     overflow: auto;
 }
 .modal-content .modal-body::-webkit-scrollbar {
-    width: 4px;  
+    width: 4px;
 }
 .modal-content .modal-body::-webkit-scrollbar-thumb {
     background: var(--lightGray);

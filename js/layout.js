@@ -6,21 +6,24 @@ function activeBallPosition(){
     let activeBallTop = buttonTop + (buttonHeight / 2) - ($('.active-ball').outerHeight() / 2);
 
     $('aside nav .active-ball').css('top', activeBallTop + "px");
-} 
+}
+
+// html 모드 - 세션스토리지에서 현재 colorTheme값을 가져와서 사용
+function htmlMode(){
+    let htmlTheme = sessionStorage.getItem('colorTheme') ||  sessionStorage.setItem('colorTheme','light');
+    $('html').attr('color-theme',htmlTheme);
+}
+htmlMode();
 
 $(document).ready(function() {
+    htmlMode();
+
     // icon lucide
     lucide.createIcons();
 
     if($('aside nav .menu-item').length > 0 ){
         activeBallPosition();
     }
-
-    // datepicker 
-    $('#datepicker01, #datepicker02, #datepicker03, #datepicker04').datepicker({
-        changeMonth: true,
-        changeYear: true
-    });
 
     // time
     let hours = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, "0")); // 00 ~ 23
@@ -39,7 +42,7 @@ $(document).ready(function() {
     populateList(".hour-list", hours, "Hour");
     populateList(".minute-list", minutes, "Minute");
     populateList(".second-list", minutes, "Second");
-    
+
     $('.time-result').on('click',function(e){
         e.stopPropagation();
 
@@ -66,9 +69,9 @@ $(document).ready(function() {
         } else if (thisType === "Second") {
             Second = thisValue;
         }
-        
+
         $('#'+selectTime).val(Hour+":"+Minute+":"+Second);
-        
+
         $(changeValue).text($('#'+selectTime).val());
         $(changeValue).attr('data-value',$('#'+selectTime).val())
 
@@ -76,23 +79,32 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
+    // html color-theme값에 따라 #mode switch의 체크여부를 수정
+    if($('html').attr('color-theme') == 'light') {
+        $('#mode').prop("checked",true)
+    } else {
+        $('#mode').prop("checked",false)
+    }
+
     // 모드 변경
     $('#mode').on('change', function() {
         if ($(this).is(':checked')) {
             $('html').attr('color-theme', 'light');
+            sessionStorage.setItem('colorTheme', 'light');
         } else {
             $('html').attr('color-theme', 'dark');
+            sessionStorage.setItem('colorTheme', 'dark');
         }
     });
 
-    // modal 
+    // modal
     $('.modal-open').on('click',function(){
         let thisName = $(this).attr('data-name');
         $('#'+thisName).addClass('open');
         $('#'+thisName).children('.overlay').show();
     });
 
-    // tab 
+    // tab
     $('.tab .item').on('click',function(){
         let thisName = $(this).attr('data-name');
 
@@ -114,7 +126,7 @@ $(document).ready(function() {
         $('#' + thisName).removeClass('open');
     });
 
-    // menu-item 클릭시 메뉴 열림 
+    // menu-item 클릭시 메뉴 열림
     $('.menu-item').on('click',function(){
         $(this).parents('aside').addClass('open');
         $(this).parents('aside').children('.overlay').show();
@@ -128,14 +140,17 @@ $(document).ready(function() {
 
     // 메뉴 열렸을때 메뉴명을 클릭하면 하위메뉴가 열림(다른 메뉴는 닫힘)
     $('.side-menu .menu-item').on('click',function(){
+        const isActive = $(this).hasClass('active');
         $('.side-menu .menu-item').removeClass('active');
         $('.side-menu .menu-item .depth2 li').removeClass('active');
 
-        $(this).addClass('active')
+        if (!isActive) {
+            $(this).addClass('active');
+        }
     })
 
     // custom select
-    $('.select').on('click', function (e) {
+    $(document).on('click','.select', function (e) {
         e.stopPropagation();
 
         $('.select').not(this).removeClass('open').children('.option-list').slideUp();
@@ -144,12 +159,12 @@ $(document).ready(function() {
         $(this).children('.option-list').slideToggle(50);
     });
 
-    $('.select .option-list .option').on('click', function (e) {
+    $(document).on('click', '.select .option-list .option', function (e) {
         e.stopPropagation();
 
         let selectText = $(this).text();
         let selectValue = $(this).attr('data-value');
-   
+
         $(this).parents('.select').removeClass('open');
         $(this).parents('.select').attr('data-value',selectValue);
         $(this).parents('.option-list').slideUp(50);
@@ -162,7 +177,7 @@ $(document).ready(function() {
         $(this).parents('.select').children('.label').text(selectText);
     });
 
-    // filter button 
+    // filter button
     $('.btn-filter').on('click',function(){
         $(this).toggleClass('active');
         $('#filterBox').toggleClass('open');
@@ -203,7 +218,7 @@ $(document).ready(function() {
         });
 
         uploadName.on('click', function () {
-            fileInput.click(); 
+            fileInput.click();
         });
     });
 });
@@ -215,7 +230,7 @@ $(document).on('click', function (e) {
     $('.option-list').slideUp(50);
 
     if ($(e.target).closest('.time-wrap').length) {
-        return; 
+        return;
     }
     $('.time-select').fadeOut(150);
 });

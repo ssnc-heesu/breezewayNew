@@ -345,9 +345,56 @@
                             </div>
                         </div>
                         <!-- 새로운 알람 있을경우 new 클래스가 붙음  -->
-                        <div class="alarm new">
-                            <a href="#"><i data-lucide="bell"></i></a>
+                        <div class="alarm new" id="">
+                            <button class="modal-open" data-name="alarmList"><i data-lucide="bell"></i></button>
+                            <div class="alarm-list" id="alarmList">
+                                <strong class="alarm-tit">Alarm</strong>
+                                <button type="button" class="modal-close" data-name="alarmList"><i data-lucide="x"></i></button>
+                                <ul>
+                                    <li class="empty">
+                                        <i data-lucide="bell-off"></i>
+                                        There are no new alarms
+                                    </li>
+                                    <li class="new">
+                                        <a href="#" title="Hong Gil-dong requested firewall approval.">
+                                            <span class="date">2024.11.30 13:13 (999일전)</span>
+                                            <div class="alarm-txt">
+                                                <strong>[approval] alarm</strong>
+                                                <p>Hong Gil-dong requested firewall approval.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="new">
+                                        <a href="#" title="Hong Gil-dong requested firewall approval.">
+                                            <span class="date">2024.11.30 13:13 (999일전)</span>
+                                            <div class="alarm-txt">
+                                                <strong>[approval] alarm</strong>
+                                                <p>Hong Gil-dong requested firewall approval.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Hong Gil-dong requested firewall approval.">
+                                            <span class="date">2024.11.30 13:13 (999일전)</span>
+                                            <div class="alarm-txt">
+                                                <strong>[approval] alarm</strong>
+                                                <p>Hong Gil-dong requested firewall approval.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Hong Gil-dong requested firewall approval.">
+                                            <span class="date">2024.11.30 13:13 (999일전)</span>
+                                            <div class="alarm-txt">
+                                                <strong>[approval] alarm</strong>
+                                                <p>Hong Gil-dong requested firewall approval.</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
+
                         <div class="profile">
                             <div class="select" data-value="">
                                 <span class="label"><img src="img/img_profile.png" alt="profile img" width="30" style="margin-top:4px"/></span>
@@ -358,6 +405,18 @@
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+
+                        <div class="toast">
+                            <a href="#" class="alarm-txt">
+                                <strong>[approval] alarm</strong>
+                                <p>Hong Gil-dong requested firewall approval.</p>
+                            </a>
+                    
+                            <a href="#" class="alarm-txt">
+                                <strong>[approval] alarm</strong>
+                                <p>Joshua Mclnerney requested firewall approval. Joshua Mclnerney requested firewall approval.</p>
+                            </a>
                         </div>
                     </div>
                     
@@ -529,7 +588,7 @@
                                     <tbody>
                                         <tr>
                                             <td colspan="5" class="empty">
-                                                <i data-lucide="file-search"></i>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#898989" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-search"><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M4.268 21a2 2 0 0 0 1.727 1H18a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v3"/><path d="m9 18-1.5-1.5"/><circle cx="5" cy="14" r="3"/></svg>
                                                 There are no search results.<br>
                                                 Please check the contents again.
                                             </td>

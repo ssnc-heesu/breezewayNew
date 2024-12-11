@@ -1,172 +1,105 @@
-<asdie id="sideaMenu">
-    <img src="img/img_logo.png" style="width :28px; height: 28px;" class="logo">
-    <nav>
-        <ul>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="pencil-line"></i><span class="bubble">Request</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="stamp"></i><span class="bubble">Approval</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="list-todo"></i><span class="bubble">Policy</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="chart-candlestick"></i><span class="bubble">Governance(Push)</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="menu-item active">
-                    <i data-lucide="package-search"></i><span class="bubble">Object</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="server"></i><span class="bubble">Device(Firewall/Switch)</span>
-                </button>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="scroll-text"></i><span class="bubble">Report</span>
-                </button>
-            </li>
-            <li>
-                <a href="#" class="menu-item">
-                    <i data-lucide="shield-plus"></i><span class="bubble">Diagnostic</span>
-                </a>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="settings"></i><span class="bubble">Setting</span>
-                </button>
-            </li>
-        </ul>
-        <span class="active-ball"></span>
-    </nav>
-    <!-- 메뉴 오픈 -->
-    <div class="side-menu">
-        <div class="full-logo">Breezeway FireONE</div>
-        <button type="button" class="btn-close" data-name="sideMenu"><i data-lucide="chevrons-left" width="20"></i></button>
-        <ul class="menu-list">
-            <li>
-                <button type="button" class="menu-item active">
-                    <i data-lucide="pencil-line"></i><span class="menu-name">Request</span>
-                </button>
-                <ul class="depth2">
-                    <li class="active">
-                        <a href="/request/fpiq/requestFirewallPolicy.os"><spring:message code="RequestFirewallPolicy"/></a>
-                    </li>
-                    <li>
-                        <a href="/request/fpiq/requestBlackListFirewallPolicy.os"><spring:message code="RequestBlackListPolicy"/></a>
-                    </li>
-                    <li>
-                        <a href="/request/fpiq/fpiqRequestList.os"><spring:message code="RequestPolicyList"/></a>
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="stamp"></i><span class="menu-name">Approval</span>
-                </button>
-                <ul class="depth2">
-                    <li><a href="/approval/approvalBox.os"><spring:message code="ApprovalBox"/></a></li>
-                    <li><a href="/approval/draftBox.os"><spring:message code="DraftBox"/></a></li>
-                    <li><a href="#">Mandate</a></li>
-                    <li><a href="#">My Line Setup</a></li>
-                    <li><a href="#">Fixed Line Setup</a></li>
-                </ul>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="list-todo"></i><span class="menu-name">Topology</span>
-                </button>
-                <ul class="depth2">
-                    <li><a href="/argos/topology/topology.os">Topology</a></li>
-                    <li><a href="/policy/fpiq/fpiqList.os"><spring:message code="Firewall"/></a></li>
-                    <li><a href="/policy/fpiq/ruleList.os"><spring:message code="Firewall"/> Rule</a></li>
-                    <li><a href="/policy/fpiq/objectGroup.os" class="item"><spring:message code = "objectGroup"/></a></li>
-                    <li><a href="/policy/fpiq/complianceRegister.os" class="item">Compliance</a></li>
-                    <li><a href="/policy/fpiq/workgroup/list.os" class="item"><spring:message code="WorkGroup" /></a></li>
-                </ul>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="package-search"></i><span class="menu-name">Object</span>
-                </button>
-                <ul class="depth2">
-                    <li><a href="/policy/fpiq/objectfwList.os"><spring:message code="Firewall Object"/></a></li>
-                    <li><a href="/policy/fpiq/objectAddrList.os"><spring:message code="AddressObject"/></a></li>
-                    <li><a href="/policy/fpiq/objectSvcList.os"><spring:message code="ServiceObject"/></a></li>
-                    <li><a href="/policy/fpiq/objectAddrSvcList.os"><spring:message code="System Object"/></a></li>
-                </ul>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="chart-candlestick"></i><span class="menu-name">Push</span>
-                </button>
-                <ul class="depth2">
-                    <li><a href="/push/requestedList.os"><spring:message code="RequestedObjectList"/></a></li>
-                    <li><a href="/push/completedList.os"><spring:message code="CompletedObjectList"/></a></li>
-                    <li><a href="/push/expiredList.os"><spring:message code="ExpiredObjectList"/></a></li>
-                </ul>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="server"></i><span class="menu-name">Device(Firewall/Switch)</span>
-                </button>
-                <ul class="depth2">
-                    <li><a href="#">Firewall List</a></li>
-                    <li><a href="#">Firewall Rule</a></li>
-                    <li><a href="#">Firewall Object</a></li>
-                    <li><a href="#">Switch List</a></li>
-                </ul>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="scroll-text"></i><span class="menu-name">Report</span>
-                </button>
-                <ul class="depth2">
-                    <li><a href="#">2차메뉴 미정</a></li>
-                </ul>
-            </li>
-            <li>
-                <a onclick="window.open('http://192.168.1.126:3000/ko')" class="menu-item">
-                    <i data-lucide="shield-plus"></i><span class="menu-name">Diagnostic
-                        <i data-lucide="external-link" class="ico-link"></i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <button type="button" class="menu-item">
-                    <i data-lucide="settings"></i><span class="menu-name">Setting</span>
-                </button>
-                <ul class="depth2">
-                    <li><a href="#">Uer List</a></li>
-                    <li><a href="#">Dept List</a></li>
-                    <li><a href="#">Admin User</a></li>
-                    <li><a href="#">Work Group</a></li>
-                    <li><a href="#">IP ACL</a></li>
-                </ul>
-            </li>
-        </ul>
+<!DOCTYPE html>
+<html lang="ko" color-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Breezeway FireONE layout</title>
 
-    </div>
-    <div class="overlay" data-name="sideMenu"></div>
-    <!-- 메뉴 오픈 End-->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
 
-    <!-- mode switch  -->
-    <div class="mode">
-        <input type="checkbox" id="mode" class="switch" checked>
-        <label for="mode">
-            <i data-lucide="sun" class="light"></i>
-            <i data-lucide="moon" class="dark"></i>
-        </label> 
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/layout.js"></script>
+</head>
+<body >
+    <div class="wrap">
+        <main>
+    
+            <div class="content-wrap">
+                <div class="inner">
+    
+                    <div class="content-tit">
+                        <span><spring:message code="Policy"/></span>
+                        <span><spring:message code="objectGroup"/></span>
+                        <span><spring:message code="CreateobjcetGroup"/></span>
+                    </div>
+    
+                    <div class="row">
+                        <div class="content-item col-6">
+                            <div class="item-content">
+                                <form>
+                                    <table class="table-style01">
+                                        <colgroup>
+                                            <col style="width: 30%">
+                                            <col style="width: 70%">
+                                        </colgroup>
+                                        <tbody>
+                                        <tr>
+                                            <th><spring:message code="GroupType"/></th>
+                                            <td>
+                                                <div class="select" id="groupType" data-value="">
+                                                    <span class="label">Custom select</span>
+                                                    <ul class="option-list">
+                                                        <li class="option" data-value="addr"><spring:message code="AddressGroup"/></li>
+                                                        <li class="option" data-value="svc"><spring:message code="ServiceGroup"/></li>
+                                                        <li class="option" data-value="addr_svc">SystemGroup</li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="groupName"><spring:message code="GroupName"/></label></th>
+                                            <td>
+                                                <div class="input-wrap">
+                                                    <input type="text" class="input-style01 input-block" id="groupName">
+                                                    <button type="button" class="btn btn-line-gray" onclick="f_nameCheck()"><spring:message code="duplication"/></button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><label for="comment"><spring:message code="Description"/></label></th>
+                                            <td>
+                                                <input type="text" class="input-style01 input-block" id="comment" name="description"  placeholder="<spring:message code='Description'/>">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                               <button id = "openModalBtn" class="btn btn-block btn-md btn-line-blue mt-10">+ <spring:message code="AddMember"/></button>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="content-item col-6">
+                            <div class="item-content">
+                                <div class="table-head">
+                                    <h3 class="item-tit"><spring:message code="MemberList"/></h3>
+                                    <div>
+                                        <button onclick="setButton()" class="btn btn-sm btn-blue"><spring:message code="CreateobjcetGroup"/></button>
+                                        <button onclick="f_redirect()" class="btn btn-sm btn-blue"><spring:message code="List"/></button>
+                                    </div>
+                                </div>
+                                <table id="MemberSelect" class="table-style01">
+                                    <thead></thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>No data available in table</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-</aside>
+    
+    
+</body>
+</html>
