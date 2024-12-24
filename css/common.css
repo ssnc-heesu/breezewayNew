@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/font/NotoSansCJKkr-Black.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Black.otf') format('opentype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/font/NotoSansCJKkr-Bold.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Bold.otf') format('opentype');
     font-weight: 600;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/font/NotoSansCJKkr-Medium.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Medium.otf') format('opentype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/font/NotoSansCJKkr-Regular.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Regular.otf') format('opentype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/font/NotoSansCJKkr-Light.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Light.otf') format('opentype');
     font-weight: 200;
 }
 
