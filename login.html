@@ -17,16 +17,22 @@
     <script>
         $(document).ready(function(){
             $('#username').focus();
+
+                const randomNum = Math.floor(Math.random() * 3) + 1;
+                console.log(randomNum)
+
+
+            $('.login-right').attr('id', 'loginBg'+randomNum);
         });
     </script>
 </head>
 <body >
     <div class="wrap" id="login">
         <div class="form-wrap">
-            <img src="img/img_login_logo.png" class="login-logo">
+            <span class="login-logo">Breezeway FireONE</span>
 
             <!-- 1차로그인 -->
-            <!-- <form>
+            <form>
                 <h2>FireONE</h2>
                 <p>Welcome Back, Please enter Your details</p>
                 <div class="input-wrap">
@@ -36,11 +42,11 @@
                 </div>
                 <button type="submit" class="btn btn-blue btn-login">LOGIN</button>
                 <a href="#" class="find-pw">Forgot password?</a>
-            </form> -->
+            </form>
             <!-- // 1차 로그인  -->
 
             <!-- 2차인증  -->
-            <form>
+            <!-- <form>
                 <h2>FireONE</h2>
                 <p>Welcome Back, Please enter Your details</p>
                 <div class="input-wrap">
@@ -54,7 +60,7 @@
                 </div>
                 <button type="submit" class="btn btn-blue btn-login">LOGIN</button>
                 <a href="#" class="find-pw">Forgot password?</a>
-            </form>
+            </form> -->
              <!-- //2차인증  -->
             <div class="copyright">ⓒ 2024 SSNC All rights reserved. Beta Version 1.0.0</div>
         </div>
