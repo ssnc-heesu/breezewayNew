@@ -1,26 +1,26 @@
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/css/font/NotoSansCJKkr-Black.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Black.otf') format('opentype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/css/font/NotoSansCJKkr-Bold.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Bold.otf') format('opentype');
     font-weight: 600;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/css/font/NotoSansCJKkr-Medium.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Medium.otf') format('opentype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/css/font/NotoSansCJKkr-Regular.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Regular.otf') format('opentype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('/resources/views/css/font/NotoSansCJKkr-Light.otf') format('opentype');
+    src: url('font/NotoSansCJKkr-Light.otf') format('opentype');
     font-weight: 200;
 }
 
@@ -735,7 +735,7 @@ div[class*='-wrap'] .date-item {
     margin-top: 0px;
     margin-left: -22px;
     padding: 8px;
-    background: #fff url("/resources/views/img/ico_arrow_blue.png") no-repeat center / 5px;
+    background: #fff url("../img/ico_arrow_blue.png") no-repeat center / 5px;
     border-radius: 3px;
     border: 1px solid var(--point)
 }
