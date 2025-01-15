@@ -1,4 +1,20 @@
-// 초기진입시 aside active-ball의 위치를 설정
+function setActiveTab(index) {
+    $('.tab .item').removeClass('active');
+    $('.tab-content').removeClass('active');
+
+    $('.tab .item').eq(index).addClass('active');
+    $('.tab-content').eq(index).addClass('active');
+
+    const activeTab = $('.tab .item.active');
+    $('.tab .active-ball').css({
+        'width': activeTab.outerWidth() + 'px',
+        'left': activeTab.position().left + 'px'
+    });
+}
+function tabWidth() {
+    setActiveTab(0); // 첫 번째 탭 활성화
+}
+
 function activeBallPosition(){
     let thisButton = $('aside nav .menu-item.active')
     let buttonTop = thisButton.position().top;
@@ -8,7 +24,7 @@ function activeBallPosition(){
     $('aside nav .active-ball').css('top', activeBallTop + "px");
 }
 
-// html 모드 - 세션스토리지에서 현재 colorTheme값을 가져와서 사용
+// html 컬러모드 - 세션스토리지에서 현재 colorTheme값을 가져와서 사용
 function htmlMode(){
     let htmlTheme = sessionStorage.getItem('colorTheme') ||  sessionStorage.setItem('colorTheme','light');
     $('html').attr('color-theme',htmlTheme);
@@ -18,12 +34,14 @@ htmlMode();
 $(document).ready(function() {
     htmlMode();
 
+    if ($('.tab').length > 0) {
+        tabWidth();
+    }
+
+    activeBallPosition();
+    
     // icon lucide
     lucide.createIcons();
-
-    if($('aside nav .menu-item').length > 0 ){
-        activeBallPosition();
-    }
 
     // time
     let hours = Array.from({ length: 24 }, (_, i) => String(i).padStart(2, "0")); // 00 ~ 23
@@ -99,9 +117,15 @@ $(document).ready(function() {
 
     // modal
     $('.modal-open').on('click',function(){
-        let thisName = $(this).attr('data-name');
-        $('#'+thisName).addClass('open');
-        $('#'+thisName).children('.overlay').show();
+        const modalId = $(this).attr('data-name');
+        const modal = $('#' + modalId);
+
+        modal.toggleClass('open');
+        modal.children('.overlay').show();
+
+        if (modal.find('.tab').length > 0) {
+            tabWidth();
+        }
     });
 
     // tab
@@ -114,10 +138,8 @@ $(document).ready(function() {
         $(this).addClass('active');
         $('#' + thisName).addClass('active');
 
-        $(this).siblings('.active-ball').css({
-            'left': $(this).position().left + 'px',
-            'width': $(this).outerWidth() + 'px'
-        });
+        const index = $(this).index(); // 클릭된 탭의 인덱스
+        setActiveTab(index);
     });
 
     // overlay,close버튼들 클릭 시 data-name과 동일한 id의 요소를 close
@@ -127,7 +149,7 @@ $(document).ready(function() {
     });
 
     // menu-item 클릭시 메뉴 열림
-    $('.menu-item').on('click',function(){
+    $('#sideMenu').on('click','.menu-item',function(){
         $(this).parents('aside').addClass('open');
         $(this).parents('aside').children('.overlay').show();
     });
@@ -139,7 +161,7 @@ $(document).ready(function() {
     })
 
     // 메뉴 열렸을때 메뉴명을 클릭하면 하위메뉴가 열림(다른 메뉴는 닫힘)
-    $('.side-menu .menu-item').on('click',function(){
+    $('.side-menu').on('click','.menu-item', function(){
         const isActive = $(this).hasClass('active');
         $('.side-menu .menu-item').removeClass('active');
         $('.side-menu .menu-item .depth2 li').removeClass('active');
@@ -163,18 +185,33 @@ $(document).ready(function() {
         e.stopPropagation();
 
         let selectText = $(this).text();
+        let thisParents = $(this).parents('.select')
         let selectValue = $(this).attr('data-value');
 
-        $(this).parents('.select').removeClass('open');
-        $(this).parents('.select').attr('data-value',selectValue);
-        $(this).parents('.option-list').slideUp(50);
+        if ($(this).closest('.profile').length > 0) {
+            return false;
+        }
 
+        thisParents.removeClass('open');
+        thisParents.attr('data-value',selectValue);
+        thisParents.children('.select-value').val(selectValue).trigger('change');
+        $(this).parents('.option-list').slideUp(50);
 
         if ($(this).closest('.function-box').length > 0) {
             return false;
         }
 
         $(this).parents('.select').children('.label').text(selectText);
+    });
+
+    $(document).on('change','.select-value',function(){
+        let currentVal = $(this).val();
+        let activeOption = $(this).siblings('.option-list').children('.option')
+        activeOption.removeClass('active');
+        activeOption.addClass('active');
+
+        $(this).siblings('.label').text(currentVal);
+        $(this).parents('.select').attr('data-value',currentVal);
     });
 
     // filter button

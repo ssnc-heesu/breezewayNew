@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <title>Breezeway FireONE layout</title>
 
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
-    <link href="css/reset.css" rel="stylesheet" />
-    <link href="css/common.css" rel="stylesheet" />
-    <link href="css/layout.css" rel="stylesheet" />
+    <link rel="icon" href="/resources/views/img/favicon.ico">
+    <link rel="icon" href="/resources/views/img/favicon.png">
 
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link href="/resources/views/css/reset.css" rel="stylesheet" />
+    <link href="/resources/views/css/common.css" rel="stylesheet" />
+    <link href="/resources/views/css/layout.css" rel="stylesheet" />
+
+    <script src="/resources/views/js/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script src="js/layout.js"></script>
+    <script src="/resources/views/js/layout.js"></script>
 </head>
 <body >
     <div class="wrap">
         <aside id="sideMenu">
-            <img src="img/img_logo.png" style="width :28px; height: 28px;" class="logo">
+            <img src="/resources/views/img/img_logo.png" style="width :28px; height: 28px;" class="logo">
             <nav>
                 <ul>
                     <li>
@@ -394,19 +397,72 @@
                                 </ul>
                             </div>
                         </div>
-
                         <div class="profile">
                             <div class="select" data-value="">
-                                <span class="label"><img src="img/img_profile.png" alt="profile img" width="30" style="margin-top:4px"/></span>
+                                <span class="label">
+                                    <img src="/resources/views/img/img_profile.png" alt="profile img" width="30" style="margin-top:4px"/>
+                                </span>
                                 <ul class="option-list">
-                                    <li class="option">Joshua Mclnerney <span class="small txt-gray">Joshua@ssnc.co.kr</span></li>
                                     <li class="option">
-                                        <button type="button"><i data-lucide="log-out"></i>logout</button>
+                                        Joshua Mclnerney 
+                                        <span class="small txt-gray">Joshua@ssnc.co.kr</span>
+                                    </li>
+                                    <li class="option">
+                                        <span>30:00</span>
+                                        <button type="button" class="btn-time">
+                                            <i data-lucide="alarm-clock"></i>
+                                            로그인연장
+                                        </button>
+                                    </li>
+                                    <li class="option">
+                                        <button type="button" onclick="logout()" class="btn-logout"><i data-lucide="log-out"></i>Logout</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
+                        <div class="chat-wrap">
+                            <button type="button" class="btn-chat" onclick="$(this).toggleClass('open')">chat bot</button>
+                            <div class="chat-box">
+                                <div class="chat-head">
+                                    <strong class="chat-tit">BreezeWay Help</strong>
+                                    <button type="button" class="close" onclick="$(this).parents('.chat-wrap').children('.btn-chat').removeClass('open')"><i data-lucide="x"></i></button>
+                                </div>
+                                <div class="chat-body">
+                                    <div class="chat">
+                                        <p class="c-bubble">How can we help you?</p>
+                                        <span class="time">AM 9:00</span>
+                                    </div>
+                                    <div class="chat user">
+                                        <p class="c-bubble">Frequently asked questions</p>
+                                        <span class="time">AM 9:15</span>
+                                    </div>
+                                    <div class="chat">
+                                        <p class="c-bubble">This is a list of frequently asked questions.</p>
+                                        <ul class="btn-list">
+                                            <li><button type="button" class="item">My page</button></li>
+                                            <li><button type="button" class="item">Setting</button></li>
+                                            <li><button type="button" class="item">Firewall Object List</button></li>
+                                            <li><input type="button" class="item" value="Customer service phone number"></li>
+                                        </ul>
+                                        <span class="time">AM 9:00</span>
+                                    </div>
+                                    <div class="chat user">
+                                        <p class="c-bubble">Customer service phone number</p>
+                                        <span class="time">AM 9:15</span>
+                                    </div>
+                                    <div class="chat">
+                                        <p class="c-bubble">How can we help you?</p>
+                                        <span class="time">AM 9:00</span>
+                                    </div>
+                                </div>
+                                <div class="chat-input">
+                                    <input type="text" placeholder="Please enter your question">
+                                    <button class="btn-send"><i data-lucide="send"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    
                         <div class="toast">
                             <a href="#" class="alarm-txt">
                                 <strong>[approval] alarm</strong>
@@ -689,61 +745,59 @@
                         <div class="item-head">
                             <h3 class="item-tit">col group, list style02</h3>
                         </div>
-                        <div class="row">
-                            <div class="item-content col-2 id-box">
-                                <span class="icon">
-                                    <i data-lucide="id-card"></i>
-                                </span>
-                                <div>
-                                    <label class="list-tit">룰 아이디</label>
-                                    <span class="list-info">R20241015155007003</span>
+                        <div class="item-content">
+                            <div class="box-info">
+                                <span class="box-tit">ApplicationNumber</span>
+                                <div class="d-flex f-between">
+                                    <strong class="box-name" id="req_idx">ruleId</strong>
+                                    <div class="gauge-wrap">
+                                        <button type="button"><i data-lucide="gauge"></i> REQUESTED</button>
+                                        <div class="detail-status">
+                                            <h4>현재 룰은 <strong>REQUESTED</strong> 상태입니다.</h4>
+                                            <ul>
+                                                <li class="active current">REQUESTED</li>
+                                                <li>SYNCHRONIZING</li>
+                                                <li>SYNCHRONIZED</li>
+                                                <li>EXPIRED</li>
+                                                <!--li class="current">EXPIRED</li-->
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="item-content col-10">
-                                <table class="list-style02">
+                              <table class="table-style01" id="ApprInfoTable">
                                     <colgroup>
-                                        <col style="width: 14%">
-                                        <col style="width: 23%">
-                                        <col style="width: 31%">
-                                        <col style="width: 32%">
+                                        <col style="width: 24%">
+                                        <col style="width: 26%">
+                                        <col style="width: 24%">
+                                        <col style="width: 26%">
                                     </colgroup>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                <span class="list-tit">룰 상태 </span>
-                                                <span class="list-info">REQUESTED</span>
-                                            </td>
-                                            <td>
-                                                <span class="list-tit">방화벽 명</span>
-                                                <span class="list-info">AhnLab1</span>
-                                            </td>
-                                            <td>
-                                                <span class="list-tit">신청자 아이디</span>
-                                                <span class="list-info">admin</span>
-                                            </td>
-                                            <td rowspan="2">
-                                                <span class="list-tit">요청 내용</span>
-                                                <span class="list-info">test example</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="list-tit">신청 유형</span>
-                                                <span class="list-info">사후 결재</span>
-                                            </td>
-                                            <td>
-                                                <span class="list-tit">신청 번호</span>
-                                                <span class="list-info">FIQ20241015154858752</span>
-                                            </td>
-                                            <td>
-                                                <span class="list-tit">요청일/만료일</span>
-                                                <span class="list-info">2024-10-15 15:48:58 / 9999-12-31</span>
-                                            </td>
-                                        </tr>
+                                    <tr>
+                                        <th><span class="list-tit">Name</span></th>
+                                        <td><span class="list-info" name="emp_name">emp_name</span></td>
+                                        <th><span class="list-tit">Department</span></th>
+                                        <td><span class="list-info" name="department">department</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="list-tit">AttachedFile</span></th>
+                                        <td><span class="list-info" name="req_file">-</span></td>
+                                        <th><span class="list-tit">Content</span></th>
+                                        <td><span class="list-info" name="req_content">req_content</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="list-tit">Request Date</span></th>
+                                        <td><span class="list-info" name="req_date">req_date</span></td>
+                                        <th><span class="list-tit">Expiration Date</span></th>
+                                        <td><span class="list-info" name="expiration_date">expiration_date</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th><span class="list-tit">Request Type</span></th>
+                                        <td colspan="3"><span class="list-info" name="req_type"></span></td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
-                        </div>
                         <div class="item-content">
                             <form>
                                 <table class="table-style01">
@@ -763,19 +817,6 @@
                                     </tbody>
                                 </table>
                             </form>
-                        </div>
-                        <div class="item-content">
-                            <div class="detail-status">
-                                <h4>현재 <strong>결재 중</strong> 상태입니다.</h4>
-                                <ul>
-                                    <li>status01</li>
-                                    <li>status02</li>
-                                    <li class="active current">결재 중</li>
-                                    <li>status04</li>
-                                    <li class="current">status05</li>
-                                    <li>status06</li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
 

@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Breezeway FireONE layout</title>
+    
+    <link rel="icon" href="/resources/views/img/favicon.ico">
+    <link rel="icon" href="/resources/views/img/favicon.png">
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
-    <link href="css/reset.css" rel="stylesheet" />
-    <link href="css/common.css" rel="stylesheet" />
-    <link href="css/layout.css" rel="stylesheet" />
+    <link href="/resources/views/css/reset.css" rel="stylesheet" />
+    <link href="/resources/views/css/common.css" rel="stylesheet" />
+    <link href="/resources/views/css/layout.css" rel="stylesheet" />
 
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="/resources/views/js/jquery-3.7.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    <script src="js/layout.js"></script>
+    <script src="/resources/views/js/layout.js"></script>
 
     <script>
         $(document).ready(function(){
             $('#username').focus();
 
-                const randomNum = Math.floor(Math.random() * 3) + 1;
-                console.log(randomNum)
+            const randomNum = Math.floor(Math.random() * 3) + 1;
+            console.log(randomNum)
 
 
             $('.login-right').attr('id', 'loginBg'+randomNum);
@@ -41,7 +44,6 @@
                     <p class="error"><i data-lucide="triangle-alert"></i>Please check the information you entered again.</p>
                 </div>
                 <button type="submit" class="btn btn-blue btn-login">LOGIN</button>
-                <a href="#" class="find-pw">Forgot password?</a>
             </form>
             <!-- // 1차 로그인  -->
 
@@ -59,7 +61,6 @@
                     <p class="error"><i data-lucide="triangle-alert"></i>Please check the information you entered again.</p>
                 </div>
                 <button type="submit" class="btn btn-blue btn-login">LOGIN</button>
-                <a href="#" class="find-pw">Forgot password?</a>
             </form> -->
              <!-- //2차인증  -->
             <div class="copyright">ⓒ 2024 SSNC All rights reserved. Beta Version 1.0.0</div>

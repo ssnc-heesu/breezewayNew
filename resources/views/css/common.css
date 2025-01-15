@@ -1,35 +1,35 @@
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Black.otf') format('opentype');
+    src: url('/resources/views/css/font/NotoSansCJKkr-Black.otf') format('opentype');
     font-weight: 800;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Bold.otf') format('opentype');
+    src: url('/resources/views/css/font/NotoSansCJKkr-Bold.otf') format('opentype');
     font-weight: 600;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Medium.otf') format('opentype');
+    src: url('/resources/views/css/font/NotoSansCJKkr-Medium.otf') format('opentype');
     font-weight: 500;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Regular.otf') format('opentype');
+    src: url('/resources/views/css/font/NotoSansCJKkr-Regular.otf') format('opentype');
     font-weight: 400;
 }
 @font-face {
     font-family: 'Noto Sans CJK';
-    src: url('font/NotoSansCJKkr-Light.otf') format('opentype');
+    src: url('/resources/views/css/font/NotoSansCJKkr-Light.otf') format('opentype');
     font-weight: 200;
 }
 
 :root {
-    --point: #2c67ff;
     --pRgb: 44,103,255;
 }
 :root[color-theme='light'] {
     --red: #e90101;
+    --point: #2c67ff;
 
     --bgColor: #f3f6ff;
     --bgContent: #fff;
@@ -47,6 +47,7 @@
 
 :root[color-theme='dark'] {
     --red: #ff3838;
+    --point: #739aff;
 
     --bgColor: #161618;
     --bgContent: #202127;
@@ -98,7 +99,7 @@ body {
 
 .d-flex {
     display: flex;
-    gap: 15px;
+    gap: 10px;
 }
 .f-between {
     justify-content: space-between;
@@ -106,6 +107,18 @@ body {
 .flex-block {
     flex: 1;
 }
+
+.essential {
+    position: relative;
+}
+.essential::after {
+    content: '*';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 0.4em;
+    color: var(--red);
+}
+
 .row {
     display: flex;
     flex-wrap: nowrap;
@@ -256,6 +269,7 @@ main {
 }
 .list-info {
     display: block;
+    margin-bottom: 8px;
     font-size: 13px;
     font-weight: 500;
     letter-spacing: -0.03em;
@@ -305,7 +319,8 @@ textarea {
     max-width: 100%;
     font-size: 0;
 }
-.input-wrap input[type='text'] {
+.input-wrap input[type='text'],
+.input-wrap input[type='password'] {
     display: inline-block;
     vertical-align: middle;
     width: calc(100% - 80px);
@@ -431,6 +446,24 @@ textarea {
 }
 .switch.switch-sm:checked + label::after {
     left: 23px;
+}
+.switch-wrap {
+    display: flex;
+    align-items: center;
+}
+.switch-wrap .switch + label {
+    order: 2;
+}
+.switch-wrap .switch-tit {
+    order: 1;
+    margin-left: 0;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 200;
+    color: var(--lightTxt);
+}
+.switch-wrap .switch:checked ~ .switch-tit {
+    color: var(--point);
 }
 
 /* file  */
@@ -680,6 +713,7 @@ div[class*='-wrap'] .date-item {
     background: var(--bgContent);
     border-color: var(--lightGray);
     border-radius: 4px;
+    z-index: 1000!important;
 }
 .ui-datepicker .ui-datepicker-header {
     position: relative;
@@ -701,7 +735,7 @@ div[class*='-wrap'] .date-item {
     margin-top: 0px;
     margin-left: -22px;
     padding: 8px;
-    background: #fff url("../img/ico_arrow_blue.png") no-repeat center / 5px;
+    background: #fff url("/resources/views/img/ico_arrow_blue.png") no-repeat center / 5px;
     border-radius: 3px;
     border: 1px solid var(--point)
 }
@@ -949,16 +983,19 @@ table {
 }
 .table-style01 th,
 .table-style01 td {
-    padding: 12px 10px;
+    padding: 12px 8px;
     font-size: 12px;
     border-bottom: 1px solid var(--lightGray);
     transition: all 0.2s;
+    letter-spacing: -0.03em;
+    line-height: 1.4;
 }
 .table-style01 thead th {
     font-weight: 600;
     background: var(--whiteGray);
 }
-.table-style01 tbody tr:not(.readonly):hover td:not(.empty) {
+.table-style01 tbody tr:not(.readonly):hover td:not(.empty),
+.table-style01 tbody tr.active td:not(.empty) {
     background: var(--bgColor);
 }
 .table-style01 tbody tr:not(.readonly):hover th + td:not(.empty) {
@@ -1020,7 +1057,7 @@ table .readonly td {
 }
 .tab-content {
     display: none;
-    margin-top: 14px;
+    margin-top: 18px;
 }
 .tab-content.active {
     display: block;
@@ -1243,7 +1280,7 @@ table .readonly td {
 
 .modal-sm {
     width: 410px;
-    height: 360px;
+    min-height: 200px;
 }
 .modal-md {
     width: 580px;
