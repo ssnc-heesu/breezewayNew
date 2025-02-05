@@ -112,6 +112,7 @@ aside .side-menu .menu-list::-webkit-scrollbar-track {
 }
 aside .side-menu .menu-list {
     padding-left: 12px;
+    padding-bottom: 64px;
 }
 aside .side-menu .menu-list .menu-item {
     position: relative;
@@ -1976,7 +1977,7 @@ html[color-theme="dark"] #login .login-logo {
     border-radius: 50%;
     background: rgba(var(--pRgb),20%);
     z-index: -1;
-    animation: dddd 2s infinite ease-in-out;
+    animation: pulse 2s infinite ease-in-out;
 }
 .detail-status ul li.active {
     background: url("../img/ico_dot_gray.png") no-repeat 18px 100% / 2px;
@@ -1992,13 +1993,14 @@ html[color-theme="dark"] #login .login-logo {
 .detail-status ul li:last-of-type {
     background: none!important;
 }
-@keyframes dddd {
-    50% {
-        transform: scale(3);
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
     }
-
-    0%,51%,100% {
-        transform: scale(0);
+    100% {
+        opacity: 0;
+        transform: scale(4);
     }
 }
 
