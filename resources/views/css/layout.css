@@ -1721,33 +1721,34 @@ html[color-theme="dark"] #login .login-logo {
     overflow: auto;
     border: 1px solid var(--lightGray);
 }
-.approval-tree .search-wrap {
+
+.search-wrap {
     display: grid;
     grid-template-columns: 1fr 28px;
     align-items: center;
     justify-content: space-between;
 }
-.approval-tree .search-wrap .input-box {
+.search-wrap .input-box {
     position: relative;
 }
-.approval-tree .search-wrap .input-box input {
+.search-wrap .input-box input {
     padding-right: 26px;
 }
-.approval-tree .search-wrap .input-search {
+.search-wrap .input-search {
     position: absolute;
     top: 6px;
     right: 6px;
 }
-.approval-tree .search-wrap .input-search svg {
+.search-wrap .input-search svg {
     width: 14px;
     height: 14px;
     color: var(--gray);
     stroke: var(--gray);
 }
-.approval-tree .btn-refresh {
+.btn-refresh {
     text-align: right;
 }
-.approval-tree .btn-refresh svg {
+.btn-refresh svg {
     width: 18px;
     height: 28px;
     color: var(--gray);

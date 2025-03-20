@@ -28,7 +28,7 @@
     --pRgb: 44,103,255;
 }
 :root[color-theme='light'] {
-    --red: #e90101;
+    --red: #ff7003;
     --point: #2c67ff;
 
     --bgColor: #f3f6ff;
@@ -46,7 +46,7 @@
 }
 
 :root[color-theme='dark'] {
-    --red: #ff3838;
+    --red: #ff8b33;
     --point: #739aff;
 
     --bgColor: #161618;
@@ -1069,10 +1069,26 @@ table .readonly td {
     width: max-content;
     min-width: 100%;
 }
-.scroll-table table th *,
-.scroll-table table td * {
-    width: max-content;
-    white-space: nowrap;
+.scroll-table table th,
+.scroll-table table td {
+    vertical-align: middle;
+}
+.scroll-table.fixed thead th {
+    position: sticky;
+    top: 0;
+    background: var(--whiteGray);
+    z-index: 10;
+}
+.scroll-table.fixed thead th.left-th {
+    z-index: 11;
+}
+.scroll-table.fixed .left-th {
+    position: sticky;
+    left: 0;
+    background: var(--whiteGray);
+}
+.scroll-table tbody tr:hover {
+    background: var(--bgColor);
 }
 /* speech bubble style */
 .bubble {

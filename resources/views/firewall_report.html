@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko" color-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Breezeway FireONE layout</title>
+    
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="icon" href="img/favicon.png">
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <link href="css/reset.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="js/layout.js"></script>
+</head>
+<body >
+    <div class="wrap">
+        <aside id="sideMenu">
+            <img src="img/img_logo.png" style="width :28px; height: 28px;" class="logo">
+            <nav>
+                <ul>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="pencil-line"></i><span class="bubble">Request</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="stamp"></i><span class="bubble">Approval</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item active">
+                            <i data-lucide="list-todo"></i><span class="bubble">Policy</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="chart-candlestick"></i><span class="bubble">Governance</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="package-search"></i><span class="bubble">Object</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="server"></i><span class="bubble">Device(Firewall/Switch)</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="scroll-text"></i><span class="bubble">Report</span>
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item">
+                            <i data-lucide="shield-plus"></i><span class="bubble">Diagnostic</span>
+                        </a>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="settings"></i><span class="bubble">Setting</span>
+                        </button>
+                    </li>
+                </ul>
+                <span class="active-ball"></span>
+            </nav>
+
+            <!-- 메뉴 오픈 -->
+            <div class="side-menu">
+                <div class="full-logo">Breezeway FireONE</div>
+                <button type="button" class="btn-close" data-name="sideMenu"><i data-lucide="chevrons-left" width="20"></i></button>
+                <ul class="menu-list">
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="pencil-line"></i><span class="menu-name">Request</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Firewall Policy</a></li>
+                            <li><a href="#">Blacklist Policy</a></li>
+                            <li><a href="#">Policy List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="stamp"></i><span class="menu-name">Approval</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Approval</a></li>
+                            <li><a href="#">Draft</a></li>
+                            <li><a href="#">Mandate</a></li>
+                            <li><a href="#">My Line Setup</a></li>
+                            <li><a href="#">Fixed Line Setup</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item active">
+                            <i data-lucide="list-todo"></i><span class="menu-name">Policy</span>
+                        </button>
+                        <ul class="depth2">
+                            <li class="active"><a href="#">Requested Policy</a></li>
+                            <li><a href="#">Completed Policy</a></li>
+                            <li><a href="#">Expire Policy</a></li>
+                            <li><a href="#">Unused Policy</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="chart-candlestick"></i><span class="menu-name">Governance</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Topology</a></li>
+                            <li><a href="#">Compliance</a></li>
+                            <li><a href="#">Blacklist</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="package-search"></i><span class="menu-name">Object</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Address</a></li>
+                            <li><a href="#">Service</a></li>
+                            <li><a href="#">Users</a></li>
+                            <li><a href="#">System</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="server"></i><span class="menu-name">Device(Firewall/Switch)</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Firewall List</a></li>
+                            <li><a href="#">Firewall Rule</a></li>
+                            <li><a href="#">Firewall Object</a></li>
+                            <li><a href="#">Switch List</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="scroll-text"></i><span class="menu-name">Report</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">2차메뉴 미정</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-item">
+                            <i data-lucide="shield-plus"></i><span class="menu-name">Diagnostic
+                                <i data-lucide="external-link" class="ico-link"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <button type="button" class="menu-item">
+                            <i data-lucide="settings"></i><span class="menu-name">Setting</span>
+                        </button>
+                        <ul class="depth2">
+                            <li><a href="#">Uer List</a></li>
+                            <li><a href="#">Dept List</a></li>
+                            <li><a href="#">Admin User</a></li>
+                            <li><a href="#">Work Group</a></li>
+                            <li><a href="#">IP ACL</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="overlay" data-name="sideMenu"></div>
+            <!-- 메뉴 오픈 End-->
+
+            <!-- mode switch  -->
+            <div class="mode">
+                <input type="checkbox" id="mode" class="switch" checked>
+                <label for="mode">
+                    <i data-lucide="sun" class="light"></i>
+                    <i data-lucide="moon" class="dark"></i>
+                </label> 
+                <span class="mode-txt"></span>
+            </div>
+
+        </aside>
+        <main>
+            <div class="filter open" id="filterBox">
+                <button type="button" class="btn-close" data-name="filterBox"><i data-lucide="chevrons-left" width="20"></i></button>
+                
+                <h3 class="filter-tit"><i data-lucide="sliders-horizontal"></i>Filter</h3>
+                <div class="filter-body">
+                    <ul class="list-style01">
+                        <li>
+                            <label class="list-tit" for="addressName">Address Name</label>
+                            <input type="text" class="input-style01 input-block" id="addressName">
+                        </li>
+                        <li>
+                            <label class="list-tit" for="AddressType">Address Type</label>
+                            <input type="text" class="input-style01 input-block" id="AddressType">
+                        </li>
+                        <li>
+                            <label class="list-tit" for="AddressValue">Address Value</label>
+                            <input type="text" class="input-style01 input-block" id="AddressValue">
+                        </li>
+                        <li>
+                            <label class="list-tit" for="Description">Description</label>
+                            <input type="text" class="input-style01 input-block" id="Description">
+                        </li>
+                        <li>
+                            <label class="list-tit">date picker</label>
+                            <div class="date-wrap">
+                                <div class="date-item">
+                                    <input type="text" id="datepicker01" class="input-style01" placeholder="Start Date">
+                                    <i data-lucide="calendar"></i>
+                                </div>
+                                <div class="date-item">
+                                    <input type="text" id="datepicker02" class="input-style01" placeholder="End Date">
+                                    <i data-lucide="calendar"></i>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <label class="list-tit" for="Applyer">Applyer</label>
+                            <input type="text" class="input-style01 input-block" id="Applyer">
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-foot">
+                    <button type="button" class="btn btn-line-blue btn-lg">Reset</button>
+                    <button type="button" class="btn btn-blue btn-lg">Search</button>
+                </div>
+            </div>
+
+            <div class="content-wrap">
+                <div class="inner">
+                    <h2 class="content-tit">
+                        <span>scroll</span>
+                        <span>Table</span>
+                    </h2>
+            
+                    <div class="content-item">
+                        <div class="item-head">
+                            <h3 class="item-tit">table title</h3>
+                            <button type="button" class="modal-open btn btn-blue btn-sm" data-name="tableModal">modal button</button>
+                        </div>
+                        <div class="item-content">
+                            <div class="scroll-table fixed">
+                               <table class="table-style01">
+                                <thead>
+                                    <tr>
+                                        <th class="left-th" rowspan="2">Category</th>
+                                        <th class="left-th" rowspan="2">Details</th>
+                                        <th colspan="16">Number of Applicable Rules</th>
+                                    </tr>
+                                    <tr>
+                                        <th>AxGate1</th>
+                                        <th>BlueMax1</th>
+                                        <th>Paloalto</th>
+                                        <th>AxGete</th>
+                                        <th>common</th>
+                                        <th>AhnLab</th>
+                                        <th>BlueMax</th>
+                                        <th>Juniper</th>
+                                        <th>CheckPoint</th>
+                                        <th>vsys2</th>
+                                        <th>FGT60D4Q16009290</th>
+                                        <th>Fortinet3</th>
+                                        <th>SSNC Main_12</th>
+                                        <th>AhnLab2</th>
+                                        <th>top</th>
+                                        <th><strong>Total</strong></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tableBody2">
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </main>
+
+
+        <!-- 결재선 지정 모달  -->
+        <div id="tableModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content modal-lg">
+                <div class="modal-head">
+                    <h3 class="modal-tit">modal title</h3>
+                    <button type="button" class="modal-close" data-name="tableModal"><i data-lucide="x"></i></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="search-wrap" style="margin-bottom: 20px;">
+                        <div class="input-box">
+                            <input type="text" class="input-style01 input-block" name="keyword" placeholder="search">
+                            <button type="button" class="input-search"><i data-lucide="search"></i></button>
+                        </div>
+                        <button type="button" name="refresh" class="btn-refresh"><i data-lucide="rotate-cw"></i></button>
+                    </div>
+
+                    <table class="table-style01 txt-center v-middle">
+                        <colgroup>
+                            <col style="width:5%">
+                            <col style="width:30%">
+                            <col style="width:30%">
+                            <col style="width:35%">
+                        </colgroup>
+                        <thead>
+                        <tr>
+                            <th><input type="checkbox" class="all-chk" name="tableListChk" /></th>
+                            <th>Catogory</th>
+                            <th>details</th>
+                            <th>Rules</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td><input type="checkbox" class="chk-box" name="tableListChk"/></td>
+                                <td>Period Management</td>
+                                <td>Expired Rule</td>
+                                <td>AxGete2</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="modal-foot">
+                    <input type="button" class="btn btn-md btn-line-blue" name="deleteBtn" value="cancel">
+                    <input type="button" class="btn btn-md btn-blue" name="applyBtn" value="Apply">
+                </div>
+            </div>
+            <div class="overlay" data-name="tableModal"></div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<script>
+$(document).ready(function () {
+
+        
+    let tableBody2 = $("#tableBody2");
+
+    for (let i = 1; i <= 16; i++) {
+        let row = `
+                <tr>
+                    <th class="left-th">tbody1</th>
+                    <th class="left-th">rule1</th>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+        `;
+        tableBody2.append(row);
+    }
+
+    let tableBody = $("#tableBody");
+
+    for (let i = 1; i <= 20; i++) {
+        let row = `
+            <tr>
+                <td><input type="checkbox" class="chk-box" name="tableListChk"/></td>
+                <td>Period Management</td>
+                <td>Expired Rule</td>
+                <td>AxGete2</td>
+            </tr>
+        `;
+        tableBody.append(row);
+    }
+
+        // 스크롤테이블
+        function updateStickyHeaders() {
+        $('.scroll-table.fixed .left-th').each(function () {
+            const leftOffset = $(this).position().left;
+            $(this).css('left', leftOffset + 'px');
+        });
+
+        $('.scroll-table.fixed thead th').each(function () {
+            const topOffset = $(this).position().top;
+            $(this).css('top', topOffset + 'px');
+        });
+    }
+
+        const tableTop = $('.scroll-table.fixed').offset().top + 32 + 44;
+        $('.scroll-table.fixed').css('height', `calc(100vh - ${tableTop}px)`);
+        updateStickyHeaders();
+});
+</script>
